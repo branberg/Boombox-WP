@@ -1,0 +1,120 @@
+/*******
+
+This theme supports 3 major responsive breakpoints for mobile, tablet and desktop resolutions
+
+*******/
+.wrap{
+	max-width: 87.5%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol{
+	
+	float: left;
+	margin-right: 0;
+	
+}
+.onecol{ width:100%; }
+.twocol{ width:100%; }
+.threecol{ width:100%; }
+.fourcol{ width:100%; }
+.fivecol{ width:100%; }
+.sixcol{ width:100%; }
+.sevencol{ width:100%; }
+.eightcol{ width:100%; }
+.ninecol{ width:100%; }
+.tencol{ width:100%; }
+.elevencol{ width:100%; }
+.twelvecol{ width:100%; }
+
+.last{ margin-right: 0 !important; }
+.first{}
+
+
+@media only screen and (min-width: 480px) {
+	
+	.wrap{
+		
+	}
+	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol{
+		
+		
+		
+	}
+	.onecol{ width:50%; }
+	.twocol{ width:50%; }
+	.threecol{ width:50%; }
+	.fourcol{ width:50%; }
+	.fivecol{ width:50%; }
+	.sixcol{ width:50%; }
+	.sevencol{ width:50%; }
+	.eightcol{ width:50%; }
+	.ninecol{ width:100%; }
+	.tencol{ width:100%; }
+	.elevencol{ width:100%; }
+	.twelvecol{ width:100%; }
+	
+	.last{}
+	.first{}
+	
+}
+
+
+@media only screen and (min-width: 768px) {
+	
+	.wrap{
+		max-width: 94.79%;
+		padding: 0 20px;
+	}
+	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol{
+		
+		margin-right: 2.13%;
+		
+	}
+	.onecol		{ width: 6.38%; }
+	.twocol		{ width:14.89%; }
+	.threecol	{ width:23.4%; }
+	.fourcol	{ width:31.91%; }
+	.fivecol	{ width:37.42%; }
+	.sixcol		{ width:48.93%; }
+	.sevencol	{ width:57.44%; }
+	.eightcol	{ width:65.95%; }
+	.ninecol	{ width:74.46%; }
+	.tencol		{ width:82.97%; }
+	.elevencol	{ width:91.48%; }
+	.twelvecol	{ width:99.99%; }
+	
+	.last{}
+	.first{}
+	
+}
+
+
+@media only screen and (min-width: 1024px) {
+	
+	.wrap{
+		max-width: 940px;
+		padding: 0 10px;
+	}
+	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol{
+	
+		margin-right: 2.13%;
+		
+	}
+	.onecol		{ width: 6.38%; }
+	.twocol		{ width:14.89%; }
+	.threecol	{ width:23.4%; }
+	.fourcol	{ width:31.91%; }
+	.fivecol	{ width:37.42%; }
+	.sixcol		{ width:48.93%; }
+	.sevencol	{ width:57.44%; }
+	.eightcol	{ width:65.95%; }
+	.ninecol	{ width:74.46%; }
+	.tencol		{ width:82.97%; }
+	.elevencol	{ width:91.48%; }
+	.twelvecol	{ width:99.99%; }
+	
+	.last{ margin-right: 0; }
+	.first{  }
+	
+}

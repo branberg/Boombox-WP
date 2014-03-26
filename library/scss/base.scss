@@ -1,0 +1,660 @@
+@import url("myousic-icons.css");
+/********************************************************************
+*** GLOBALS
+*********************************************************************/
+html, body{
+
+	font-family: $opensans;
+	font-weight: 500;
+	font-size: 1em;
+	color: $textColor;
+	overflow-x: hidden;
+
+}
+body{
+	
+}
+
+a{
+	color: $textColor;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $montserrat;
+	font-weight: 500;
+}
+
+::selection { background: $selectionColor; }
+::-moz-selection { background: $selectionColor; }
+
+#site_wrap{
+
+	position: relative;
+	background: url('../img/background.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	@include box-shadow( 0, 0, 40px, 0.5 );
+
+	#overlay_color{
+		background-color: rgba(255,255,255,0.8);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+#mobile_menu{
+
+	background-color: darken($accent, 2%);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	padding: 0 60px 0 0;
+	font-family: $montserrat;
+
+	ul{
+
+		padding: 20px;
+		margin: 0;
+
+		li{
+
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			ul.sub-menu{
+
+				padding: 0 0 0 20px;
+
+				li{
+
+					a{
+						font-size: 0.85em;
+						padding:14px;
+					}
+
+				}
+
+			}
+
+			a{
+				display: block;
+				font-weight: 300;
+				text-decoration: none;
+				padding: 20px;
+				font-size: 1.2em;
+				opacity: 0.55;
+				text-transform: uppercase;
+				color: $white;
+				@include transition(opacity 0.05s linear);
+			}
+
+		}
+		li.current-menu-item a,
+		li a:hover{
+			opacity: 1;
+		}
+
+	}
+
+	ul#social_links{
+
+		li{
+
+			display: inline-block;
+			margin-right:-4px;
+
+			a{
+
+				display: block;
+				font-size: 24px;
+
+				i{
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+#mobile_header{
+
+	height: 56px;
+	width: 100%;
+	background-color: transparentize($accent, 0.2);
+	border-bottom: solid 1px darken($accent, 4%);
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+
+	#mobile_menu_toggle{
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		z-index: 10;
+		padding: 17px;
+		@include transition(opacity 0.05s linear);
+
+		&:hover{
+			opacity: 0.6;
+		}
+
+		i{
+			display: block;
+			font-size: 24px;
+			color: $white;
+		}
+
+	}
+
+	#mobile_site_title{
+		display: block;
+		position: absolute;
+		padding: 16px 20px;
+		top: 0;
+		left: 0;
+		text-align: center;
+		color: $white;
+		width: 100%;
+		font-size: 16px;
+		height: 56px;
+		overflow: hidden;
+		z-index: 0;
+	}
+
+}
+
+.site_header{
+
+	position: relative;
+
+	.wrap{}
+
+	#logo_wrap{
+
+		padding: 140px 0 84px 0;
+
+		a{
+
+			display: block;
+			max-width: 90%;
+			margin: 0 auto;
+
+			font-size: 50px;
+			text-decoration: none;
+			text-align: center;
+			font-weight: 700;
+			font-family: $montserrat;
+
+			-webkit-backface-visibility: hidden; //to fix the Chrome moving bug on transition hover
+			@include transition(opacity 0.15s linear);
+			opacity: 1;
+
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto;
+				margin: 0 auto;
+			}
+
+		}
+		a:hover{
+			opacity: 0.85;
+		}
+
+	}
+
+	nav#header_nav{ display: none; }
+
+}
+
+#page_sections{
+
+	&:first-child{
+		margin-top:0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+}
+.page_section{
+
+	padding: 15px 0;
+	position: relative;
+
+	.wrap{}
+
+}
+
+/*************************************
+MUSIC/ALBUMS
+*************************************/
+.music_section{
+
+	background-color: $albumBackground;
+	margin: 15px 0;
+	padding: 30px 0;
+
+	.wrap{}
+
+	header.section_header{}
+
+	.album{
+
+		background-color: $albumBackground;
+		margin-bottom: 30px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		.soundcloud_embed{
+
+			height: 200px; //just to set the initial height
+
+			iframe, .soundcloud_plaeholder{
+				display: block;
+				width: 100% !important;
+				height: 100% !important;
+			}
+
+		}
+
+		.album_info_wrapper{
+
+			color: $textColor;
+
+			.album_info{
+				
+				padding: 20px 20px 0 20px;
+
+				.album_type{
+					font-family: $montserrat;
+					color: $headerText;
+					text-transform: uppercase;
+					font-size: 0.85rem;
+					color: $albumType;
+				}
+				.album_title{
+					font-size: 1.625rem;
+					font-weight: 500;
+					margin: 10px 0;
+					color: $albumTitle;
+				}
+				.album_description{
+
+					color: $albumText;
+
+					& > :first-child{ margin-top: 0; }
+					& > :last-child{ margin-bottom: 0; }
+					p{
+
+					}
+
+				}
+				.album_button{
+					font-size: 1.25rem;
+					display: block;
+					margin: 20px 0 0 0;
+					font-family: $montserrat;
+					text-transform: uppercase;
+					text-align: center;
+					background-color: $albumButtonBackground;
+					color: $albumButtonText;
+					text-decoration: none;
+					padding: 20px;
+					@include transition(background-color 0.05s linear);
+
+					&:hover{
+						background-color: lighten($albumButtonBackground, 10%);
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
+/*************************************
+SHOWS
+*************************************/
+.shows_section{
+
+	
+
+}
+table.tour_dates{
+
+	width:100%;
+	font-family: $montserrat;
+	font-weight: 300;
+	border-collapse: separate;
+
+	tr{
+
+		&:first-child td{
+			border-top: solid 2px transparentize($textColor, 0.7);
+		}
+		td{
+			border-bottom: solid 2px transparentize($textColor, 0.7);
+		}
+
+		td{
+
+			
+			font-size: 12px;
+
+			.cell_wrap{
+				padding: 20px 10px;
+			}
+
+			a{
+
+				text-decoration: none;
+
+				&:hover{
+					text-decoration: underline;
+				}
+
+			}
+
+		}
+
+		td.date{
+
+			text-align: center;
+			position: relative;
+
+			.month, .day{
+				display: block;
+			}
+			.month{
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+			.day{
+				font-size: 16px;
+			}
+
+		}
+		td.location{
+
+			a{
+				display: block;
+			}
+
+			.venue, .city{
+				display: block;
+			}
+			.venue{
+
+			}
+			.city{
+
+			}
+
+		}
+		td.tickets{
+
+			text-align: right;
+
+		}
+		td.rsvp{
+
+			display: none;
+
+		}
+
+	}
+
+}
+
+
+/*************************************
+VIDEOS
+*************************************/
+.videos_section{
+
+	.wrap{}
+
+	.section_header{
+		margin: 0 0 40px 0;
+	}
+
+	.video_embed{
+		padding: 0;
+	}
+
+}
+
+/*************************************
+PHOTOS SECTION
+*************************************/
+.photos_section{
+
+	.wrap{}
+
+	.section_header{}
+
+}
+.photo_gallery{
+
+	ul{
+
+		margin: 0;
+		padding: 0;
+
+		li{
+
+			display: block;
+			list-style-type: none;
+			float: left;
+			width: 50%;
+
+			a{
+
+				display: block;
+				-webkit-backface-visibility: hidden; //to fix the Chrome moving bug on transition hover
+				@include transition(opacity 0.05s linear);
+
+				&:hover{
+					opacity: 0.6;
+				}
+
+			}
+			img{
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+
+		}
+
+	}
+
+}
+
+/*************************************
+TEXT SECTION
+*************************************/
+.text_section{
+
+	.wrap{}
+	.section_header{
+
+	}
+
+	.text_content{
+
+		
+
+		& > :first-child{ margin-top: 0; }
+		& > :last-child{ margin-bottom: 0; }
+
+		p{
+
+		}
+
+	}
+
+}
+
+
+/*************************************
+FOOTER
+*************************************/
+.site_footer{
+
+	color: $footerText;
+	padding: 40px 0;
+	position: relative;
+
+	.wrap{}
+
+	.credits{
+
+		font-family: $montserrat;
+		text-align: center;
+		padding-top: 40px;
+		color: $footerText;
+
+		p{
+			margin: 10px 0;
+		}
+		a{
+			color: $footerText;
+			text-decoration: none;
+			&:hover{
+				color: $textColor;
+			}
+		}
+
+	}
+
+}
+.mailing_list{
+
+	text-align: center;
+	padding: 0 0 40px 0;
+	font-family: $montserrat;
+
+	.mailing_list_title, form{
+		display: block;
+		color: $footerText;
+	}
+
+	.mailing_list_title{
+		text-transform: uppercase;
+		font-size: 1.4em;
+		margin: 0 0 20px 0;
+	}
+
+	form{
+
+		font-size: 18px;
+		overflow: hidden;
+
+		input{
+			border: solid 2px $footerText;
+			display: block;
+			padding: 15px;
+			outline: none;
+		}
+		input[type="text"]{
+			width: 100%;
+			background: none;
+			margin-bottom: 10px;
+			color: $footerText;
+		}
+		input[type="submit"]{
+
+			text-transform: uppercase;
+			background-color: $footerText;
+			color: $white;
+			width: 100%;
+
+			&:hover{
+				background-color: lighten($footerText, 4%);
+			}
+
+		}
+
+		::-webkit-input-placeholder { color: $footerText; }
+		:-moz-placeholder { color: $footerText; }
+		::-moz-placeholder { color: $footerText; }
+		:-ms-input-placeholder { color: $footerText; }
+		label.placeholder{ color: $footerText; }
+
+	}
+		
+}
+.social_links{
+
+	ul{
+
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		li{
+
+			display: inline-block;
+			list-style-type: none;
+			margin-right: -4px;
+
+			a{
+
+				display: block;
+				padding: 10px 14px;
+				background-color: $socialIconsBackground;
+				font-size: 28px;
+				text-decoration: none;
+				color: $footerText;
+
+				i{
+
+				}
+
+			}
+			a:hover, a:hover{ color: lighten($textColor, 20%); }
+
+		}
+
+	}
+
+}
+
+
+/*************************************
+PAGE STYLES
+*************************************/
+#page_content{
+
+	padding: 30px 0;
+
+	&.top_offset{
+
+	}
+
+}

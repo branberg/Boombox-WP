@@ -1,0 +1,512 @@
+/********************************************************************
+*** GLOBALS
+*********************************************************************/
+html, body{
+
+	
+
+}
+
+a{
+	
+}
+
+h1, h2, h3, h4, h5, h6{
+	
+}
+
+#site_wrap{
+	padding-top: 0;
+	@include box-shadow( 0, 0, 0, 0 );
+}
+
+#mobile_menu{ display: none; }
+
+#mobile_header{ display: none; }
+
+.site_header{
+
+	padding-bottom: 30px;
+
+	#header_overlay_color{
+		
+	}
+
+	.wrap{
+		
+	}
+
+	
+	#logo_wrap{
+
+		padding: 75px 0;
+
+		#logo{
+
+			font-size: 60px;
+
+			img{
+				
+			}
+
+		}
+
+	}
+
+	nav#header_nav{
+
+		display: block;
+		font-family: $montserrat;
+
+		ul{
+
+			margin: 0;
+			padding: 0;
+			text-align: center;
+
+			li{
+
+				list-style-type: none;
+				display: inline-block;
+				text-transform: uppercase;
+				font-size: 22px;
+
+				a{
+					text-decoration: none;
+					display: block;
+					padding:10px;
+					-webkit-backface-visibility: hidden; //to fix the Chrome moving bug on transition hover
+					@include transition(opacity 0.15s linear);
+					opacity: 1;
+				}
+
+			}
+			li.current-menu-item > a,
+			li a:hover{
+				opacity: 0.5;
+			}
+
+		}
+
+		ul#menu_links{
+
+			
+
+			li{
+
+				a{
+
+				}
+
+			}
+
+		}
+
+		ul#social_links{
+
+			
+
+			li{
+
+				a{
+
+					i{
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.page_section{
+
+	padding: 30px 0;
+
+	.wrap{}
+
+}
+
+/*************************************
+MUSIC/ALBUMS
+*************************************/
+.music_section{
+
+	background: none;
+	margin: 0;
+
+	.wrap{}
+
+	.album{
+
+		margin-bottom: 40px;
+
+		&:last-child{
+			
+		}
+
+		.soundcloud_embed{
+
+			float: left;
+			width: 50%;
+
+			iframe{
+				
+			}
+
+		}
+
+		.album_info_wrapper{
+
+			float: left;
+			width: 50%;
+			position: relative;
+
+			.album_info{
+
+				padding: 40px;
+
+				.album_type{
+					font-size: 1.125rem;
+				}
+				.album_title{
+					font-size: 2.375rem;
+				}
+				.album_description{
+
+					font-size: 1.15em;
+
+					& > :first-child{  }
+					& > :last-child{  }
+					p{
+
+					}
+
+				}
+				.album_button{
+					position: absolute;
+					bottom: 40px;
+					left: 40px;
+					right: 40px;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/*************************************
+NEWS SECTION
+*************************************/
+.news_section{
+
+	.wrap{}
+
+	.news_article_wrap{
+
+		margin-bottom: 60px;
+
+		&:before{
+			
+		}
+
+		.news_article{
+
+			padding: 40px;
+
+			header.article_header{
+
+				
+
+				h3{
+
+					font-size: 2.3em;
+
+					a{
+						
+					}
+
+				}
+
+				span.article_date{
+					display: block;
+					float: right;
+					text-transform: uppercase;
+					color: $headerText;
+					margin-top: 10px;
+				}
+
+			}
+
+			.article_excerpt{
+
+				font-size: 1.5rem;
+
+				p{
+					
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
+/*************************************
+SHOWS
+*************************************/
+.shows_section{
+
+	padding-bottom: 80px;
+
+}
+table.tour_dates{
+
+	tr{
+
+		td{
+
+			font-size: 20px;
+
+			.cell_wrap{
+				position: relative;
+				height: 100%;
+				padding: 30px 20px;
+			}
+
+		}
+
+		td.date{
+
+			width: 126px;
+
+			.cell_wrap{
+
+				padding-left: 40px;
+				padding-right: 30px;
+				width: 120px;
+
+				.month, .day{
+					
+				}
+				.month{
+					font-size: 22px;
+				}
+				.day{
+					font-size: 28px;
+				}
+
+				&:after{
+					content: "";
+					border-right: solid 2px transparentize($textColor, 0.7);
+					width: 1px;
+					position: absolute;
+					right: 0;
+					top: 40px;
+					bottom: 40px;
+				}
+
+			}
+
+		}
+		td.location{
+
+			.cell_wrap{
+				padding-left: 30px;
+			}
+
+			a{
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+
+			.venue, .city{
+				
+			}
+			.venue{
+				text-transform: uppercase;
+				font-weight:700;
+			}
+			.city{
+
+			}
+
+		}
+		td.tickets{
+
+			
+
+		}
+		td.rsvp{
+
+			.cell_wrap{
+				padding-right: 40px;
+			}
+
+		}
+
+	}
+
+}
+/*************************************
+VIDEOS
+*************************************/
+.videos_section{
+
+	
+
+	.wrap{}
+
+	.video_embed{
+		
+	}
+
+}
+
+/*************************************
+PHOTOS SECTION
+*************************************/
+.photos_section{
+
+	.wrap{}
+
+}
+.photo_gallery{
+
+	ul{
+
+		
+
+		li{
+
+			width: 25%;
+
+			a{
+
+				
+
+				&:hover{
+					
+				}
+
+			}
+			img{
+				
+			}
+
+		}
+
+	}
+
+}
+
+/*************************************
+PHOTOS SECTION
+*************************************/
+.text_section{
+
+	.wrap{}
+
+	.text_content{
+
+		font-size: 1.6em;
+
+		& > :first-child{}
+		& > :last-child{}
+
+		p{
+
+		}
+
+	}
+
+}
+
+
+/*************************************
+FOOTER
+*************************************/
+.site_footer{
+
+	
+
+	.wrap{}
+
+	.credits{
+
+	}
+
+}
+.mailing_list{
+
+	
+
+	.mailing_list_title, form{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.mailing_list_title{
+		font-size: 1.5em;
+		margin: 0 40px 0 0;
+	}
+
+	form{
+
+		font-size: 18px;
+
+		input{
+			float: left;
+			padding: 20px;
+		}
+		input[type="text"]{
+			width: 280px;
+			border-right: none;
+			margin-bottom: 0;
+		}
+		input[type="submit"]{
+
+			width: 150px;
+
+			&:hover{}
+
+		}
+
+		::-webkit-input-placeholder {}
+		:-moz-placeholder {}
+		::-moz-placeholder {}
+		:-ms-input-placeholder {}
+
+	}
+		
+}
+.social_links{
+
+	ul{
+
+		li{
+
+			a{
+
+				
+
+			}
+
+		}
+
+	}
+
+}

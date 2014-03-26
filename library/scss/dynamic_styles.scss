@@ -1,0 +1,365 @@
+html, body{
+
+	font-family: $opensans;
+	color: $textColor;
+
+}
+
+a{
+	color: $textColor;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $montserrat;
+}
+
+::selection { background: $selectionColor; }
+::-moz-selection { background: $selectionColor; }
+
+#site_wrap{
+	background-color: darken($accent, 2%);
+}
+
+#mobile_menu{
+
+	background-color: darken($accent, 2%);
+	font-family: $montserrat;
+
+	ul{
+		
+		li{
+
+			a{
+				color: $white;
+			}
+
+		}
+
+	}
+
+}
+
+#mobile_header{
+
+	background-color: transparentize($accent, 0.2);
+	border-bottom: solid 1px darken($accent, 4%);
+
+	#mobile_menu_toggle{
+
+		i{
+			color: $white;
+		}
+
+	}
+
+	#mobile_site_title{
+		color: $white;
+	}
+
+}
+
+.site_header{
+
+	background: url('../img/header_background.jpg') no-repeat center center scroll;
+
+	#header_overlay_color{
+		background-color: $headerOverlay;
+		opacity: $headerOverlayOpacity;
+	}
+
+	#logo_wrap{
+
+		#logo{
+
+			font-family: $montserrat;
+			color: $logoColor;
+			text-shadow: 5px 5px 0 $logoShadow;
+
+		}
+
+	}
+
+	#page_title{
+
+		font-family: $montserrat;
+		color: $logoColor;
+		text-shadow: 1px 1px 0 $logoShadow;
+
+	}
+
+}
+
+.page_section{
+
+	background-color: $accent;
+
+	.section_header{
+
+		&, a{
+			color: $headerText;
+		}
+		a{
+
+			&:after{
+				font-family: $opensans;
+			}
+
+			&:hover{
+				color: $headerTextHover;
+			}
+
+		}
+
+	}
+
+}
+
+.music_section{
+
+	.album{
+
+		background-color: $albumBackground;
+
+		.album_info_wrapper{
+
+			color: $textColor;
+
+			.album_info{
+				
+				.album_type{
+					font-family: $montserrat;
+					color: $headerText;
+					color: $albumType;
+				}
+				.album_title{
+					color: $albumTitle;
+				}
+				.album_description{
+
+					color: $albumText;
+
+				}
+				.album_button{
+					font-family: $montserrat;
+					background-color: $albumButtonBackground;
+					color: $albumButtonText;
+
+					&:hover{
+						background-color: lighten($albumButtonBackground, 10%);
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.news_section{
+
+	.news_article_wrap{
+
+		border-top: solid 2px $headerText;
+
+		&:before{
+			@include css-gradient-top-down($headerText, $accent);
+		}
+
+		.news_article{
+
+			background-color: $accent;
+			
+			footer.article_footer{
+				
+				ul.share_links{
+
+					li{
+
+						a{
+
+							&:hover{
+								color: $white;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+.tooltipster-default {
+
+	color: $white;
+
+	.tooltipster-content {
+
+		font-family: $opensans;
+
+	}
+
+}
+
+.bit-widget-container{
+
+	th{
+		font-family: $montserrat;
+	}
+
+}td.bit-date{
+	font-family: $montserrat;
+}
+td.bit-venue{
+	font-family: $opensans;
+}
+#bit-events td .bit-uiButton{
+	background-color: $accent;
+}
+
+table.tour_dates{
+
+	font-family: $montserrat;
+
+	tr{
+
+		&:first-child td{
+			border-top: solid 2px transparentize($textColor, 0.7);
+		}
+		td{
+			border-bottom: solid 2px transparentize($textColor, 0.7);
+		}
+
+	}
+
+}
+
+.videos_section{
+
+	background-color: $videoSectionBackground;
+
+}
+
+.site_footer{
+
+	color: $footerText;
+	background-color: $footerBackground;
+
+	.wrap{}
+
+	.credits{
+
+		font-family: $montserrat;
+		color: $footerText;
+
+		a{
+			color: $footerText;
+			&:hover{
+				color: $textColor;
+			}
+		}
+
+	}
+
+}
+.mailing_list{
+
+	font-family: $montserrat;
+
+	.mailing_list_title, form{
+		color: $footerText;
+	}
+
+	form{
+
+		input{
+			border: solid 2px $footerText;
+		}
+		input[type="text"]{
+			color: $footerText;
+		}
+		input[type="submit"]{
+
+			background-color: $footerText;
+			color: $footerBackground;
+
+			&:hover{
+				background-color: lighten($footerText, 4%);
+			}
+
+		}
+
+		::-webkit-input-placeholder { color: $footerText; }
+		:-moz-placeholder { color: $footerText; }
+		::-moz-placeholder { color: $footerText; }
+		:-ms-input-placeholder { color: $footerText; }
+		label.placeholder{ color: $footerText; }
+
+	}
+		
+}
+.social_links{
+
+	ul{
+
+		li{
+
+			a{
+
+				background-color: $socialIconsBackground;
+				color: $footerText;
+
+				i{
+
+				}
+
+			}
+			a:hover, a:hover{ color: $textColor; }
+
+		}
+
+	}
+
+}
+#page_content.videos_section > .wrap{
+	background-color: $videoSectionBackground;
+}
+
+form.contact_form{
+
+	color: $footerText;
+
+	label{
+		font-family: $montserrat;
+	}
+	input, textarea{
+		border: solid 2px $footerText;
+		color: $textColor;
+	}
+	input[type="submit"]{
+
+		font-family: $montserrat;
+		background-color: $footerText;
+		color: $accent;
+
+		&:hover{
+			background-color: lighten($footerText, 10%);
+		}
+
+	}
+
+	::-webkit-input-placeholder { color: $footerText; }
+	:-moz-placeholder { color: $footerText; }
+	::-moz-placeholder { color: $footerText; }
+	:-ms-input-placeholder { color: $footerText; }
+	label.placeholder{ color: $footerText; }
+
+}

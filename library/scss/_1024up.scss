@@ -1,0 +1,403 @@
+/********************************************************************
+*** GLOBALS
+*********************************************************************/
+html, body{
+
+	
+
+}
+
+a{
+	
+}
+
+h1, h2, h3, h4, h5, h6{
+	
+}
+
+#site_wrap{
+	
+}
+
+#mobile_menu{}
+
+#mobile_header{}
+
+.site_header{
+
+	#header_overlay_color{
+		
+	}
+
+	.wrap{
+		
+	}
+
+	
+	#logo_wrap{
+
+		padding: 100px 0;
+
+		#logo{
+
+			font-size: 80px;
+
+			img{
+				
+			}
+
+		}
+
+	}
+
+	nav#header_nav{
+
+		
+
+		ul{
+
+			li{
+
+				
+
+				a{
+					
+				}
+
+			}
+
+		}
+
+		ul#menu_links{
+
+			
+
+			li{
+
+				a{
+
+				}
+
+			}
+
+		}
+
+		ul#social_links{
+
+			
+
+			li{
+
+				a{
+
+					i{
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+	nav#header_nav.justified_menus{
+		
+		ul#menu_links{
+
+			text-align: left;
+			float: left;
+
+		}
+		ul#social_links{
+
+			text-align: right;
+			float: right;
+
+		}
+
+	}
+	nav#header_nav.centered_menus{
+		
+		ul#menu_links{
+
+			text-align: center;
+			float: none;
+
+		}
+		ul#social_links{
+
+			text-align: center;
+			float: none;
+
+		}
+
+	}
+
+}
+
+.page_section{
+
+	
+
+	.wrap{}
+
+}
+
+/*************************************
+MUSIC/ALBUMS
+*************************************/
+.music_section{
+
+	.wrap{}
+
+	.album{
+
+		
+
+		&:last-child{
+			
+		}
+
+		.soundcloud_embed{
+
+			iframe{
+				
+			}
+
+		}
+
+		.album_info_wrapper{
+
+			.album_info{
+
+				.album_type{
+					
+				}
+				.album_title{
+					
+				}
+				.album_description{
+
+					& > :first-child{  }
+					& > :last-child{  }
+					p{
+
+					}
+
+				}
+				.album_button{
+					
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/*************************************
+NEWS SECTION
+*************************************/
+.news_section{
+
+	.wrap{}
+
+	.news_article_wrap{
+
+		
+
+		&:before{
+			
+		}
+
+		.news_article{
+
+			
+
+			header.article_header{
+
+				
+
+				h3{
+
+					
+
+					a{
+						
+					}
+
+				}
+
+				span.article_date{
+					
+				}
+
+			}
+
+			.article_excerpt{
+
+				
+
+				p{
+					
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/*************************************
+VIDEOS
+*************************************/
+.videos_section{
+
+	
+
+	.wrap{}
+
+	.video_embed{
+		
+	}
+
+}
+
+/*************************************
+PHOTOS SECTION
+*************************************/
+.photos_section{
+
+	.wrap{}
+
+}
+.photo_gallery{
+
+	ul{
+
+		
+
+		li{
+
+			
+
+			a{
+
+				
+
+				&:hover{
+					
+				}
+
+			}
+			img{
+				
+			}
+
+		}
+
+	}
+
+}
+
+/*************************************
+TEXT SECTION
+*************************************/
+.text_section{
+
+	.wrap{}
+
+	.text_content{
+
+		& > :first-child{}
+		& > :last-child{}
+
+		p{
+
+		}
+
+	}
+
+}
+
+
+/*************************************
+FOOTER
+*************************************/
+.site_footer{
+
+	
+
+	.wrap{}
+
+	.credits{
+
+	}
+
+}
+.mailing_list{
+
+	
+
+	.mailing_list_title, form{
+		
+	}
+
+	.mailing_list_title{
+		font-size: 2em;
+	}
+
+	form{
+
+		font-size: 22px;
+
+		input{
+			
+		}
+		input[type="text"]{
+			width: 340px;
+		}
+		input[type="submit"]{
+
+			width: 182px;
+
+			&:hover{
+				
+			}
+
+		}
+
+		::-webkit-input-placeholder {}
+		:-moz-placeholder {}
+		::-moz-placeholder {}
+		:-ms-input-placeholder {}
+
+	}
+		
+}
+.social_links{
+
+	ul{
+
+		
+
+		li{
+
+			
+
+			a{
+
+				
+
+			}
+
+		}
+
+	}
+
+}
