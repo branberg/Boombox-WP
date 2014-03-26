@@ -15,28 +15,17 @@
 	-->
 
 	<meta charset="UTF-8">
-	<title><?php the_title(); ?></title>
-	<link rel="icon" type="image/png" href="library/img/favicon.png" />
+	<title><?php the_title(); ?> | <?php bloginfo('name'); ?></title>
+	<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/library/img/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Social meta tags -->
 	<meta name="description" content="Boombox is a simple, one-page theme that was created specifically for musicians." />
-	<meta property="og:title" content="Boombox" />
+	<meta property="og:title" content="<?php the_title(); ?> | <?php bloginfo('name'); ?>" />
 	<meta property="og:type" content="profile" />
-	<meta property="og:url" content="http://www.example.com/" />
+	<meta property="og:url" content="<?php bloginfo('wpurl'); ?>" />
 	<meta property="og:image" content="http://example.com/image.jpg" />
 	<meta property="og:description" content="Boombox is a simple, one-page theme that was created specifically for musicians." />
-
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-	<link href="library/css/normalize.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="library/css/grid.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="library/css/main.css" rel="stylesheet" type="text/css" media="all" />
-
-	<link href="library/css/nivo/nivo-lightbox.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="library/css/nivo/themes/default/default.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="library/css/swipebox/swipebox.css" rel="stylesheet" type="text/css" media="all" />
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 	<?php wp_head(); ?>
 
@@ -56,15 +45,10 @@
 		<header id="main_header" class="site_header">
 			<div class="wrap">
 				<div id="logo_wrap">
-					<a href="/" id="logo" class="logo_img"><img src="/library/img/logo.png" alt="Boombox" /></a>
+					<a href="<?php bloginfo('wpurl'); ?>" id="logo" class="logo_img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/img/logo.png" alt="Boombox" /></a>
 				</div>
 				<nav id="header_nav" class="clearfix">
-					<ul id="menu_links">
-						<li><a href="/music">Music</a></li>
-						<li><a href="/shows">Shows</a></li>
-						<li><a href="/videos">Videos</a></li>
-						<li><a href="/contact">Contact</a></li>
-					</ul>
+					<?php wp_nav_menu( array( 'menu_id' => 'menu_links', 'theme_location' => 'main-nav', 'container' => '', 'menu_class' => '' ) ); ?>
 					<ul id="social_links">
 						<li class="twitter"><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
 						<li class="facebook"><a href="#" target="_blank"><i class="icon-facebook"></i></a></li>
@@ -79,71 +63,135 @@
 
 		<div id="page_sections">
 
-			<div class="page_section music_section first">
-				<div class="wrap">
-					<div class="album clearfix">
-						<div class="soundcloud_embed">
-							<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/137894105&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
-						</div>
-						<div class="album_info_wrapper">
-							<div class="album_info">
-								<span class="album_type">Single</span>
-								<h3 class="album_title">Day Dreamers</h3>
-								<div class="album_description">
-									<p>Off the upcomming PACE EP. Listen, Share, and download.</p>
+			<?php if( is_front_page() ): ?>
+
+				<?php if( have_rows('sections') ): ?>
+
+					<?php while ( have_rows('sections') ) : the_row(); ?>
+
+						<?php if( get_row_layout() == 'soundcloud_feature' ): ?>
+
+							<div class="page_section music_section first">
+								<div class="wrap">
+									<div class="album clearfix">
+										<div class="soundcloud_embed">
+											<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/137894105&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+										</div>
+										<div class="album_info_wrapper">
+											<div class="album_info">
+												<span class="album_type"><?php the_sub_field('feature_type'); ?></span>
+												<h3 class="album_title"><?php the_sub_field('feature_title'); ?></h3>
+												<div class="album_description">
+													<p><?php the_sub_field('feature_description'); ?></p>
+												</div>
+												<a href="<?php the_sub_field('button_url'); ?>" class="album_button" target="_blank"><?php the_sub_field('button_text'); ?></a>
+											</div>
+										</div>
+									</div>
 								</div>
-								<a href="#" class="album_button" target="_blank">Purchase</a>
+							</div>
+
+						<?php elseif( get_row_layout() == 'video_embed' ): ?>
+
+							<div class="page_section videos_section">
+								<div class="wrap">
+									<div class="video_embed">
+										<!-- This embed is responsive thanks to Fitvids! http://fitvidsjs.com/ -->
+										<?php the_sub_field('video_embed_code'); ?>
+									</div>
+								</div>
+							</div>
+
+						<?php elseif( get_row_layout() == 'custom_text' ): ?>
+
+							<div class="page_section text_section">
+								<div class="wrap">
+									<div class="text_content">
+										<?php the_sub_field('text_field'); ?>
+									</div>
+								</div>
+							</div>
+
+						<?php elseif( get_row_layout() == 'photo_gallery' ): ?>
+
+							<div class="page_section photos_section">
+								<div class="wrap">
+									<div class="photo_gallery">
+										<?php
+											$photos = get_sub_field('photos');
+											if($photos):
+										?>
+											<ul class="clearfix">
+												<?php foreach( $photos as $photo ): ?>
+													<li>
+														<a href="<?php echo $photo['url']; ?>" title="<?php echo $photo['title']; ?>" class="lightbox" data-lightbox-gallery="homepagephotos">
+															<img src="<?php echo $photo['sizes']['gallery-photo']; ?>" alt="<?php echo $photo['alt']; ?>" />
+														</a>
+													</li>
+												<?php endforeach; ?>
+											</ul>
+										<?php endif; ?>
+									</div>
+								</div>
+							</div>
+
+						<?php endif; ?>
+
+					<?php endwhile; ?>
+
+				<?php else: ?>
+
+					<p>No Sections Added! Please log in and add them.</p>
+
+				<?php endif; ?>
+
+			<?php elseif( is_home() ): //output standard pages ?>
+
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<div class="page_section text_section">
+						<div class="wrap">
+							<header class="section_header"><h2><?php the_title(); ?></h2></header>
+							<div class="text_content">
+								<?php the_content(); ?>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+				<?php endwhile; endif; ?>
 
-			<div class="page_section videos_section">
-				<div class="wrap">
-					<div class="video_embed">
-						<!-- This embed is responsive thanks to Fitvids! http://fitvidsjs.com/ -->
-						<iframe width="560" height="315" src="//www.youtube.com/embed/U7svgD2yPig" frameborder="0" allowfullscreen></iframe>
+			<?php elseif( is_page() || is_single() ): //output standard pages ?>
+
+				<div class="page_section text_section">
+					<div class="wrap">
+						<header class="section_header"><h2><?php the_title(); ?></h2></header>
+						<div class="text_content">
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+								<?php the_content(); ?>
+							<?php endwhile; else: ?>
+								<p>Sorry, this page has no content or does not exist yet...</p>
+							<?php endif; ?>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="page_section text_section">
-				<div class="wrap">
-					<div class="text_content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="page_section photos_section">
-				<div class="wrap">
-					<div class="photo_gallery">
-						<ul class="clearfix">
-							<li><a href="library/img/photos/full_res/pic01.jpg" class="lightbox" data-lightbox-gallery="homepagephotos"><img src="library/img/photos/pic01.jpg" alt="" /></a></li>
-							<li><a href="library/img/photos/full_res/pic02.jpg" class="lightbox" data-lightbox-gallery="homepagephotos"><img src="library/img/photos/pic02.jpg" alt="" /></a></li>
-							<li><a href="library/img/photos/full_res/pic03.jpg" class="lightbox" data-lightbox-gallery="homepagephotos"><img src="library/img/photos/pic03.jpg" alt="" /></a></li>
-							<li><a href="library/img/photos/full_res/pic04.jpg" class="lightbox" data-lightbox-gallery="homepagephotos"><img src="library/img/photos/pic04.jpg" alt="" /></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<?php endif; ?>
 
 		</div>
 
 		<footer class="site_footer">
 			<div class="wrap">
 				
-				<div class="mailing_list">
-					<span class="mailing_list_title">Mailing List</span>
-					<form>
-						<input type="text" placeholder="Enter your email address" />
-						<input type="submit" value="Submit" />
-					</form>
-				</div>
+				<?php if( get_field( 'mailing_list_visibility', 'option' ) == "On" ): ?>
+					<div class="mailing_list">
+						<span class="mailing_list_title"><?php the_field( 'mailing_list_title', 'option' ); ?></span>
+						<form>
+							<input type="text" placeholder="<?php the_field( 'mailing_list_placeholder_text', 'option' ); ?>" />
+							<input type="submit" value="<?php the_field( 'mailing_list_button_text', 'option' ); ?>" />
+						</form>
+					</div>
+				<?php endif; ?>
 
 				<div class="credits">
-					<p>&copy; 2014 Boombox - All Rights Reserved</p>
+					<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> - All Rights Reserved</p>
 				</div>
 
 			</div>
@@ -152,13 +200,6 @@
 	</div><!-- / #site_wrap -->
 
 	<?php wp_footer(); ?>
-
-	<script type="text/javascript" src="library/js/imagesloaded.js"></script>
-	<script type="text/javascript" src="library/js/jquery.fitvids.js"></script>
-	<script type="text/javascript" src="library/js/nivo-lightbox.min.js"></script>
-	<script type="text/javascript" src="library/js/jquery.swipebox.min.js"></script>
-
-	<script type="text/javascript" src="library/js/main.js"></script>
 
 </body>
 </html>
