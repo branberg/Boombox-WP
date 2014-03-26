@@ -9,6 +9,11 @@ define( 'ACF_LITE' , false );
 include_once( 'plugins/advanced-custom-fields/acf.php' );
 include_once( 'plugins/acf-gallery/acf-gallery.php' );
 include_once( 'plugins/acf-flexible-content/acf-flexible-content.php' );
+include_once( 'plugins/acf-options-page/acf-options-page.php' );
+
+if( function_exists('acf_set_options_page_title') ) {
+    acf_set_options_page_title( __('Boombox Theme Options') );
+}
 
 /*********************************************************************
 SCRIPTS & ENQUEUEING
