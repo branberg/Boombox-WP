@@ -1,8 +1,18 @@
 <?php
 
-/*********************
+/*********************************************************************
+ADD SOME PLUGIN GOODNESS
+*********************************************************************/
+// change this value to false to view custom field editor in Wordpress and make modifications.
+define( 'ACF_LITE' , false );
+
+include_once( 'plugins/advanced-custom-fields/acf.php' );
+include_once( 'plugins/acf-gallery/acf-gallery.php' );
+include_once( 'plugins/acf-flexible-content/acf-flexible-content.php' );
+
+/*********************************************************************
 SCRIPTS & ENQUEUEING
-*********************/
+*********************************************************************/
 
 function boombox_styles_and_scripts(){
 
@@ -60,9 +70,9 @@ function boombox_styles_and_scripts(){
 
 add_action( 'wp_enqueue_scripts', 'boombox_styles_and_scripts' );
 
-/*********************
+/*********************************************************************
 THEME SUPPORT
-*********************/
+*********************************************************************/
 
 // wp thumbnails (sizes handled in functions.php)
 add_theme_support('post-thumbnails');
@@ -86,9 +96,9 @@ if( ! isset($content_width) ){
 	$content_width = 920;
 }
 
-/*******************************************
+/*******************************************************************************************
 Custom style for the wordpress editor
-*******************************************/
+*******************************************************************************************/
 function boombox_add_editor_styles() {
     add_editor_style( get_template_directory_uri() . '/library/css/custom-editor-style.css' );
 }
