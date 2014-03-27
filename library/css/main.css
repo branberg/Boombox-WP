@@ -636,21 +636,16 @@ TEXT SECTION
 FOOTER
 *************************************/
 .site_footer {
-  color: #382a3b;
   padding: 40px 0;
   position: relative; }
   .site_footer .credits {
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    padding-top: 40px;
-    color: #382a3b; }
+    padding-top: 40px; }
     .site_footer .credits p {
       margin: 10px 0; }
     .site_footer .credits a {
-      color: #382a3b;
       text-decoration: none; }
-      .site_footer .credits a:hover {
-        color: #382a3b; }
 
 .mailing_list {
   text-align: center;

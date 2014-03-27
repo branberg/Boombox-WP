@@ -4,12 +4,33 @@ function boombox_customizer_register($wp_customize) {
 
 
 	/***************************************************
+	Logo Section
+	***************************************************/
+	$wp_customize->add_section('boombox_logo', array(
+		'title' => __('Logo', 'boombox'),
+		'description' => 'Add a custom logo to this theme',
+		'priority' => 1
+	));
+
+	//Logo Image
+	$wp_customize->add_setting('logo_image', array(
+		'default' => get_stylesheet_directory_uri() . '/library/img/logo.png'
+	));
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo_image', array(
+		'label' => __('Change Site Logo', 'boombox' ),
+		'section' => 'boombox_logo',
+		'settings' => 'logo_image'
+	)));
+
+
+
+	/***************************************************
 	Background Section
 	***************************************************/
 	$wp_customize->add_section('boombox_background', array(
 		'title' => __('Background', 'boombox'),
-		'description' => 'Modify the theme colors',
-		'priority', 35
+		'description' => 'Modify the theme\'s background properties',
+		'priority' => 2
 	));
 
 
@@ -107,28 +128,40 @@ function boombox_customizer_register($wp_customize) {
 
 
 	/***************************************************
-	Logo Section
+	Colors
 	***************************************************/
-	$wp_customize->add_section('boombox_logo', array(
-		'title' => __('Logo', 'boombox'),
-		'description' => 'Add a custom logo to this theme',
-		'priority' => 1
+	$wp_customize->add_section('boombox_colors', array(
+		'title' => __('Colors', 'boombox'),
+		'description' => 'Change the site\'s colors',
+		'priority' => 3
 	));
 
-	//Logo Image
-	$wp_customize->add_setting('logo_image', array(
-		'default' => get_stylesheet_directory_uri() . '/library/img/logo.png'
+
+	//primary color
+	$wp_customize->add_setting('primary_color', array(
+		'default' => '#382a3b'
 	));
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo_image', array(
-		'label' => __('Change Site Logo', 'boombox' ),
-		'section' => 'boombox_logo',
-		'settings' => 'logo_image'
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
+		'label' => __('Primary Theme Color', 'boombox' ),
+		'section' => 'boombox_colors',
+		'settings' => 'primary_color'
 	)));
 
 
 }
 
 function boombox_css_customizer(){
+
+	//set needed variables from above
+	$background_position = get_theme_mod('background_position');
+	$background_repeat = get_theme_mod('background_repeat');
+	$background_attachment = get_theme_mod('background_attachment');
+
+	$overlay_color = get_theme_mod('overlay_color');
+	$overlay_opacity = get_theme_mod('overlay_opacity');
+
+	$primary_color = get_theme_mod('primary_color');
+
 	?>
 
 		<style type="text/css">
@@ -136,7 +169,6 @@ function boombox_css_customizer(){
 				background-image: url("<?php echo get_theme_mod('background_image') ?>");
 				<?php
 
-					$background_position = get_theme_mod('background_position');
 					if( $background_position != '' ){
 						switch($background_position){
 
@@ -160,7 +192,6 @@ function boombox_css_customizer(){
 						}
 					}
 
-					$background_repeat = get_theme_mod('background_repeat');
 					if( $background_repeat ){
 						switch( $background_repeat ){
 
@@ -180,7 +211,6 @@ function boombox_css_customizer(){
 						}
 					}
 
-					$background_attachment = get_theme_mod('background_attachment');
 					if( $background_attachment ){
 						switch( $background_attachment ){
 
@@ -197,9 +227,30 @@ function boombox_css_customizer(){
 				?>
 			}
 			#site_wrap #overlay_color{
-				background-color: <?php echo get_theme_mod('overlay_color'); //line 38 variable ?>;
-				opacity: <?php echo get_theme_mod('overlay_opacity'); ?>;
+				background-color: <?php echo $overlay_color; ?>;
+				opacity: <?php echo $overlay_opacity; ?>;
 			}
+
+			a,
+			html,
+			body,
+			.mailing_list .mailing_list_title,
+			.mailing_list form input[type="text"]{
+				color: <?php echo $primary_color; ?>;
+			}
+			#mobile_menu,
+			.mailing_list form input[type="submit"]{
+				background-color: <?php echo $primary_color; ?>;
+			}
+			.mailing_list form input{
+				border: solid 2px <?php echo $primary_color; ?>;
+			}
+			.mailing_list form ::-webkit-input-placeholder { color: <?php echo $primary_color; ?>; }
+			.mailing_list form :-moz-placeholder { color: <?php echo $primary_color; ?>; }
+			.mailing_list form ::-moz-placeholder { color: <?php echo $primary_color; ?>; }
+			.mailing_list form :-ms-input-placeholder { color: <?php echo $primary_color; ?>; }
+			.mailing_list form label.placeholder{ color: <?php echo $primary_color; ?>; }
+
 		</style>
 
 	<?php

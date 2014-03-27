@@ -522,7 +522,6 @@ FOOTER
 *************************************/
 .site_footer{
 
-	color: $footerText;
 	padding: 40px 0;
 	position: relative;
 
@@ -533,16 +532,14 @@ FOOTER
 		font-family: $montserrat;
 		text-align: center;
 		padding-top: 40px;
-		color: $footerText;
 
 		p{
 			margin: 10px 0;
 		}
 		a{
-			color: $footerText;
 			text-decoration: none;
 			&:hover{
-				color: $textColor;
+				
 			}
 		}
 
