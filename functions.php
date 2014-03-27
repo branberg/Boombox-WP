@@ -24,6 +24,7 @@ ADD NEW THEME STYLES TO CUSTOMIZER
 *********************************************************************************************************/
 include_once( 'theme_options.php' );
 
+
 /*********************************************************************************************************
 ADD & SET HOME PAGE ON THEME ACTIVATION
 Thanks Kevin: http://wpsnipp.com/index.php/functions-php/create-page-on-theme-activation/

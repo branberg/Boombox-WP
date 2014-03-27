@@ -45,8 +45,14 @@
 		<header id="main_header" class="site_header">
 			<div class="wrap">
 				<div id="logo_wrap">
-					<a href="<?php bloginfo('wpurl'); ?>" id="logo" class="logo_img">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/img/logo.png" alt="Boombox" />
+					<a href="<?php bloginfo('wpurl'); ?>" id="logo">
+						<?php $theme_mod_logo = get_theme_mod('logo_image'); ?>
+
+						<?php if( $theme_mod_logo ): ?>
+							<img src="<?php echo $theme_mod_logo; ?>" alt="<?php bloginfo('name'); ?>" />
+						<?php else: ?>
+							<?php bloginfo('name'); ?>
+						<?php endif; ?>
 					</a>
 				</div>
 				<nav id="header_nav" class="clearfix">

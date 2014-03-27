@@ -354,11 +354,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #site_wrap {
   position: relative;
-  background: url("../img/background.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   -o-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
@@ -466,6 +461,7 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
       max-width: 90%;
       margin: 0 auto;
+      outline: none;
       font-size: 50px;
       text-decoration: none;
       text-align: center;
