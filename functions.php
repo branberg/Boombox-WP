@@ -3,17 +3,26 @@
 /*********************************************************************************************************
 ADD SOME PLUGIN GOODNESS
 *********************************************************************************************************/
-// change this value to false to view custom field editor in Wordpress and make modifications.
-define( 'ACF_LITE' , false );
-
 include_once( 'plugins/advanced-custom-fields/acf.php' );
 include_once( 'plugins/acf-gallery/acf-gallery.php' );
 include_once( 'plugins/acf-flexible-content/acf-flexible-content.php' );
+include_once( 'plugins/acf-repeater/acf-repeater.php' );
 include_once( 'plugins/acf-options-page/acf-options-page.php' );
 
 if( function_exists('acf_set_options_page_title') ) {
     acf_set_options_page_title( __('Boombox Theme Options') );
 }
+
+//Include default ACF options
+//include_once( 'acf_options.php' );
+
+// change this value to false to view custom field editor in Wordpress and make modifications.
+define( 'ACF_LITE' , false );
+
+/*********************************************************************************************************
+ADD NEW THEME STYLES TO CUSTOMIZER
+*********************************************************************************************************/
+include_once( 'theme_options.php' );
 
 /*********************************************************************************************************
 ADD & SET HOME PAGE ON THEME ACTIVATION

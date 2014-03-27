@@ -40,23 +40,28 @@
 			<div id="mobile_menu_toggle">
 				<i class="icon-menu"></i>
 			</div>
-			<span id="mobile_site_title">Boombox</span>
+			<span id="mobile_site_title"><?php bloginfo('name'); ?></span>
 		</div>
 		<header id="main_header" class="site_header">
 			<div class="wrap">
 				<div id="logo_wrap">
-					<a href="<?php bloginfo('wpurl'); ?>" id="logo" class="logo_img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/img/logo.png" alt="Boombox" /></a>
+					<a href="<?php bloginfo('wpurl'); ?>" id="logo" class="logo_img">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/img/logo.png" alt="Boombox" />
+					</a>
 				</div>
 				<nav id="header_nav" class="clearfix">
+
 					<?php wp_nav_menu( array( 'menu_id' => 'menu_links', 'theme_location' => 'main-nav', 'container' => '', 'menu_class' => '' ) ); ?>
-					<ul id="social_links">
-						<li class="twitter"><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
-						<li class="facebook"><a href="#" target="_blank"><i class="icon-facebook"></i></a></li>
-						<li class="googleplus"><a href="#" target="_blank"><i class="icon-googleplus"></i></a></li>
-						<li class="instagram"><a href="#" target="_blank"><i class="icon-instagram"></i></a></li>
-						<li class="tumblr"><a href="#" target="_blank"><i class="icon-tumblr"></i></a></li>
-						<li class="soundcloud"><a href="#" target="_blank"><i class="icon-soundcloud"></i></a></li>
-					</ul>
+
+					<?php if( have_rows('social_icons', 'option') ): ?>
+						<ul id="social_links">
+							<?php while ( have_rows('social_icons', 'option') ) : the_row(); ?>
+								<?php $network = get_sub_field('social_network'); ?>
+								<li class="<?php echo $network; ?>"><a href="#" target="_blank"><i class="icon-<?php echo $network; ?>"></i></a></li>
+							<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>
+
 				</nav>
 			</div>
 		</header>
