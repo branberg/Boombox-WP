@@ -13,6 +13,13 @@ if( function_exists('acf_set_options_page_title') ) {
     acf_set_options_page_title( __('Boombox Theme Options') );
 }
 
+//add google font field
+//add_action('acf/register_fields', 'my_register_fields');
+//define( 'ACF_GOOGLE_FONTS_API_KEY', 'AIzaSyDFC3BY5qPSGGWtms4UO_QC0caXLjzc--w' );
+//function my_register_fields() {
+//	include_once('plugins/acf-google-font-selector-field/acf-google_font_selector.php');
+//}
+
 //Include default ACF options
 //include_once( 'acf_options.php' );
 
