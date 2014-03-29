@@ -417,13 +417,17 @@
 
 	</div><!-- / #site_wrap -->
 
-	<div id="user_controls">
-		<ul>
-			<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/index.php" title="Go To Dashboard"><i class="icon-home"></i></a></li>
-			<li><a href="<?php echo get_edit_post_link(); ?>" title="Edit Page Content"><i class="icon-cog"></i></a></li>
-			<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/admin.php?page=acf-options" title="Edit Site Styles"><i class="icon-tint"></i></a></li>
-		</ul>
-	</div>
+	<?php if(is_user_logged_in()): ?>
+
+		<div id="user_controls">
+			<ul>
+				<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/index.php" title="Go To Dashboard"><i class="icon-home"></i></a></li>
+				<li><a href="<?php echo get_edit_post_link(); ?>" title="Edit Page Content"><i class="icon-cog"></i></a></li>
+				<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/admin.php?page=acf-options" title="Edit Site Styles"><i class="icon-tint"></i></a></li>
+			</ul>
+		</div>
+
+	<?php endif; ?>
 
 	<?php wp_footer(); ?>
 
