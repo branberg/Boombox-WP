@@ -346,20 +346,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500; }
 
-::selection {
-  background: white; }
-
-::-moz-selection {
-  background: white; }
-
 #site_wrap {
   position: relative;
+  background-image: url("../img/default_background.jpg");
   -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   -o-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); }
   #site_wrap #overlay_color {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffff;
+    opacity: 0.8;
     position: absolute;
     top: 0;
     left: 0;
@@ -394,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
         text-decoration: none;
         padding: 20px;
         font-size: 1.2em;
-        opacity: 0.55;
+        opacity: 1;
         text-transform: uppercase;
         color: white;
         -webkit-transition: opacity 0.05s linear;
@@ -404,7 +400,7 @@ h1, h2, h3, h4, h5, h6 {
         transition: opacity 0.05s linear; }
     #mobile_menu ul li.current-menu-item a,
     #mobile_menu ul li a:hover {
-      opacity: 1; }
+      opacity: 0.55; }
   #mobile_menu ul#social_links li {
     display: inline-block;
     margin-right: -4px; }
@@ -415,7 +411,7 @@ h1, h2, h3, h4, h5, h6 {
 #mobile_header {
   height: 56px;
   width: 100%;
-  background-color: rgba(56, 42, 59, 0.8);
+  background-color: rgba(56, 42, 59, 0.7);
   border-bottom: solid 1px #2d222f;
   position: fixed;
   top: 0;
@@ -517,10 +513,10 @@ MUSIC/ALBUMS
         padding: 20px 20px 0 20px; }
         .music_section .album .album_info_wrapper .album_info .album_type {
           font-family: "Montserrat", sans-serif;
-          color: #382a3b;
           text-transform: uppercase;
           font-size: 0.85rem;
-          color: #605562; }
+          color: #605562;
+          opacity: 0.6; }
         .music_section .album .album_info_wrapper .album_info .album_title {
           font-size: 1.625rem;
           font-weight: 500;
@@ -543,13 +539,13 @@ MUSIC/ALBUMS
           color: #382a3b;
           text-decoration: none;
           padding: 20px;
-          -webkit-transition: background-color 0.05s linear;
-          -ms-transition: background-color 0.05s linear;
-          -o-transition: background-color 0.05s linear;
-          -transition: background-color 0.05s linear;
-          transition: background-color 0.05s linear; }
+          -webkit-transition: opacity 0.05s linear;
+          -ms-transition: opacity 0.05s linear;
+          -o-transition: opacity 0.05s linear;
+          -transition: opacity 0.05s linear;
+          transition: opacity 0.05s linear; }
           .music_section .album .album_info_wrapper .album_info .album_button:hover {
-            background-color: white; }
+            opacity: 0.7; }
 
 /*************************************
 SHOWS
@@ -677,7 +673,7 @@ FOOTER
       color: white;
       width: 100%; }
       .mailing_list form input[type="submit"]:hover {
-        background-color: #433247; }
+        opacity: 0.8; }
     .mailing_list form ::-webkit-input-placeholder {
       color: #382a3b; }
     .mailing_list form :-moz-placeholder {

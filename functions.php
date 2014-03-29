@@ -3,34 +3,76 @@
 /*********************************************************************************************************
 ADD SOME PLUGIN GOODNESS
 *********************************************************************************************************/
-include_once( 'plugins/advanced-custom-fields/acf.php' );
-include_once( 'plugins/acf-gallery/acf-gallery.php' );
-include_once( 'plugins/acf-flexible-content/acf-flexible-content.php' );
-include_once( 'plugins/acf-repeater/acf-repeater.php' );
-include_once( 'plugins/acf-options-page/acf-options-page.php' );
+include_once( 'plugins/advanced-custom-fields/acf.php' ); //Core ACF
+include_once( 'plugins/acf-gallery/acf-gallery.php' ); //ACF Gallery
+include_once( 'plugins/acf-flexible-content/acf-flexible-content.php' ); //ACF Flexible Content Field
+include_once( 'plugins/acf-repeater/acf-repeater.php' ); //ACF Repeater FIeld
+include_once( 'plugins/acf-options-page/acf-options-page.php' ); //ACF Options Page
+
+
+//add google font field api key
+
+/***  Removing font options for now, plugin not workign great
+
+define( 'ACF_GOOGLE_FONTS_API_KEY', 'AIzaSyBY00PYKLWlcKSYM6bTAZhwnzJnvFMXVUc' ); //Google Font API Key (for plugin)
+include_once( 'plugins/acf-google-font-selector-field/acf-google_font_selector.php' ); //ACF Google Font Plugin
 
 if( function_exists('acf_set_options_page_title') ) {
     acf_set_options_page_title( __('Boombox Theme Options') );
 }
 
-//add google font field
-//add_action('acf/register_fields', 'my_register_fields');
-//define( 'ACF_GOOGLE_FONTS_API_KEY', 'AIzaSyDFC3BY5qPSGGWtms4UO_QC0caXLjzc--w' );
-//function my_register_fields() {
-//	include_once('plugins/acf-google-font-selector-field/acf-google_font_selector.php');
-//}
-
-//Include default ACF options
-//include_once( 'acf_options.php' );
-
-// change this value to false to view custom field editor in Wordpress and make modifications.
-define( 'ACF_LITE' , false );
+***/
 
 /*********************************************************************************************************
-ADD NEW THEME STYLES TO CUSTOMIZER
+ADD CUSTOM ACF OPTIONS + TOGGLE ACF CONFIG PANEL IN DASHBOARD
 *********************************************************************************************************/
+//add custom ACF options
 include_once( 'theme_options.php' );
 
+// change this value to false to view custom field editor in Wordpress and make modifications.
+define( 'ACF_LITE' , true );
+
+
+/*********************************************************************************************************
+ADD CUSTOM HEX TO RGBA CONVERTER  - thanks http://mekshq.com/how-to-convert-hexadecimal-color-code-to-rgb-or-rgba-using-php/
+*********************************************************************************************************/
+function hex2rgba($color, $opacity = false) {
+
+	$default = 'rgb(0,0,0)';
+
+	//Return default if no color provided
+	if(empty($color))
+          return $default; 
+
+	//Sanitize $color if "#" is provided 
+        if ($color[0] == '#' ) {
+        	$color = substr( $color, 1 );
+        }
+
+        //Check if color has 6 or 3 characters and get values
+        if (strlen($color) == 6) {
+                $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+        } elseif ( strlen( $color ) == 3 ) {
+                $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+        } else {
+                return $default;
+        }
+
+        //Convert hexadec to rgb
+        $rgb =  array_map('hexdec', $hex);
+
+        //Check if opacity is set(rgba or rgb)
+        if($opacity){
+        	if(abs($opacity) > 1)
+        		$opacity = 1.0;
+        	$output = 'rgba('.implode(",",$rgb).','.$opacity.')';
+        } else {
+        	$output = 'rgb('.implode(",",$rgb).')';
+        }
+
+        //Return rgb(a) color string
+        return $output;
+}
 
 /*********************************************************************************************************
 ADD & SET HOME PAGE ON THEME ACTIVATION

@@ -1,265 +1,569 @@
 <?php
 
-function boombox_customizer_register($wp_customize) {
-
-
-	/***************************************************
-	Logo Section
-	***************************************************/
-	$wp_customize->add_section('boombox_logo', array(
-		'title' => __('Logo', 'boombox'),
-		'description' => 'Add a custom logo to this theme',
-		'priority' => 1
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_boombox-theme-options',
+		'title' => 'Boombox Theme Options',
+		'fields' => array (
+			array (
+				'key' => 'field_5332fcea92d85',
+				'label' => 'Logo',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_53371e04a2c56',
+				'label' => 'Favicon',
+				'name' => 'favicon',
+				'type' => 'image',
+				'instructions' => 'This should be a 16x16px .png image',
+				'save_format' => 'url',
+				'preview_size' => 'full',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5332fcf892d86',
+				'label' => 'Logo',
+				'name' => 'logo',
+				'type' => 'image',
+				'instructions' => 'If no image is present, the site name will be shown. This can be changed in "Settings > General > Site Title".<br/>
+	<em>Theme has been built to utilize a wide range of sizes for the logo, but you should still try and keep it smaller than about 900x300px.</em>',
+				'save_format' => 'object',
+				'preview_size' => 'full',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_53348c086bf14',
+				'label' => 'Background',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_53348c186bf15',
+				'label' => 'Background Image',
+				'name' => 'background_image',
+				'type' => 'image',
+				'save_format' => 'url',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_53348c776bf17',
+				'label' => 'Background Position',
+				'name' => 'background_position',
+				'type' => 'radio',
+				'choices' => array (
+					'Fullscreen' => 'Fullscreen',
+					'Top Left' => 'Top Left',
+					'Top Middle' => 'Top Middle',
+					'Centered' => 'Centered',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => '',
+				'layout' => 'vertical',
+			),
+			array (
+				'key' => 'field_53348c316bf16',
+				'label' => 'Background Repeat',
+				'name' => 'background_repeat',
+				'type' => 'radio',
+				'choices' => array (
+					'Repeat' => 'Repeat',
+					'Repeat Horizontally' => 'Repeat Horizontally',
+					'Repeat Vertically' => 'Repeat Vertically',
+					'No Repeat' => 'No Repeat',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => '',
+				'layout' => 'vertical',
+			),
+			array (
+				'key' => 'field_53348cbb6bf18',
+				'label' => 'Background Attachment',
+				'name' => 'background_attachment',
+				'type' => 'radio',
+				'choices' => array (
+					'Scrolling Background' => 'Scrolling Background',
+					'Fixed Background' => 'Fixed Background',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => '',
+				'layout' => 'vertical',
+			),
+			array (
+				'key' => 'field_53348ce66bf19',
+				'label' => 'Background Overlay Color',
+				'name' => 'background_overlay_color',
+				'type' => 'color_picker',
+				'default_value' => '#ffffff',
+			),
+			array (
+				'key' => 'field_53348d016bf1a',
+				'label' => 'Background Overlay Opacity',
+				'name' => 'background_overlay_opacity',
+				'type' => 'number',
+				'instructions' => 'Enter the percentage of opacity to apply to the background overlay color. <strong>100</strong> is fully opaque, <strong>0</strong> is fully transparent.<br/>
+	To turn off the background overlay, simply set this value to 0.',
+				'default_value' => 75,
+				'placeholder' => 'Enter Opacity Percentage',
+				'prepend' => '',
+				'append' => '',
+				'min' => 0,
+				'max' => 100,
+				'step' => 5,
+			),
+			array (
+				'key' => 'field_53348a079e5f6',
+				'label' => 'Site Colors',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_53348a129e5f7',
+				'label' => 'Main Color',
+				'name' => 'main_color',
+				'type' => 'color_picker',
+				'instructions' => 'This controls the main color of the site including: Text, forms, mobile menu background, link colors.',
+				'default_value' => '#382A3B',
+			),
+			array (
+				'key' => 'field_53371f6f6f463',
+				'label' => 'Menu Color',
+				'name' => 'menu_color',
+				'type' => 'color_picker',
+				'default_value' => '#382A3B',
+			),
+			array (
+				'key' => 'field_53371f916f464',
+				'label' => 'Footer Text Color',
+				'name' => 'footer_text_color',
+				'type' => 'color_picker',
+				'default_value' => '#382A3B',
+			),
+			array (
+				'key' => 'field_53371457e4727',
+				'label' => 'Music Colors',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_5337146fe4728',
+				'label' => 'Music Background Color',
+				'name' => 'music_background_color',
+				'type' => 'color_picker',
+				'instructions' => 'This controls the background color as well as the color of the text inside the button',
+				'default_value' => '#382A3B',
+			),
+			array (
+				'key' => 'field_5337148fe4729',
+				'label' => 'Music Text Color',
+				'name' => 'music_text_color',
+				'type' => 'color_picker',
+				'instructions' => 'This controls the color of the text and the button',
+				'default_value' => '#ffffff',
+			),
+			array (
+				'key' => 'field_5332fde5618d3',
+				'label' => 'Social Icons',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_533351fd6cbf6',
+				'label' => 'Social Icons',
+				'name' => 'social_icons',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5333522b736d1',
+						'label' => 'Social Network',
+						'name' => 'social_network',
+						'type' => 'select',
+						'column_width' => '',
+						'choices' => array (
+							'bandcamp' => 'Bandcamp',
+							'behance' => 'Behance',
+							'dribbble' => 'Dribbble',
+							'facebook' => 'Facebook',
+							'flickr' => 'Flickr',
+							'googleplus' => 'Google Plus',
+							'instagram' => 'Instagram',
+							'lastfm' => 'Last.fm',
+							'linkedin' => 'LinkedIn',
+							'pinterest' => 'Pinterest',
+							'rdio' => 'Rdio',
+							'skype' => 'Skype',
+							'soundcloud' => 'Soundcloud',
+							'spotify' => 'Spotify',
+							'stumbleupon' => 'StumbleUpon',
+							'tumblr' => 'Tumblr',
+							'twitter' => 'Twitter',
+							'vimeo' => 'Vimeo',
+							'youtube' => 'Youtube',
+						),
+						'default_value' => '',
+						'allow_null' => 0,
+						'multiple' => 0,
+					),
+					array (
+						'key' => 'field_533352e8736d2',
+						'label' => 'Link URL',
+						'name' => 'link_url',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Social Icon',
+			),
+			array (
+				'key' => 'field_53348b14a7cb3',
+				'label' => 'Footer',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_5332feb5d5632',
+				'label' => 'Mailing List Visibility',
+				'name' => 'mailing_list_visibility',
+				'type' => 'radio',
+				'choices' => array (
+					'On' => 'On',
+					'Off' => 'Off',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => '',
+				'layout' => 'horizontal',
+			),
+			array (
+				'key' => 'field_5332feced5633',
+				'label' => 'Mailing List Title',
+				'name' => 'mailing_list_title',
+				'type' => 'text',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5332feb5d5632',
+							'operator' => '==',
+							'value' => 'On',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => 'Mailing List',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5332fefbd5635',
+				'label' => 'Mailing List Placeholder Text',
+				'name' => 'mailing_list_placeholder_text',
+				'type' => 'text',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5332feb5d5632',
+							'operator' => '==',
+							'value' => 'On',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5332feecd5634',
+				'label' => 'Mailing List Button Text',
+				'name' => 'mailing_list_button_text',
+				'type' => 'text',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5332feb5d5632',
+							'operator' => '==',
+							'value' => 'On',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => 'Submit',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_533717b57b2ee',
+				'label' => 'Mobile',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_533717bc7b2ef',
+				'label' => 'Mobile Menu Background Color',
+				'name' => 'mobile_menu_background_color',
+				'type' => 'color_picker',
+				'default_value' => '#382A3B',
+			),
+			array (
+				'key' => 'field_533717d67b2f0',
+				'label' => 'Mobile Menu Text Color',
+				'name' => 'mobile_menu_text_color',
+				'type' => 'color_picker',
+				'default_value' => '#ffffff',
+			),
+			array (
+				'key' => 'field_533717f47b2f1',
+				'label' => 'Show Social Icons?',
+				'name' => 'show_social_icons',
+				'type' => 'radio',
+				'instructions' => 'Would you like to display social icons in the mobile menu?',
+				'choices' => array (
+					'Yes' => 'Yes',
+					'No' => 'No',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => '',
+				'layout' => 'horizontal',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
 	));
-
-	//Logo Image
-	$wp_customize->add_setting('logo_image', array(
-		'default' => get_stylesheet_directory_uri() . '/library/img/logo.png'
+	register_field_group(array (
+		'id' => 'acf_home-page-layout',
+		'title' => 'Home Page Layout',
+		'fields' => array (
+			array (
+				'key' => 'field_5332f20533b83',
+				'label' => 'Sections',
+				'name' => 'sections',
+				'type' => 'flexible_content',
+				'layouts' => array (
+					array (
+						'label' => 'Soundcloud Feature',
+						'name' => 'soundcloud_feature',
+						'display' => 'row',
+						'min' => '',
+						'max' => '',
+						'sub_fields' => array (
+							array (
+								'key' => 'field_5332f23d33b84',
+								'label' => 'Soundcloud iframe code',
+								'name' => 'soundcloud_iframe_code',
+								'type' => 'text',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'formatting' => 'html',
+								'maxlength' => '',
+							),
+							array (
+								'key' => 'field_5332f25a33b85',
+								'label' => 'Feature Type',
+								'name' => 'feature_type',
+								'type' => 'radio',
+								'column_width' => '',
+								'choices' => array (
+									'Single' => 'Single',
+									'Album' => 'Album',
+									'EP' => 'EP',
+								),
+								'other_choice' => 1,
+								'save_other_choice' => 1,
+								'default_value' => 'Album',
+								'layout' => 'vertical',
+							),
+							array (
+								'key' => 'field_5332f28733b86',
+								'label' => 'Feature Title',
+								'name' => 'feature_title',
+								'type' => 'text',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'formatting' => 'none',
+								'maxlength' => '',
+							),
+							array (
+								'key' => 'field_5332f2ab33b87',
+								'label' => 'Feature Description',
+								'name' => 'feature_description',
+								'type' => 'textarea',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => '',
+								'maxlength' => '',
+								'rows' => 4,
+								'formatting' => 'br',
+							),
+							array (
+								'key' => 'field_5332f2c533b88',
+								'label' => 'Button Text',
+								'name' => 'button_text',
+								'type' => 'text',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => 'eg: Purchase',
+								'prepend' => '',
+								'append' => '',
+								'formatting' => 'none',
+								'maxlength' => '',
+							),
+							array (
+								'key' => 'field_5332f2d933b89',
+								'label' => 'Button URL',
+								'name' => 'button_url',
+								'type' => 'text',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'formatting' => 'none',
+								'maxlength' => '',
+							),
+						),
+					),
+					array (
+						'label' => 'Video Embed',
+						'name' => 'video_embed',
+						'display' => 'row',
+						'min' => '',
+						'max' => '',
+						'sub_fields' => array (
+							array (
+								'key' => 'field_5332f3aa80e51',
+								'label' => 'Video Embed Code',
+								'name' => 'video_embed_code',
+								'type' => 'text',
+								'instructions' => 'Fully supports both Youtube and Vimeo iframe embed codes',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'formatting' => 'html',
+								'maxlength' => '',
+							),
+							array (
+								'key' => 'field_5332f3ea80e52',
+								'label' => 'Background Color',
+								'name' => 'background_color',
+								'type' => 'color_picker',
+								'column_width' => '',
+								'default_value' => '',
+							),
+						),
+					),
+					array (
+						'label' => 'Custom Text',
+						'name' => 'custom_text',
+						'display' => 'row',
+						'min' => '',
+						'max' => '',
+						'sub_fields' => array (
+							array (
+								'key' => 'field_5332f40780e54',
+								'label' => 'Text Field',
+								'name' => 'text_field',
+								'type' => 'wysiwyg',
+								'column_width' => '',
+								'default_value' => '',
+								'toolbar' => 'basic',
+								'media_upload' => 'no',
+							),
+						),
+					),
+					array (
+						'label' => 'Photo Gallery',
+						'name' => 'photo_gallery',
+						'display' => 'row',
+						'min' => '',
+						'max' => '',
+						'sub_fields' => array (
+							array (
+								'key' => 'field_5332f42480e56',
+								'label' => 'Photos',
+								'name' => 'photos',
+								'type' => 'gallery',
+								'column_width' => '',
+								'preview_size' => 'thumbnail',
+								'library' => 'all',
+							),
+						),
+					),
+				),
+				'button_label' => 'Add Section',
+				'min' => '',
+				'max' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_type',
+					'operator' => '==',
+					'value' => 'front_page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+				1 => 'featured_image',
+			),
+		),
+		'menu_order' => 0,
 	));
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo_image', array(
-		'label' => __('Change Site Logo', 'boombox' ),
-		'section' => 'boombox_logo',
-		'settings' => 'logo_image'
-	)));
-
-
-
-	/***************************************************
-	Background Section
-	***************************************************/
-	$wp_customize->add_section('boombox_background', array(
-		'title' => __('Background', 'boombox'),
-		'description' => 'Modify the theme\'s background properties',
-		'priority' => 2
-	));
-
-
-	//Background Image
-	$wp_customize->add_setting('background_image', array(
-		'default' => get_stylesheet_directory_uri() . '/library/img/background.jpg'
-	));
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'background_image', array(
-		'label' => __('Background Image', 'boombox' ),
-		'section' => 'boombox_background',
-		'settings' => 'background_image'
-	)));
-
-
-	//Background Color
-	$wp_customize->add_setting('background_color', array(
-		'default' => '#382A3B'
-	));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
-		'label' => __('Background Color', 'boombox' ),
-		'section' => 'boombox_background',
-		'settings' => 'background_color'
-	)));
-
-
-	//Background Position
-	$wp_customize->add_setting('background_position', array(
-		'default' => 'fill'
-	));
-	$wp_customize->add_control( 'background_position', array(
-		'type' => 'radio',
-		'label' => __('Background Position', 'boombox' ),
-		'section' => 'boombox_background',
-		'choices' => array(
-			'fill' => 'Fullscreen',
-			'topleft' => 'Top Left',
-			'topcenter' => 'Top Center',
-			'center' => 'Centered'
-		)
-	));
-
-
-	//Background Repeat
-	$wp_customize->add_setting('background_repeat', array(
-		'default' => 'repeat'
-	));
-	$wp_customize->add_control( 'background_repeat', array(
-		'type' => 'radio',
-		'label' => __('Background Repeat', 'boombox' ),
-		'section' => 'boombox_background',
-		'choices' => array(
-			'repeat' => 'Repeat Both',
-			'repeatx' => 'Repeat Horizontally',
-			'repeaty' => 'Repeat Vertically',
-			'norepeat' => 'No Repeat'
-		)
-	));
-
-
-	//Background Attachment
-	$wp_customize->add_setting('background_attachment', array(
-		'default' => 'fixed'
-	));
-	$wp_customize->add_control( 'background_attachment', array(
-		'type' => 'radio',
-		'label' => __('Background Attachment', 'boombox' ),
-		'section' => 'boombox_background',
-		'choices' => array(
-			'scroll' => 'Scrollable Background',
-			'fixed' => 'Fixed Background'
-		)
-	));
-
-
-	//Overlay color
-	$wp_customize->add_setting('overlay_color', array(
-		'default' => '#ffffff'
-	));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'overlay_color', array(
-		'label' => __('Background Overlay Color', 'boombox' ),
-		'section' => 'boombox_background',
-		'settings' => 'overlay_color'
-	)));
-
-
-	//overlay opacity
-	$wp_customize->add_setting('overlay_opacity', array(
-		'default' => '0.7'
-	));
-	$wp_customize->add_control( 'overlay_opacity', array(
-		'label' => __('Background Overly Opacity.Choose a value between 0 and 1 (eg: 0.7).', 'boombox' ),
-		'section' => 'boombox_background',
-		'settings' => 'overlay_opacity'
-	));
-
-
-	/***************************************************
-	Colors
-	***************************************************/
-	$wp_customize->add_section('boombox_colors', array(
-		'title' => __('Colors', 'boombox'),
-		'description' => 'Change the site\'s colors',
-		'priority' => 3
-	));
-
-
-	//primary color
-	$wp_customize->add_setting('primary_color', array(
-		'default' => '#382a3b'
-	));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
-		'label' => __('Primary Theme Color', 'boombox' ),
-		'section' => 'boombox_colors',
-		'settings' => 'primary_color'
-	)));
-
-
 }
-
-function boombox_css_customizer(){
-
-	//set needed variables from above
-	$background_position = get_theme_mod('background_position');
-	$background_repeat = get_theme_mod('background_repeat');
-	$background_attachment = get_theme_mod('background_attachment');
-
-	$overlay_color = get_theme_mod('overlay_color');
-	$overlay_opacity = get_theme_mod('overlay_opacity');
-
-	$primary_color = get_theme_mod('primary_color');
-
-	?>
-
-		<style type="text/css">
-			#site_wrap{
-				background-image: url("<?php echo get_theme_mod('background_image') ?>");
-				<?php
-
-					if( $background_position != '' ){
-						switch($background_position){
-
-							case 'fill':
-								echo "background-position: center center;
-									-webkit-background-size: cover;
-									-moz-background-size: cover;
-									-o-background-size: cover;
-									background-size: cover;";
-								break;
-							case 'topleft':
-								echo "background-position: top left;";
-								break;
-							case 'topcenter':
-								echo "background-position: top center;";
-								break;
-							case 'center':
-								echo "background-position: center center;";
-								break;
-
-						}
-					}
-
-					if( $background_repeat ){
-						switch( $background_repeat ){
-
-							case 'repeat':
-								echo "background-repeat: repeat;";
-								break;
-							case 'repeatx':
-								echo "background-repeat: repeat-x;";
-								break;
-							case 'repeaty':
-								echo "background-repeat: repeat-y;";
-								break;
-							case 'norepeat':
-								echo "background-repeat: no-repeat;";
-								break;
-
-						}
-					}
-
-					if( $background_attachment ){
-						switch( $background_attachment ){
-
-							case 'scroll':
-								echo "background-attachment: scroll;";
-								break;
-							case 'fixed':
-								echo "background-attachment: fixed;";
-								break;
-
-						}
-					}
-
-				?>
-			}
-			#site_wrap #overlay_color{
-				background-color: <?php echo $overlay_color; ?>;
-				opacity: <?php echo $overlay_opacity; ?>;
-			}
-
-			a,
-			html,
-			body,
-			.mailing_list .mailing_list_title,
-			.mailing_list form input[type="text"]{
-				color: <?php echo $primary_color; ?>;
-			}
-			#mobile_menu,
-			.mailing_list form input[type="submit"]{
-				background-color: <?php echo $primary_color; ?>;
-			}
-			.mailing_list form input{
-				border: solid 2px <?php echo $primary_color; ?>;
-			}
-			.mailing_list form ::-webkit-input-placeholder { color: <?php echo $primary_color; ?>; }
-			.mailing_list form :-moz-placeholder { color: <?php echo $primary_color; ?>; }
-			.mailing_list form ::-moz-placeholder { color: <?php echo $primary_color; ?>; }
-			.mailing_list form :-ms-input-placeholder { color: <?php echo $primary_color; ?>; }
-			.mailing_list form label.placeholder{ color: <?php echo $primary_color; ?>; }
-
-		</style>
-
-	<?php
-}
-
-
-/*
-this means every time Wordpress calls the "customize_register" functon, 
-my function is connected to it and fired every time as well!
-*/
-add_action( 'wp_head', 'boombox_css_customizer' ); //eg: fire the boombox_css_customizer function whenever wp_head is called
-add_action( 'customize_register', 'boombox_customizer_register' );
