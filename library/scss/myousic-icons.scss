@@ -23,17 +23,26 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-facebook:before {
-	content: "\e600";
-}
-.icon-twitter:before {
-	content: "\e601";
+.icon-bandcamp:before {
+	content: "\e612";
 }
 .icon-flickr:before {
 	content: "\e602";
 }
-.icon-lastfm:before {
-	content: "\e603";
+.icon-vimeo:before {
+	content: "\e608";
+}
+.icon-twitter:before {
+	content: "\e601";
+}
+.icon-facebook:before {
+	content: "\e600";
+}
+.icon-googleplus:before {
+	content: "\e607";
+}
+.icon-pinterest:before {
+	content: "\e610";
 }
 .icon-tumblr:before {
 	content: "\e604";
@@ -44,17 +53,20 @@
 .icon-dribbble:before {
 	content: "\e606";
 }
-.icon-googleplus:before {
-	content: "\e607";
+.icon-stumbleupon:before {
+	content: "\e60f";
 }
-.icon-vimeo:before {
-	content: "\e608";
+.icon-lastfm:before {
+	content: "\e603";
+}
+.icon-rdio:before {
+	content: "\e60b";
 }
 .icon-spotify:before {
 	content: "\e60a";
 }
-.icon-rdio:before {
-	content: "\e60b";
+.icon-skype:before {
+	content: "\e611";
 }
 .icon-soundcloud:before {
 	content: "\e60c";
@@ -62,24 +74,21 @@
 .icon-behance:before {
 	content: "\e60e";
 }
-.icon-stumbleupon:before {
-	content: "\e60f";
+.icon-cog:before {
+	content: "\e617";
 }
-.icon-pinterest:before {
-	content: "\e610";
+.icon-home:before {
+	content: "\e618";
 }
-.icon-skype:before {
-	content: "\e611";
+.icon-tint:before {
+	content: "\e619";
 }
-.icon-bandcamp:before {
-	content: "\e612";
+.icon-menu:before {
+	content: "\e613";
 }
 .icon-youtube:before {
 	content: "\e609";
 }
 .icon-instagram:before {
 	content: "\e60d";
-}
-.icon-menu:before {
-	content: "\e613";
 }

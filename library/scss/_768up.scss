@@ -15,6 +15,65 @@ h1, h2, h3, h4, h5, h6{
 	
 }
 
+#user_controls{
+
+	display: block;
+	position: fixed;
+	z-index: 5000;
+	top: 15px;
+	left: 15px;
+
+	ul{
+
+		padding: 0;
+		margin: 0;
+		background: rgba(0,0,0,0.1);
+		padding: 6px;
+		@include rounded(26px);
+		@include transition(background-color 0.15s linear);
+
+		&:hover{
+			background: rgba(0,0,0,0.16);
+		}
+
+		li{
+
+			list-style-type: none;
+			margin: 0 0 10px 0;
+
+			a{
+
+				display: block;
+				color: $white;
+				text-decoration: none;
+				text-align: center;
+				width: 40px;
+				height: 40px;
+				border: solid 2px $white;
+				background-color: none;
+				font-size: 20px;
+				@include rounded(20px);
+				@include transition(background-color 0.15s linear);
+
+				i{
+					position: relative;
+					top:6px;
+				}
+
+			}
+			a:hover{
+				background-color: $accent;
+			}
+
+		}
+		li:last-child{
+			margin-bottom: 0;
+		}
+
+	}
+
+}
+
 #site_wrap{
 	padding-top: 0;
 	@include box-shadow( 0, 0, 0, 0 );

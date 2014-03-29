@@ -346,6 +346,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500; }
 
+#user_controls {
+  display: none; }
+
 #site_wrap {
   position: relative;
   background-image: url("../img/default_background.jpg");
@@ -488,6 +491,21 @@ h1, h2, h3, h4, h5, h6 {
 .page_section {
   padding: 15px 0;
   position: relative; }
+
+.placeholder_section .placeholder_copy {
+  border: dashed 4px #382a3b;
+  padding: 60px;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+  .placeholder_section .placeholder_copy a {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #382a3b;
+    color: white;
+    text-decoration: none; }
 
 /*************************************
 MUSIC/ALBUMS
@@ -763,6 +781,58 @@ PAGE STYLES
   /********************************************************************
   *** GLOBALS
   *********************************************************************/
+  #user_controls {
+    display: block;
+    position: fixed;
+    z-index: 5000;
+    top: 15px;
+    left: 15px; }
+    #user_controls ul {
+      padding: 0;
+      margin: 0;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 6px;
+      -moz-border-radius: 26px;
+      -webkit-border-radius: 26px;
+      -o-border-radius: 26px;
+      border-radius: 26px;
+      -webkit-transition: background-color 0.15s linear;
+      -ms-transition: background-color 0.15s linear;
+      -o-transition: background-color 0.15s linear;
+      -transition: background-color 0.15s linear;
+      transition: background-color 0.15s linear; }
+      #user_controls ul:hover {
+        background: rgba(0, 0, 0, 0.16); }
+      #user_controls ul li {
+        list-style-type: none;
+        margin: 0 0 10px 0; }
+        #user_controls ul li a {
+          display: block;
+          color: white;
+          text-decoration: none;
+          text-align: center;
+          width: 40px;
+          height: 40px;
+          border: solid 2px white;
+          background-color: none;
+          font-size: 20px;
+          -moz-border-radius: 20px;
+          -webkit-border-radius: 20px;
+          -o-border-radius: 20px;
+          border-radius: 20px;
+          -webkit-transition: background-color 0.15s linear;
+          -ms-transition: background-color 0.15s linear;
+          -o-transition: background-color 0.15s linear;
+          -transition: background-color 0.15s linear;
+          transition: background-color 0.15s linear; }
+          #user_controls ul li a i {
+            position: relative;
+            top: 6px; }
+        #user_controls ul li a:hover {
+          background-color: #382a3b; }
+      #user_controls ul li:last-child {
+        margin-bottom: 0; }
+
   #site_wrap {
     padding-top: 0;
     -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);

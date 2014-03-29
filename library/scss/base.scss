@@ -24,6 +24,8 @@ h1, h2, h3, h4, h5, h6{
 	font-weight: 500;
 }
 
+#user_controls{ display: none; }
+
 #site_wrap{
 
 	position: relative;
@@ -234,6 +236,29 @@ h1, h2, h3, h4, h5, h6{
 	position: relative;
 
 	.wrap{}
+
+}
+
+.placeholder_section{
+
+	.wrap{ }
+
+	.placeholder_copy{
+
+		border: dashed 4px $accent;
+		padding: 60px;
+		text-align: center;
+		@include rounded(4px);
+
+		a{
+			display: inline-block;
+			padding: 10px 16px;
+			background: $accent;
+			color: $white;
+			text-decoration: none;
+		}
+
+	}
 
 }
 

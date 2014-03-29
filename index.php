@@ -351,7 +351,15 @@
 
 				<?php else: ?>
 
-					<p>No Sections Added! Please log in and add them.</p>
+					<div class="page_section placeholder_section">
+						<div class="wrap">
+							<div class="placeholder_copy">
+								<h1>Theme successfully installed!</h1>
+								<p>This is just a placeholder section, please log into your dashboard, navigate to "Pages > Home" and click the "Add Section" button.</p>
+								<?php edit_post_link('Add Sections Now!'); ?>
+							</div>
+						</div>
+					</div>
 
 				<?php endif; ?>
 
@@ -408,6 +416,14 @@
 		</footer>
 
 	</div><!-- / #site_wrap -->
+
+	<div id="user_controls">
+		<ul>
+			<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/index.php" title="Go To Dashboard"><i class="icon-home"></i></a></li>
+			<li><a href="<?php echo get_edit_post_link(); ?>" title="Edit Page Content"><i class="icon-cog"></i></a></li>
+			<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/admin.php?page=acf-options" title="Edit Site Styles"><i class="icon-tint"></i></a></li>
+		</ul>
+	</div>
 
 	<?php wp_footer(); ?>
 
