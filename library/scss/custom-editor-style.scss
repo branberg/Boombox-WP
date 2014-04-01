@@ -1,0 +1,17 @@
+@import "variables.scss";
+
+body#tinymce.wp-editor { 
+
+    font-family: $opensans; 
+    font-size: 1.6em; 
+    color: #333333;
+    max-width: 920px;
+    margin: 0 auto;
+
+    :first-child{ margin-top: 0; }
+    :last-child{ margin-bottom: 0; }
+}
+
+body#tinymce.wp-editor a {
+    color: #4CA6CF;
+}

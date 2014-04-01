@@ -323,27 +323,21 @@ BORDER RADIUS - Even
 /*********************
 TRIANGLES
 *********************/
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
 /********************************************************************
 *** GLOBALS
 *********************************************************************/
 html, body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 1em;
-  color: #382a3b;
+  color: #382A3B;
   overflow-x: hidden; }
 
 a {
-  color: #382a3b; }
+  color: #382A3B; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500; }
 
 #user_controls {
@@ -374,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   z-index: 0;
   padding: 0 60px 0 0;
-  font-family: "Montserrat", sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
   #mobile_menu ul {
     padding: 20px;
     margin: 0; }
@@ -395,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.2em;
         opacity: 1;
         text-transform: uppercase;
-        color: white;
+        color: #ffffff;
         -webkit-transition: opacity 0.05s linear;
         -ms-transition: opacity 0.05s linear;
         -o-transition: opacity 0.05s linear;
@@ -437,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
     #mobile_header #mobile_menu_toggle i {
       display: block;
       font-size: 24px;
-      color: white; }
+      color: #ffffff; }
   #mobile_header #mobile_site_title {
     display: block;
     position: absolute;
@@ -445,7 +439,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     text-align: center;
-    color: white;
+    color: #ffffff;
     width: 100%;
     font-size: 16px;
     height: 56px;
@@ -465,7 +459,7 @@ h1, h2, h3, h4, h5, h6 {
       text-decoration: none;
       text-align: center;
       font-weight: 700;
-      font-family: "Montserrat", sans-serif;
+      font-family: 'Montserrat', sans-serif;
       -webkit-backface-visibility: hidden;
       -webkit-transition: opacity 0.15s linear;
       -ms-transition: opacity 0.15s linear;
@@ -493,7 +487,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative; }
 
 .placeholder_section .placeholder_copy {
-  background: white;
+  background: #ffffff;
   padding: 80px 60px;
   text-align: center;
   -moz-border-radius: 4px;
@@ -505,8 +499,8 @@ h1, h2, h3, h4, h5, h6 {
   .placeholder_section .placeholder_copy a {
     display: inline-block;
     padding: 10px 16px;
-    background: #382a3b;
-    color: white;
+    background: #382A3B;
+    color: #ffffff;
     text-decoration: none;
     font-size: 26px; }
 
@@ -514,11 +508,11 @@ h1, h2, h3, h4, h5, h6 {
 MUSIC/ALBUMS
 *************************************/
 .music_section {
-  background-color: #382a3b;
+  background-color: #382A3B;
   margin: 15px 0;
   padding: 30px 0; }
   .music_section .album {
-    background-color: #382a3b;
+    background-color: #382A3B;
     margin-bottom: 30px; }
     .music_section .album:last-child {
       margin-bottom: 0; }
@@ -529,22 +523,22 @@ MUSIC/ALBUMS
         width: 100% !important;
         height: 100% !important; }
     .music_section .album .album_info_wrapper {
-      color: #382a3b; }
+      color: #382A3B; }
       .music_section .album .album_info_wrapper .album_info {
         padding: 20px 20px 0 20px; }
         .music_section .album .album_info_wrapper .album_info .album_type {
-          font-family: "Montserrat", sans-serif;
+          font-family: 'Montserrat', sans-serif;
           text-transform: uppercase;
           font-size: 0.85rem;
-          color: #605562;
+          color: #ffffff;
           opacity: 0.6; }
         .music_section .album .album_info_wrapper .album_info .album_title {
           font-size: 1.625rem;
           font-weight: 500;
           margin: 10px 0;
-          color: white; }
+          color: #ffffff; }
         .music_section .album .album_info_wrapper .album_info .album_description {
-          color: white; }
+          color: #ffffff; }
           .music_section .album .album_info_wrapper .album_info .album_description > :first-child {
             margin-top: 0; }
           .music_section .album .album_info_wrapper .album_info .album_description > :last-child {
@@ -553,11 +547,11 @@ MUSIC/ALBUMS
           font-size: 1.25rem;
           display: block;
           margin: 20px 0 0 0;
-          font-family: "Montserrat", sans-serif;
+          font-family: 'Montserrat', sans-serif;
           text-transform: uppercase;
           text-align: center;
-          background-color: white;
-          color: #382a3b;
+          background-color: #ffffff;
+          color: #382A3B;
           text-decoration: none;
           padding: 20px;
           -webkit-transition: opacity 0.05s linear;
@@ -573,7 +567,7 @@ SHOWS
 *************************************/
 table.tour_dates {
   width: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   border-collapse: separate; }
   table.tour_dates tr:first-child td {
@@ -656,7 +650,7 @@ FOOTER
   padding: 40px 0;
   position: relative; }
   .site_footer .credits {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding-top: 40px; }
     .site_footer .credits p {
@@ -667,10 +661,10 @@ FOOTER
 .mailing_list {
   text-align: center;
   padding: 0 0 40px 0;
-  font-family: "Montserrat", sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
   .mailing_list .mailing_list_title, .mailing_list form {
     display: block;
-    color: #382a3b; }
+    color: #382A3B; }
   .mailing_list .mailing_list_title {
     text-transform: uppercase;
     font-size: 1.4em;
@@ -679,7 +673,7 @@ FOOTER
     font-size: 18px;
     overflow: hidden; }
     .mailing_list form input {
-      border: solid 2px #382a3b;
+      border: solid 2px #382A3B;
       display: block;
       padding: 15px;
       outline: none; }
@@ -687,24 +681,24 @@ FOOTER
       width: 100%;
       background: none;
       margin-bottom: 10px;
-      color: #382a3b; }
+      color: #382A3B; }
     .mailing_list form input[type="submit"] {
       text-transform: uppercase;
-      background-color: #382a3b;
-      color: white;
+      background-color: #382A3B;
+      color: #ffffff;
       width: 100%; }
       .mailing_list form input[type="submit"]:hover {
         opacity: 0.8; }
     .mailing_list form ::-webkit-input-placeholder {
-      color: #382a3b; }
+      color: #382A3B; }
     .mailing_list form :-moz-placeholder {
-      color: #382a3b; }
+      color: #382A3B; }
     .mailing_list form ::-moz-placeholder {
-      color: #382a3b; }
+      color: #382A3B; }
     .mailing_list form :-ms-input-placeholder {
-      color: #382a3b; }
+      color: #382A3B; }
     .mailing_list form label.placeholder {
-      color: #382a3b; }
+      color: #382A3B; }
 
 .social_links ul {
   margin: 0;
@@ -720,7 +714,7 @@ FOOTER
       background-color: none;
       font-size: 28px;
       text-decoration: none;
-      color: #382a3b; }
+      color: #382A3B; }
     .social_links ul li a:hover, .social_links ul li a:hover {
       color: #715477; }
 
@@ -749,7 +743,7 @@ PAGE STYLES
   table.tour_dates tr td.date {
     /*&:after{
     	content: "";
-    	border-right: solid 1px $textColor;
+    	border-right: solid 1px #382A3B;
     	width: 1px;
     	position: absolute;
     	right: 0;
@@ -811,12 +805,12 @@ PAGE STYLES
         margin: 0 0 10px 0; }
         #user_controls ul li a {
           display: block;
-          color: white;
+          color: #ffffff;
           text-decoration: none;
           text-align: center;
           width: 40px;
           height: 40px;
-          border: solid 2px white;
+          border: solid 2px #ffffff;
           background-color: none;
           font-size: 20px;
           -moz-border-radius: 20px;
@@ -832,7 +826,7 @@ PAGE STYLES
             position: relative;
             top: 6px; }
         #user_controls ul li a:hover {
-          background-color: #382a3b; }
+          background-color: #382A3B; }
       #user_controls ul li:last-child {
         margin-bottom: 0; }
 
@@ -857,7 +851,7 @@ PAGE STYLES
         font-size: 60px; }
     .site_header nav#header_nav {
       display: block;
-      font-family: "Montserrat", sans-serif; }
+      font-family: 'Montserrat', sans-serif; }
       .site_header nav#header_nav ul {
         margin: 0;
         padding: 0;
@@ -927,7 +921,7 @@ PAGE STYLES
         display: block;
         float: right;
         text-transform: uppercase;
-        color: #382a3b;
+        color: #382A3B;
         margin-top: 10px; }
       .news_section .news_article_wrap .news_article .article_excerpt {
         font-size: 1.5rem; }

@@ -44,12 +44,12 @@ h1, h2, h3, h4, h5, h6{
 			a{
 
 				display: block;
-				color: $white;
+				color: #ffffff;
 				text-decoration: none;
 				text-align: center;
 				width: 40px;
 				height: 40px;
-				border: solid 2px $white;
+				border: solid 2px #ffffff;
 				background-color: none;
 				font-size: 20px;
 				@include rounded(20px);
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6{
 
 			}
 			a:hover{
-				background-color: $accent;
+				background-color: #382A3B;
 			}
 
 		}
@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6{
 	nav#header_nav{
 
 		display: block;
-		font-family: $montserrat;
+		font-family: 'Montserrat', sans-serif;
 
 		ul{
 
@@ -299,7 +299,7 @@ NEWS SECTION
 					display: block;
 					float: right;
 					text-transform: uppercase;
-					color: $headerText;
+					color: #382A3B;
 					margin-top: 10px;
 				}
 
@@ -368,7 +368,7 @@ table.tour_dates{
 
 				&:after{
 					content: "";
-					border-right: solid 2px transparentize($textColor, 0.7);
+					border-right: solid 2px transparentize(#382A3B, 0.7);
 					width: 1px;
 					position: absolute;
 					right: 0;

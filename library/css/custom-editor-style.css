@@ -1,0 +1,19 @@
+/*********************
+COLORS
+*********************/
+/*********************
+TYPOGRAPHY
+*********************/
+body#tinymce.wp-editor {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6em;
+  color: #333333;
+  max-width: 920px;
+  margin: 0 auto; }
+  body#tinymce.wp-editor :first-child {
+    margin-top: 0; }
+  body#tinymce.wp-editor :last-child {
+    margin-bottom: 0; }
+
+body#tinymce.wp-editor a {
+  color: #4CA6CF; }

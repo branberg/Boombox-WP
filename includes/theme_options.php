@@ -501,7 +501,7 @@ if(function_exists("register_field_group"))
 								'type' => 'wysiwyg',
 								'column_width' => '',
 								'default_value' => '',
-								'toolbar' => 'basic',
+								'toolbar' => 'full',
 								'media_upload' => 'no',
 							),
 						),
