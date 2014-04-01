@@ -496,6 +496,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px; }
   .placeholder_section .placeholder_copy h1 {
     margin-top: 0; }
+  .placeholder_section .placeholder_copy p {
+    margin: 2em; }
   .placeholder_section .placeholder_copy a {
     display: inline-block;
     padding: 10px 16px;

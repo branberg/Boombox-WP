@@ -173,7 +173,7 @@
 						<div class="wrap">
 							<div class="placeholder_copy">
 								<h1>Theme successfully installed!</h1>
-								<p>This is just a placeholder section, please log into your dashboard, navigate to "Pages > Home" and click the "Add Section" button.</p>
+								<p>Click the button below to start adding custom sections and remove this dumb message.</p>
 								<?php edit_post_link('Add Sections Now!'); ?>
 							</div>
 						</div>

@@ -113,46 +113,49 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 
 	html, body, a{
 		
-		<?php echo( $main_color ? "color: $main_color" : "" ); ?>
+		<?php echo( $main_color ? "color: $main_color;" : "" ); ?>
 
 	}
 
 	#logo,
 	.site_header nav#header_nav ul li a{
 		
-		<?php echo( $menu_color ? "color: $menu_color" : "" ); ?>
+		<?php echo( $menu_color ? "color: $menu_color;" : "" ); ?>
 
 	}
 
-	.site_footer{ <?php echo( $footer_text_color ? "color: $footer_text_color" : "" ); ?> }
-	.mailing_list .mailing_list_title, .mailing_list form, .mailing_list form input[type="text"]{ <?php echo( $footer_text_color ? "color: $footer_text_color" : "" ); ?> }
-	.mailing_list form input{ <?php echo( $footer_text_color ? "color: $footer_text_color" : "" ); ?> }
-	.mailing_list form ::-webkit-input-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color" : "" ); ?> }
-	.mailing_list form :-moz-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color" : "" ); ?> }
-	.mailing_list form ::-moz-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color" : "" ); ?> }
-	.mailing_list form :-ms-input-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color" : "" ); ?> }
-	.mailing_list form label.placeholder{ color: <?php echo( $footer_text_color ? "color: $footer_text_color" : "" ); ?> }
-	.mailing_list form input[type="submit"]{ <?php echo( $footer_text_color ? "background-color: $footer_text_color" : "" ); ?> }
+	.site_footer{ <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list .mailing_list_title, .mailing_list form, .mailing_list form input[type="text"]{ <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list form input{ <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list form ::-webkit-input-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list form :-moz-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list form ::-moz-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list form :-ms-input-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list form label.placeholder{ color: <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list form input[type="submit"]{
+		<?php echo( $footer_text_color ? "background-color: $footer_text_color;" : "" ); ?>
+		<?php echo ( $background_overlay_color ? "color: $background_overlay_color;" : '' ); ?>
+	}
 
-	.music_section{ <?php echo( $music_background_color ? "background-color: $music_background_color" : "" ); ?> }
-	.music_section .album{ <?php echo( $music_background_color ? "background-color: $music_background_color" : "" ); ?> }
+	.music_section{ <?php echo( $music_background_color ? "background-color: $music_background_color;" : "" ); ?> }
+	.music_section .album{ <?php echo( $music_background_color ? "background-color: $music_background_color;" : "" ); ?> }
 	@media only screen and (min-width: 768px) {
 		.music_section{ background-color: transparent; }
 	}
-	.music_section .album{ <?php echo( $music_background_color ? "background-color: $music_background_color" : "" ); ?> }
-	.music_section .album .album_info_wrapper .album_info .album_button{ <?php echo( $music_background_color ? "color: $music_background_color" : "" ); ?> }
+	.music_section .album{ <?php echo( $music_background_color ? "background-color: $music_background_color;" : "" ); ?> }
+	.music_section .album .album_info_wrapper .album_info .album_button{ <?php echo( $music_background_color ? "color: $music_background_color;" : "" ); ?> }
 
-	.music_section .album .album_info_wrapper .album_info .album_type{ <?php echo( $music_text_color ? "color: $music_text_color" : "" ); ?> }
-	.music_section .album .album_info_wrapper .album_info .album_title{ <?php echo( $music_text_color ? "color: $music_text_color" : "" ); ?> }
-	.music_section .album .album_info_wrapper .album_info .album_description{ <?php echo( $music_text_color ? "color: $music_text_color" : "" ); ?> }
-	.music_section .album .album_info_wrapper .album_info .album_button{ <?php echo( $music_text_color ? "background-color: $music_text_color" : "" ); ?> }
+	.music_section .album .album_info_wrapper .album_info .album_type{ <?php echo( $music_text_color ? "color: $music_text_color;" : "" ); ?> }
+	.music_section .album .album_info_wrapper .album_info .album_title{ <?php echo( $music_text_color ? "color: $music_text_color;" : "" ); ?> }
+	.music_section .album .album_info_wrapper .album_info .album_description{ <?php echo( $music_text_color ? "color: $music_text_color;" : "" ); ?> }
+	.music_section .album .album_info_wrapper .album_info .album_button{ <?php echo( $music_text_color ? "background-color: $music_text_color;" : "" ); ?> }
 
-	#mobile_menu{ <?php echo( $mobile_menu_background_color ? "background-color: $mobile_menu_background_color" : "" ); ?> }
+	#mobile_menu{ <?php echo( $mobile_menu_background_color ? "background-color: $mobile_menu_background_color;" : "" ); ?> }
 	#mobile_header{
 
 		<?php
 			if( $mobile_menu_background_color ){
-				echo "background-color:" . hex2rgba($mobile_menu_background_color, 0.7) . "; border-bottom: " . $mobile_menu_background_color;
+				echo "background-color:" . hex2rgba($mobile_menu_background_color, 0.7) . "; border-bottom: " . $mobile_menu_background_color . ";";
 			}
 		?>
 	}
@@ -164,3 +167,11 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 	#mobile_header #mobile_menu_toggle i{ color: <?php echo $mobile_menu_text_color; ?>; }
 
 	<?php endif; ?>
+
+	.placeholder_section .placeholder_copy{ <?php echo ( $background_overlay_color ? "background-color: $background_overlay_color;" : '' ); ?> }
+	.placeholder_section .placeholder_copy a{
+
+		<?php echo( $main_color ? "background-color: $main_color;" : "" ); ?>
+		<?php echo ( $background_overlay_color ? "color: $background_overlay_color;" : '' ); ?>
+
+	}
