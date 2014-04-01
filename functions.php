@@ -6,32 +6,33 @@ ADD SOME PLUGIN GOODNESS
 include_once( 'plugins/advanced-custom-fields/acf.php' ); //Core ACF
 include_once( 'plugins/acf-gallery/acf-gallery.php' ); //ACF Gallery
 include_once( 'plugins/acf-flexible-content/acf-flexible-content.php' ); //ACF Flexible Content Field
-include_once( 'plugins/acf-repeater/acf-repeater.php' ); //ACF Repeater FIeld
+include_once( 'plugins/acf-repeater/acf-repeater.php' ); //ACF Repeater Field
 include_once( 'plugins/acf-options-page/acf-options-page.php' ); //ACF Options Page
 
 
-//add google font field api key
-
-/***  Removing font options for now, plugin not workign great
-
-define( 'ACF_GOOGLE_FONTS_API_KEY', 'AIzaSyBY00PYKLWlcKSYM6bTAZhwnzJnvFMXVUc' ); //Google Font API Key (for plugin)
-include_once( 'plugins/acf-google-font-selector-field/acf-google_font_selector.php' ); //ACF Google Font Plugin
-
-if( function_exists('acf_set_options_page_title') ) {
-    acf_set_options_page_title( __('Boombox Theme Options') );
-}
-
-***/
 
 /*********************************************************************************************************
 ADD CUSTOM ACF OPTIONS + TOGGLE ACF CONFIG PANEL IN DASHBOARD
 *********************************************************************************************************/
 //add custom ACF options
-include_once( 'theme_options.php' );
+include_once( 'includes/theme_options.php' );
+
+//set default values for fields
+include_once( 'includes/default_options.php' );
 
 // change this value to false to view custom field editor in Wordpress and make modifications.
 define( 'ACF_LITE' , true );
 
+
+
+/*********************************************************************************************************
+BOOMBOX MAIN MENU - Used as fallback when no menu is initially created
+*********************************************************************************************************/
+function boombox_main_menu(){
+	echo '<ul id="menu_links">';
+	wp_list_pages('title_li=');
+	echo '</ul>';
+}
 
 /*********************************************************************************************************
 ADD CUSTOM HEX TO RGBA CONVERTER  - thanks http://mekshq.com/how-to-convert-hexadecimal-color-code-to-rgb-or-rgba-using-php/

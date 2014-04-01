@@ -245,17 +245,22 @@ h1, h2, h3, h4, h5, h6{
 
 	.placeholder_copy{
 
-		border: dashed 4px $accent;
-		padding: 60px;
+		//border: dashed 4px #e2e2e2;
+		background: $white;
+		padding: 80px 60px;
 		text-align: center;
 		@include rounded(4px);
 
+		h1{
+			margin-top: 0;
+		}
 		a{
 			display: inline-block;
 			padding: 10px 16px;
 			background: $accent;
 			color: $white;
 			text-decoration: none;
+			font-size: 26px;
 		}
 
 	}

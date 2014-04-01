@@ -3,7 +3,7 @@
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_boombox-theme-options',
+		'id' => 'acf_boombox-theme-options-2',
 		'title' => 'Boombox Theme Options',
 		'fields' => array (
 			array (
@@ -28,7 +28,7 @@ if(function_exists("register_field_group"))
 				'name' => 'logo',
 				'type' => 'image',
 				'instructions' => 'If no image is present, the site name will be shown. This can be changed in "Settings > General > Site Title".<br/>
-	<em>Theme has been built to utilize a wide range of sizes for the logo, but you should still try and keep it smaller than about 900x300px.</em>',
+		<em>Theme has been built to utilize a wide range of sizes for the logo, but you should still try and keep it smaller than about 900x300px.</em>',
 				'save_format' => 'object',
 				'preview_size' => 'full',
 				'library' => 'all',
@@ -61,7 +61,7 @@ if(function_exists("register_field_group"))
 				),
 				'other_choice' => 0,
 				'save_other_choice' => 0,
-				'default_value' => '',
+				'default_value' => 'Fullscreen',
 				'layout' => 'vertical',
 			),
 			array (
@@ -77,7 +77,7 @@ if(function_exists("register_field_group"))
 				),
 				'other_choice' => 0,
 				'save_other_choice' => 0,
-				'default_value' => '',
+				'default_value' => 'No Repeat',
 				'layout' => 'vertical',
 			),
 			array (
@@ -91,7 +91,7 @@ if(function_exists("register_field_group"))
 				),
 				'other_choice' => 0,
 				'save_other_choice' => 0,
-				'default_value' => '',
+				'default_value' => 'Fixed Background',
 				'layout' => 'vertical',
 			),
 			array (
@@ -107,7 +107,7 @@ if(function_exists("register_field_group"))
 				'name' => 'background_overlay_opacity',
 				'type' => 'number',
 				'instructions' => 'Enter the percentage of opacity to apply to the background overlay color. <strong>100</strong> is fully opaque, <strong>0</strong> is fully transparent.<br/>
-	To turn off the background overlay, simply set this value to 0.',
+		To turn off the background overlay, simply set this value to 0.',
 				'default_value' => 75,
 				'placeholder' => 'Enter Opacity Percentage',
 				'prepend' => '',
@@ -245,7 +245,7 @@ if(function_exists("register_field_group"))
 				),
 				'other_choice' => 0,
 				'save_other_choice' => 0,
-				'default_value' => '',
+				'default_value' => 'On',
 				'layout' => 'horizontal',
 			),
 			array (
@@ -287,7 +287,7 @@ if(function_exists("register_field_group"))
 					),
 					'allorany' => 'all',
 				),
-				'default_value' => '',
+				'default_value' => 'Enter your email address',
 				'placeholder' => '',
 				'prepend' => '',
 				'append' => '',
@@ -337,21 +337,6 @@ if(function_exists("register_field_group"))
 				'type' => 'color_picker',
 				'default_value' => '#ffffff',
 			),
-			array (
-				'key' => 'field_533717f47b2f1',
-				'label' => 'Show Social Icons?',
-				'name' => 'show_social_icons',
-				'type' => 'radio',
-				'instructions' => 'Would you like to display social icons in the mobile menu?',
-				'choices' => array (
-					'Yes' => 'Yes',
-					'No' => 'No',
-				),
-				'other_choice' => 0,
-				'save_other_choice' => 0,
-				'default_value' => '',
-				'layout' => 'horizontal',
-			),
 		),
 		'location' => array (
 			array (
@@ -373,7 +358,7 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	register_field_group(array (
-		'id' => 'acf_home-page-layout',
+		'id' => 'acf_home-page-layout-2',
 		'title' => 'Home Page Layout',
 		'fields' => array (
 			array (
@@ -424,7 +409,7 @@ if(function_exists("register_field_group"))
 								'name' => 'feature_title',
 								'type' => 'text',
 								'column_width' => '',
-								'default_value' => '',
+								'default_value' => 'Album Title',
 								'placeholder' => '',
 								'prepend' => '',
 								'append' => '',
@@ -498,7 +483,7 @@ if(function_exists("register_field_group"))
 								'name' => 'background_color',
 								'type' => 'color_picker',
 								'column_width' => '',
-								'default_value' => '',
+								'default_value' => '#382a3b',
 							),
 						),
 					),

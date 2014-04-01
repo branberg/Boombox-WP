@@ -19,6 +19,8 @@
 
 	<?php $favicon = get_field('favicon','option'); if($favicon): ?>
 		<link rel="icon" type="image/png" href="<?php echo $favicon; ?>" />
+	<?php else: ?>
+		<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() . '/library/img/favicon.png' ?>" />
 	<?php endif; ?>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -33,199 +35,7 @@
 
 	<?php wp_head(); ?>
 
-	<style type="text/css">
-
-		<?php
-
-			//backgrond options
-			$background_image = get_field('background_image', 'option');
-			$background_position = get_field('background_position', 'option');
-			$background_repeat = get_field('background_repeat', 'option');
-			$background_attachment = get_field('background_attachment', 'option');
-			$background_overlay_color = get_field('background_overlay_color', 'option');
-			$background_overlay_opacity = get_field('background_overlay_opacity', 'option');
-
-			//site colors
-			$main_color = get_field('main_color', 'option');
-			$menu_color = get_field('menu_color', 'option');
-			$footer_text_color = get_field('footer_text_color', 'option');
-
-			//album colors
-			$music_background_color = get_field( 'music_background_color', 'option' );
-			$music_text_color = get_field( 'music_text_color', 'option' );
-
-			//mobile
-			$mobile_menu_background_color = get_field( 'mobile_menu_background_color', 'option');
-			$mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
-
-		?>
-
-		<?php if( $background_image || $background_position || $background_repeat || $background_attachment ): ?>
-
-
-
-		/* Custom Background Image Options */
-		#site_wrap{
-
-			<?php echo ( $background_image ? "background-image: url('$background_image');" : '' ); ?>
-			<?php if( $background_position ){
-				switch($background_position){
-					case 'Fullscreen':
-						echo "background-position: center center;
-							-webkit-background-size: cover;
-							-moz-background-size: cover;
-							-o-background-size: cover;
-							background-size: cover;";
-						break;
-					case 'Top Left':
-						echo "background-position: top left;";
-						break;
-					case 'Top Middle':
-						echo "background-position: top center;";
-						break;
-					case 'Centered':
-						echo "background-position: center center;";
-						break;
-				}
-			} ?>
-			<?php if($background_repeat){
-				switch( $background_repeat ){
-					case 'Repeat':
-						echo "background-repeat: repeat;";
-						break;
-					case 'Repeat Horizontally':
-						echo "background-repeat: repeat-x;";
-						break;
-					case 'Repeat Vertically':
-						echo "background-repeat: repeat-y;";
-						break;
-					case 'No Repeat':
-						echo "background-repeat: no-repeat;";
-						break;
-				}
-			} ?>
-			<?php if($background_attachment){
-				switch( $background_attachment ){
-					case 'Scrolling Background':
-						echo "background-attachment: scroll;";
-						break;
-					case 'Fixed Background':
-						echo "background-attachment: fixed;";
-						break;
-				}
-			} ?>
-
-		}
-
-		<?php endif; ?>
-
-
-
-		<?php if( $background_overlay_color || $background_overlay_opacity ): ?>
-
-		/* Custom Background Overlay Color Options */
-		#site_wrap #overlay_color{
-
-			<?php if($background_overlay_color){
-				echo "background-color: $background_overlay_color ;";
-			} ?>
-
-			<?php if($background_overlay_opacity){
-				$opacityConversion = $background_overlay_opacity/100;
-				echo "opacity: $opacityConversion ;";
-			} ?>
-
-		}
-
-		<?php endif; ?>
-
-
-
-		<?php if($main_color): ?>
-
-		/* Custom Main Color Changes */
-		html, body, a{ <?php echo "color: $main_color;"; ?> }
-
-		<?php endif; ?>
-
-
-
-		<?php if($menu_color): ?>
-
-		/* Custom Menu Color Changes */
-		#logo,
-		.site_header nav#header_nav ul li a{ color: <?php echo $menu_color; ?>; }
-
-		<?php endif; ?>
-
-
-
-		<?php if($footer_text_color): ?>
-
-		/* Custom Footer Text Color Changes */
-		.site_footer{ <?php echo "color: $footer_text_color;"; ?> }
-		.mailing_list .mailing_list_title, .mailing_list form, .mailing_list form input[type="text"]{ <?php echo "color: $footer_text_color;"; ?> }
-		.mailing_list form input{ <?php echo "border: solid 2px $footer_text_color;" ?>; }
-		.mailing_list form ::-webkit-input-placeholder { color: <?php echo $footer_text_color ?>; }
-		.mailing_list form :-moz-placeholder { color: <?php echo $footer_text_color ?>; }
-		.mailing_list form ::-moz-placeholder { color: <?php echo $footer_text_color ?>; }
-		.mailing_list form :-ms-input-placeholder { color: <?php echo $footer_text_color ?>; }
-		.mailing_list form label.placeholder{ color: <?php echo $footer_text_color ?>; }
-		.mailing_list form input[type="submit"]{ background-color: <?php echo $footer_text_color ?>; }
-
-
-		<?php endif; ?>
-
-
-
-		<?php if( $music_background_color ): ?>
-
-		.music_section{ background-color: <?php echo $music_background_color ?>; }
-		.music_section .album{ background-color: <?php echo $music_background_color ?>; }
-
-		@media only screen and (min-width: 768px) {
-			
-			.music_section{ background-color: transparent; }
-			
-		}
-
-		.music_section .album{ background-color: <?php echo $music_background_color ?>; }
-		.music_section .album .album_info_wrapper .album_info .album_button{ color: <?php echo $music_background_color ?>; }
-
-		<?php endif; ?>
-
-
-
-		<?php if( $music_text_color ): ?>
-
-		.music_section .album .album_info_wrapper .album_info .album_type{ color: <?php echo $music_text_color ?>; }
-		.music_section .album .album_info_wrapper .album_info .album_title{ color: <?php echo $music_text_color ?>; }
-		.music_section .album .album_info_wrapper .album_info .album_description{ color: <?php echo $music_text_color ?>; }
-		.music_section .album .album_info_wrapper .album_info .album_button{ background-color: <?php echo $music_text_color ?>; }
-
-		<?php endif; ?>
-
-
-
-		<?php if( $mobile_menu_background_color ): ?>
-
-		#mobile_menu{ background-color: <?php echo $mobile_menu_background_color; ?>; }
-		#mobile_header{ background-color: <?php echo hex2rgba($mobile_menu_background_color, 0.7) ?>; border-bottom: <?php echo $mobile_menu_background_color ?>; }
-
-		<?php endif; ?>
-
-
-
-		<?php if( $mobile_menu_text_color ): ?>
-
-		#mobile_menu ul li a{ color: <?php echo $mobile_menu_text_color; ?>; }
-		#mobile_header #mobile_site_title{ color: <?php echo $mobile_menu_text_color; ?>; }
-		#mobile_header #mobile_menu_toggle i{ color: <?php echo $mobile_menu_text_color; ?>; }
-
-		<?php endif; ?>
-
-
-	</style>
+	<style type="text/css"><?php include_once('includes/custom_styles.php'); ?></style>
 
 </head>
 <body>
@@ -256,13 +66,21 @@
 				</div>
 				<nav id="header_nav" class="clearfix">
 
-					<?php wp_nav_menu( array( 'menu_id' => 'menu_links', 'theme_location' => 'main-nav', 'container' => '', 'menu_class' => '' ) ); ?>
+					<?php wp_nav_menu( array(
+
+						'menu_id' => 'menu_links',
+						'theme_location' => 'main-nav',
+						'container' => '',
+						'menu_class' => '',
+						'fallback_cb' => 'boombox_main_menu'
+
+					)); ?>
 
 					<?php if( have_rows('social_icons', 'option') ): ?>
 						<ul id="social_links">
 							<?php while ( have_rows('social_icons', 'option') ) : the_row(); ?>
 								<?php $network = get_sub_field('social_network'); ?>
-								<li class="<?php echo $network; ?>"><a href="#" target="_blank"><i class="icon-<?php echo $network; ?>"></i></a></li>
+								<li class="<?php echo $network; ?>"><a href="<?php the_sub_field('link_url'); ?>" target="_blank"><i class="icon-<?php echo $network; ?>"></i></a></li>
 							<?php endwhile; ?>
 						</ul>
 					<?php endif; ?>
