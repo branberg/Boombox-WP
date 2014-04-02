@@ -15,10 +15,14 @@ $background_overlay_color = get_field('background_overlay_color', 'option');
 $background_overlay_opacity = get_field('background_overlay_opacity', 'option');
 
 //custom fonts
+$heading_font_type = get_field('heading_font_type','options');
 $heading_font = get_field( 'heading_fonts', 'option' );
-$body_font = get_field( 'body_fonts', 'option' );
 $custom_heading_font_family = get_field( 'custom_heading_font_family', 'option' );
+
+$body_font_type = get_field('body_font_type','options');
+$body_font = get_field( 'body_fonts', 'option' );
 $custom_body_font_family = get_field( 'custom_body_font_family', 'option' );
+
 $fonts = array(
 
 	//these keys need to match the keys in the options exactly
@@ -59,11 +63,19 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 	html, body{
 
 		<?php
-			if( get_field( 'custom_fonts', 'option' ) ){
-				echo "font-family: $custom_body_font_family;";
-			} else {
+
+			if( $body_font_type == "Google Font" ){ //if Google Font
+
 				echo "font-family: " . $fonts[$body_font] . ";";
+
+			} elseif( $body_font_type == "Custom" ) { //if Custom Font
+
+				echo "font-family: $custom_body_font_family;";
+
+			} else {
+				echo 'font-family: "Helvetica Neue", Helvetica, sans-serif;';
 			}
+
 		?>
 
 	}
@@ -79,11 +91,19 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 	.site_header nav#header_nav{
 
 		<?php
-			if( get_field( 'custom_fonts', 'option' ) ){
-				echo "font-family: $custom_heading_font_family;";
-			} else {
+			
+			if( $heading_font_type == "Google Font" ){ //if Google Font
+
 				echo "font-family: " . $fonts[$heading_font] . ";";
+
+			} elseif( $heading_font_type == "Custom" ) { //if Custom Font
+
+				echo "font-family: $custom_heading_font_family;";
+
+			} else {
+				echo 'font-family: "Helvetica Neue", Helvetica, sans-serif;'; //fall back to helvetica because why not
 			}
+
 		?>
 
 	}

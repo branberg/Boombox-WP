@@ -123,10 +123,35 @@ if(function_exists("register_field_group"))
 				'type' => 'tab',
 			),
 			array (
+				'key' => 'field_533c3d7c2c07c',
+				'label' => 'Heading Font Type',
+				'name' => 'heading_font_type',
+				'type' => 'radio',
+				'choices' => array (
+					'Google Font' => 'Google Font',
+					'Custom' => 'Custom',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => 'Google Font',
+				'layout' => 'horizontal',
+			),
+			array (
 				'key' => 'field_533c186767fab',
 				'label' => 'Heading Fonts',
 				'name' => 'heading_fonts',
 				'type' => 'select',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_533c3d7c2c07c',
+							'operator' => '==',
+							'value' => 'Google Font',
+						),
+					),
+					'allorany' => 'all',
+				),
 				'choices' => array (
 					'Lato' => 'Lato',
 					'Open Sans' => 'Open Sans',
@@ -148,10 +173,62 @@ if(function_exists("register_field_group"))
 				'multiple' => 0,
 			),
 			array (
+				'key' => 'field_533c1bb8f97e1',
+				'label' => 'Custom Heading Font Family',
+				'name' => 'custom_heading_font_family',
+				'type' => 'text',
+				'instructions' => 'Use the following format:<br/>
+	<em>"Helvetica Neue", Helvetica, Arial, sans-serif</em><br/>
+	Do not include the "font-family" property, it will be automatically added.<br/>
+	<a href="http://cssfontstack.com/" target="_blank">cssfontstack.com</a> is a great resource for default web-safe font stacks.',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_533c3d7c2c07c',
+							'operator' => '==',
+							'value' => 'Custom',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'placeholder' => '"Helvetica Neue", Helvetica, Arial, sans-serif',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_533c3e142c07e',
+				'label' => 'Body Font Type',
+				'name' => 'body_font_type',
+				'type' => 'radio',
+				'choices' => array (
+					'Google Font' => 'Google Font',
+					'Custom' => 'Custom',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => 'Google Font',
+				'layout' => 'horizontal',
+			),
+			array (
 				'key' => 'field_533c18e42716a',
 				'label' => 'Body Fonts',
 				'name' => 'body_fonts',
 				'type' => 'select',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_533c3e142c07e',
+							'operator' => '==',
+							'value' => 'Google Font',
+						),
+					),
+					'allorany' => 'all',
+				),
 				'choices' => array (
 					'Lato' => 'Lato',
 					'Open Sans' => 'Open Sans',
@@ -173,71 +250,21 @@ if(function_exists("register_field_group"))
 				'multiple' => 0,
 			),
 			array (
-				'key' => 'field_533c1b84f97e0',
-				'label' => 'Custom Fonts',
-				'name' => 'custom_fonts',
-				'type' => 'true_false',
-				'instructions' => '<strong>These settings will override the font selections above.</strong>',
-				'message' => 'Enable Custom Font Families',
-				'default_value' => 0,
-			),
-			array (
-				'key' => 'field_533c1ca536971',
-				'label' => 'Custom Font Instructions',
-				'name' => '',
-				'type' => 'message',
-				'conditional_logic' => array (
-					'status' => 1,
-					'rules' => array (
-						array (
-							'field' => 'field_533c1b84f97e0',
-							'operator' => '==',
-							'value' => '1',
-						),
-					),
-					'allorany' => 'all',
-				),
-				'message' => 'Use the following format:
-	<em>"Helvetica Neue", Helvetica, Arial, sans-serif</em>
-	Do not include the "font-family" property, it will be automatically added.
-	
-	<a href="http://cssfontstack.com/" target="_blank">cssfontstack.com</a> is a great resource for default web-safe font stacks.',
-			),
-			array (
-				'key' => 'field_533c1bb8f97e1',
-				'label' => 'Custom Heading Font Family',
-				'name' => 'custom_heading_font_family',
-				'type' => 'text',
-				'conditional_logic' => array (
-					'status' => 1,
-					'rules' => array (
-						array (
-							'field' => 'field_533c1b84f97e0',
-							'operator' => '==',
-							'value' => '1',
-						),
-					),
-					'allorany' => 'all',
-				),
-				'default_value' => '',
-				'placeholder' => '"Helvetica Neue", Helvetica, Arial, sans-serif',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'none',
-				'maxlength' => '',
-			),
-			array (
 				'key' => 'field_533c1bd4f97e2',
 				'label' => 'Custom Body Font Family',
 				'name' => 'custom_body_font_family',
 				'type' => 'text',
+				'instructions' => 'Use the following format:<br/>
+	<em>"Helvetica Neue", Helvetica, Arial, sans-serif</em><br/>
+	Do not include the "font-family" property, it will be automatically added.<br/>
+	<a href="http://cssfontstack.com/" target="_blank">cssfontstack.com</a> is a great resource for default web-safe font stacks.',
 				'conditional_logic' => array (
 					'status' => 1,
 					'rules' => array (
 						array (
-							'field' => 'field_533c1b84f97e0',
+							'field' => 'field_533c3e142c07e',
 							'operator' => '==',
-							'value' => '1',
+							'value' => 'Custom',
 						),
 					),
 					'allorany' => 'all',

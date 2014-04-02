@@ -112,7 +112,7 @@ SCRIPTS & ENQUEUEING FOR CUSTOM WEB FONTS
 *********************************************************************************************************/
 function boombox_custom_webfonts(){
 
-	if (!is_admin()) {
+	if (!is_admin()) { //only load on front end
 
 		/*************************************
 		STUFF FOR CUSTOM GOOGLE FONTS
@@ -139,24 +139,41 @@ function boombox_custom_webfonts(){
 		);
 
 		//get ACF values
+		$heading_font_type = get_field('heading_font_type','options');
 		$heading_font = get_field('heading_fonts', 'options');
 		$heading_font = $fonts[$heading_font];
+
+		$body_font_type = get_field('body_font_type','options');
 		$body_font = get_field('body_fonts', 'options');
 		$body_font = $fonts[$body_font];
 
-		$fontFamily = "http://fonts.googleapis.com/css??family=$heading_font|$body_font";
+		$fontFamily = ''; //set to nothing for now
 
-		//register the style IF custom select field is not enabled
-		if( !get_field( 'custom_fonts', 'options') ){
+		//we only need to output google fonts, because custom ones will only be loaded in custom_styles.php
+		if( $heading_font_type == "Google Font" && $body_font_type == "Google Font" ){
 
-			wp_register_style( 'custom-googlefonts', $fontFamily, array(), '', 'all' );
-			wp_enqueue_style('custom-googlefonts');
+			$fontFamily = "http://fonts.googleapis.com/css?family=$heading_font|$body_font";
 
+		} elseif( $heading_font_type == "Google Font" && $body_font_type != "Google Font" ) {
+
+			$fontFamily = "http://fonts.googleapis.com/css?family=$heading_font";
+
+		} elseif( $heading_font_type != "Google Font" && $body_font_type == "Google Font" ){
+
+			$fontFamily = "http://fonts.googleapis.com/css?family=$body_font";
+
+		}
+		
+		//only add script if at least one is a Google Font
+		if( $heading_font_type == "Google Font" || $body_font_type == "Google Font" ){
+			wp_register_style( 'custom-fonts', $fontFamily, array(), '', 'all' );
+			wp_enqueue_style('custom-fonts');
 		}
 
 	}
 
 }
+//only hook this in if at least one option is a google font
 add_action( 'wp_enqueue_scripts', 'boombox_custom_webfonts' );
 
 /*********************************************************************************************************
@@ -164,7 +181,6 @@ SCRIPTS & ENQUEUEING
 *********************************************************************************************************/
 function boombox_styles_and_scripts(){
 
-	// loading modernizr and jquery, and reply script
 	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 	if (!is_admin()) {
 	
@@ -210,15 +226,7 @@ add_action( 'wp_enqueue_scripts', 'boombox_styles_and_scripts' );
 /*********************************************************************************************************
 THEME SUPPORT
 *********************************************************************************************************/
-
-// wp thumbnails (sizes handled in functions.php)
-add_theme_support('post-thumbnails');
-
-// default thumb size
-set_post_thumbnail_size( 256, 160, true );
-add_image_size( 'gallery-photo', 320, 320, true );
-
-// rss thingy
+// add rss feed links to <head>
 add_theme_support('automatic-feed-links');
 
 // registering wp3+ menus
@@ -228,7 +236,7 @@ register_nav_menus(
 	)
 );
 
-//define content width
+//define content width (desktop size)
 if( ! isset($content_width) ){
 	$content_width = 920;
 }
