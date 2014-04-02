@@ -379,6 +379,7 @@ if(function_exists("register_field_group"))
 								'label' => 'Soundcloud iframe code',
 								'name' => 'soundcloud_iframe_code',
 								'type' => 'text',
+								'instructions' => 'To obtain this, go to your Soundcloud song or set and click "Share" then the "Embed" tab. Then you will see a preview and some iframe code. Copy that and paste it in right here.',
 								'column_width' => '',
 								'default_value' => '',
 								'placeholder' => '',
@@ -386,6 +387,7 @@ if(function_exists("register_field_group"))
 								'append' => '',
 								'formatting' => 'html',
 								'maxlength' => '',
+								'required' => 'yes'
 							),
 							array (
 								'key' => 'field_5332f25a33b85',
@@ -402,6 +404,7 @@ if(function_exists("register_field_group"))
 								'save_other_choice' => 1,
 								'default_value' => 'Album',
 								'layout' => 'vertical',
+								'required' => 'yes'
 							),
 							array (
 								'key' => 'field_5332f28733b86',
@@ -409,12 +412,13 @@ if(function_exists("register_field_group"))
 								'name' => 'feature_title',
 								'type' => 'text',
 								'column_width' => '',
-								'default_value' => 'Album Title',
-								'placeholder' => '',
+								'default_value' => '',
+								'placeholder' => 'Album Title',
 								'prepend' => '',
 								'append' => '',
 								'formatting' => 'none',
 								'maxlength' => '',
+								'required' => 'yes'
 							),
 							array (
 								'key' => 'field_5332f2ab33b87',
@@ -433,6 +437,7 @@ if(function_exists("register_field_group"))
 								'label' => 'Button Text',
 								'name' => 'button_text',
 								'type' => 'text',
+								'instructions' => 'Both Text and URL fields must be filled out in order for button to display on site.',
 								'column_width' => '',
 								'default_value' => '',
 								'placeholder' => 'eg: Purchase',
@@ -448,7 +453,7 @@ if(function_exists("register_field_group"))
 								'type' => 'text',
 								'column_width' => '',
 								'default_value' => '',
-								'placeholder' => '',
+								'placeholder' => 'http://',
 								'prepend' => '',
 								'append' => '',
 								'formatting' => 'none',
@@ -476,14 +481,7 @@ if(function_exists("register_field_group"))
 								'append' => '',
 								'formatting' => 'html',
 								'maxlength' => '',
-							),
-							array (
-								'key' => 'field_5332f3ea80e52',
-								'label' => 'Background Color',
-								'name' => 'background_color',
-								'type' => 'color_picker',
-								'column_width' => '',
-								'default_value' => '#382a3b',
+								'required' => 'yes'
 							),
 						),
 					),
@@ -503,6 +501,7 @@ if(function_exists("register_field_group"))
 								'default_value' => '',
 								'toolbar' => 'full',
 								'media_upload' => 'no',
+								'required' => 'yes'
 							),
 						),
 					),
@@ -521,6 +520,7 @@ if(function_exists("register_field_group"))
 								'column_width' => '',
 								'preview_size' => 'thumbnail',
 								'library' => 'all',
+								'required' => 'yes'
 							),
 						),
 					),

@@ -109,10 +109,14 @@
 											<div class="album_info">
 												<span class="album_type"><?php the_sub_field('feature_type'); ?></span>
 												<h3 class="album_title"><?php the_sub_field('feature_title'); ?></h3>
-												<div class="album_description">
-													<p><?php the_sub_field('feature_description'); ?></p>
-												</div>
-												<a href="<?php the_sub_field('button_url'); ?>" class="album_button" target="_blank"><?php the_sub_field('button_text'); ?></a>
+												<?php if( get_sub_field('feature_description') ): ?>
+													<div class="album_description">
+														<p><?php the_sub_field('feature_description'); ?></p>
+													</div>
+												<?php endif; ?>
+												<?php if( get_sub_field('button_url') && get_sub_field('button_text') ): ?>
+													<a href="<?php the_sub_field('button_url'); ?>" class="album_button" target="_blank"><?php the_sub_field('button_text'); ?></a>
+												<?php endif; ?>
 											</div>
 										</div>
 									</div>
