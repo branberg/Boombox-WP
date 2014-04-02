@@ -42,7 +42,7 @@ function updateoptionkeys() {
 
 		$existence = get_field_object($key);
 
-		if (!get_field($existence[name], "options")) {
+		if (!get_field($existence['name'], "options")) {
 			update_field($key, $value, "options");
 		}
 
