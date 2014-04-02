@@ -16,11 +16,11 @@ $background_overlay_color = get_field('background_overlay_color', 'option');
 $background_overlay_opacity = get_field('background_overlay_opacity', 'option');
 
 //custom fonts
-$heading_font_type = get_field('heading_font_type','options');
+$heading_font_type = get_field('heading_font_type','option');
 $heading_font = get_field( 'heading_fonts', 'option' );
 $custom_heading_font_family = get_field( 'custom_heading_font_family', 'option' );
 
-$body_font_type = get_field('body_font_type','options');
+$body_font_type = get_field('body_font_type','option');
 $body_font = get_field( 'body_fonts', 'option' );
 $custom_body_font_family = get_field( 'custom_body_font_family', 'option' );
 
@@ -74,7 +74,9 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 				echo "font-family: $custom_body_font_family;";
 
 			} else {
+
 				echo 'font-family: "Helvetica Neue", Helvetica, sans-serif;';
+
 			}
 
 		?>
@@ -102,7 +104,9 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 				echo "font-family: $custom_heading_font_family;";
 
 			} else {
+
 				echo 'font-family: "Helvetica Neue", Helvetica, sans-serif;'; //fall back to helvetica because why not
+			
 			}
 
 		?>
