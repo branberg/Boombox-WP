@@ -90,7 +90,7 @@ if (isset($_GET['activated']) && is_admin()){
         'post_title' => $new_page_title,
         'post_content' => $new_page_content,
         'post_status' => 'publish',
-         'post_author' => 1,
+        'post_author' => 1,
     );
     if(!isset($page_check->ID)){
         $new_page_id = wp_insert_post($new_page);
