@@ -14,6 +14,31 @@ $background_attachment = get_field('background_attachment', 'option');
 $background_overlay_color = get_field('background_overlay_color', 'option');
 $background_overlay_opacity = get_field('background_overlay_opacity', 'option');
 
+//custom fonts
+$heading_font = get_field( 'heading_fonts', 'option' );
+$body_font = get_field( 'body_fonts', 'option' );
+$custom_heading_font_family = get_field( 'custom_heading_font_family', 'option' );
+$custom_body_font_family = get_field( 'custom_body_font_family', 'option' );
+$fonts = array(
+
+	//these keys need to match the keys in the options exactly
+	'Lato' => "'Lato', sans-serif",
+	'Open Sans' => "'Open Sans', sans-serif",
+	'Montserrat' => "'Montserrat', sans-serif",
+	'Roboto' => "'Roboto', sans-serif",
+	'Source Sans Pro' => "'Source Sans Pro', sans-serif",
+	'Oswald' => "'Oswald', sans-serif",
+	'Quattrocento' => "'Quattrocento', serif",
+	'Quattrocento Sans' => "'Quattrocento Sans', sans-serif",
+	'Josefin Slab' => "'Josefin Slab', serif",
+	'Josefin Sans' => "'Josefin Sans', sans-serif",
+	'Arvo' => "'Arvo', serif",
+	'Ubuntu' => "'Ubuntu', sans-serif",
+	'Droid Sans' => "'Droid Sans', sans-serif",
+	'Droid Serif' => "'Droid Serif', serif"
+
+);
+
 //site colors
 $main_color = get_field('main_color', 'option');
 $menu_color = get_field('menu_color', 'option');
@@ -30,6 +55,38 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 ?>
 
 	/** Custom Styles Set by Site Owner **/
+
+	html, body{
+
+		<?php
+			if( get_field( 'custom_fonts', 'option' ) ){
+				echo "font-family: $custom_body_font_family;";
+			} else {
+				echo "font-family: " . $fonts[$body_font] . ";";
+			}
+		?>
+
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	#mobile_menu,
+	.site_header #logo_wrap a,
+	.music_section .album .album_info_wrapper .album_info_wrapper .album_type,
+	.music_section .album .album_info_wrapper .album_info_wrapper .album_button,
+	table.tour_dates,
+	.site_footer .credits,
+	.mailing_list,
+	.site_header nav#header_nav{
+
+		<?php
+			if( get_field( 'custom_fonts', 'option' ) ){
+				echo "font-family: $custom_heading_font_family;";
+			} else {
+				echo "font-family: " . $fonts[$heading_font] . ";";
+			}
+		?>
+
+	}
 
 	#site_wrap{
 		
