@@ -10,7 +10,6 @@ include_once( 'plugins/acf-repeater/acf-repeater.php' ); //ACF Repeater Field
 include_once( 'plugins/acf-options-page/acf-options-page.php' ); //ACF Options Page
 
 
-
 /*********************************************************************************************************
 ADD CUSTOM ACF OPTIONS + TOGGLE ACF CONFIG PANEL IN DASHBOARD
 *********************************************************************************************************/
@@ -24,7 +23,6 @@ include_once( 'includes/default_options.php' );
 define( 'ACF_LITE' , true );
 
 
-
 /*********************************************************************************************************
 BOOMBOX MAIN MENU - Used as fallback when no menu is initially created
 *********************************************************************************************************/
@@ -33,6 +31,7 @@ function boombox_main_menu(){
 	wp_list_pages('title_li=');
 	echo '</ul>';
 }
+
 
 /*********************************************************************************************************
 ADD CUSTOM HEX TO RGBA CONVERTER  - thanks http://mekshq.com/how-to-convert-hexadecimal-color-code-to-rgb-or-rgba-using-php/
@@ -75,6 +74,7 @@ function hex2rgba($color, $opacity = false) {
         return $output;
 }
 
+
 /*********************************************************************************************************
 ADD & SET HOME PAGE ON THEME ACTIVATION
 Thanks Kevin: http://wpsnipp.com/index.php/functions-php/create-page-on-theme-activation/
@@ -106,6 +106,7 @@ if (isset($_GET['activated']) && is_admin()){
     }
 
 }
+
 
 /*********************************************************************************************************
 SCRIPTS & ENQUEUEING FOR CUSTOM WEB FONTS
@@ -173,8 +174,8 @@ function boombox_custom_webfonts(){
 	}
 
 }
-//only hook this in if at least one option is a google font
 add_action( 'wp_enqueue_scripts', 'boombox_custom_webfonts' );
+
 
 /*********************************************************************************************************
 SCRIPTS & ENQUEUEING
@@ -240,6 +241,7 @@ register_nav_menus(
 if( ! isset($content_width) ){
 	$content_width = 920;
 }
+
 
 /*********************************************************************************************************
 Custom style for the wordpress editor
