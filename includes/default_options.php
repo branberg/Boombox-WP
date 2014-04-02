@@ -10,6 +10,10 @@ function updateoptionkeys() {
 		"field_53348ce66bf19"	=> '#ffffff', //bg overlay color
 		"field_53348d016bf1a"	=> '90', //bg overlay opacity
 
+		//fonts
+		"field_533c186767fab"	=> 'Montserrat', //heading font
+		"field_533c18e42716a"	=> 'Open Sans', //body font
+
 		//site colors
 		"field_53348a129e5f7"	=> '#382A3B', //main color
 		"field_53371f6f6f463"	=> '#382A3B', //menu color

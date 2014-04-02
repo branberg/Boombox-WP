@@ -108,9 +108,60 @@ if (isset($_GET['activated']) && is_admin()){
 }
 
 /*********************************************************************************************************
+SCRIPTS & ENQUEUEING FOR CUSTOM WEB FONTS
+*********************************************************************************************************/
+function boombox_custom_webfonts(){
+
+	if (!is_admin()) {
+
+		/*************************************
+		STUFF FOR CUSTOM GOOGLE FONTS
+		*************************************/
+		//set variables for all fonts...
+		$fonts = array(
+
+			//these keys need to match the keys in the options exactly
+			'Lato' => 'Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic',
+			'Open Sans' => 'Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800',
+			'Montserrat' => 'Montserrat:400,700',
+			'Roboto' => 'Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic',
+			'Source Sans Pro' => 'Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic',
+			'Oswald' => 'Oswald:400,300,700',
+			'Quattrocento' => 'Quattrocento:400,700',
+			'Quattrocento Sans' => 'Quattrocento+Sans:400,400italic,700,700italic',
+			'Josefin Slab' => 'Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic',
+			'Josefin Sans' => 'Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic',
+			'Arvo' => 'Arvo:400,700,400italic,700italic',
+			'Ubuntu' => 'Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic',
+			'Droid Sans' => 'Droid+Sans:400,700',
+			'Droid Serif' => 'Droid+Serif:400,700,400italic,700italic'
+
+		);
+
+		//get ACF values
+		$heading_font = get_field('heading_fonts', 'options');
+		$heading_font = $fonts[$heading_font];
+		$body_font = get_field('body_fonts', 'options');
+		$body_font = $fonts[$body_font];
+
+		$fontFamily = "http://fonts.googleapis.com/css??family=$heading_font|$body_font";
+
+		//register the style IF custom select field is not enabled
+		if( !get_field( 'custom_fonts', 'options') ){
+
+			wp_register_style( 'custom-googlefonts', $fontFamily, array(), '', 'all' );
+			wp_enqueue_style('custom-googlefonts');
+
+		}
+
+	}
+
+}
+add_action( 'wp_enqueue_scripts', 'boombox_custom_webfonts' );
+
+/*********************************************************************************************************
 SCRIPTS & ENQUEUEING
 *********************************************************************************************************/
-
 function boombox_styles_and_scripts(){
 
 	// loading modernizr and jquery, and reply script
@@ -131,10 +182,8 @@ function boombox_styles_and_scripts(){
 		wp_register_style( 'stylesheet', get_stylesheet_directory_uri() . '/library/css/main.css', array(), '', 'all' );
 		wp_register_style( 'normalize', get_stylesheet_directory_uri() . '/library/css/normalize.css', array(), '', 'all' );
 		wp_register_style( 'ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
-		wp_register_style( 'googlefonts', 'http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', array(), '', 'all' );
 		
 		// enqueue styles
-		wp_enqueue_style('googlefonts');
 		wp_enqueue_style( 'swipebox' );
 		wp_enqueue_style( 'nivo' );
 		wp_enqueue_style( 'nivotheme' );
@@ -156,6 +205,7 @@ function boombox_styles_and_scripts(){
 }
 
 add_action( 'wp_enqueue_scripts', 'boombox_styles_and_scripts' );
+
 
 /*********************************************************************************************************
 THEME SUPPORT
