@@ -11,7 +11,9 @@ function updateoptionkeys() {
 		"field_53348d016bf1a"	=> '90', //bg overlay opacity
 
 		//fonts
+		"field_533c3d7c2c07c"	=> 'Google Font', //set default heading font type
 		"field_533c186767fab"	=> 'Montserrat', //heading font
+		"field_533c3e142c07e"	=> 'Google Font', //body font type
 		"field_533c18e42716a"	=> 'Open Sans', //body font
 
 		//site colors
