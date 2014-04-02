@@ -3,7 +3,7 @@
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_boombox-theme-options-2',
+		'id' => 'acf_boombox-theme-options',
 		'title' => 'Boombox Theme Options',
 		'fields' => array (
 			array (
@@ -28,7 +28,7 @@ if(function_exists("register_field_group"))
 				'name' => 'logo',
 				'type' => 'image',
 				'instructions' => 'If no image is present, the site name will be shown. This can be changed in "Settings > General > Site Title".<br/>
-		<em>Theme has been built to utilize a wide range of sizes for the logo, but you should still try and keep it smaller than about 900x300px.</em>',
+			<em>Theme has been built to utilize a wide range of sizes for the logo, but you should still try and keep it smaller than about 900x300px.</em>',
 				'save_format' => 'object',
 				'preview_size' => 'full',
 				'library' => 'all',
@@ -107,7 +107,7 @@ if(function_exists("register_field_group"))
 				'name' => 'background_overlay_opacity',
 				'type' => 'number',
 				'instructions' => 'Enter the percentage of opacity to apply to the background overlay color. <strong>100</strong> is fully opaque, <strong>0</strong> is fully transparent.<br/>
-		To turn off the background overlay, simply set this value to 0.',
+			To turn off the background overlay, simply set this value to 0.',
 				'default_value' => 75,
 				'placeholder' => 'Enter Opacity Percentage',
 				'prepend' => '',
@@ -178,9 +178,9 @@ if(function_exists("register_field_group"))
 				'name' => 'custom_heading_font_family',
 				'type' => 'text',
 				'instructions' => 'Use the following format:<br/>
-	<em>"Helvetica Neue", Helvetica, Arial, sans-serif</em><br/>
-	Do not include the "font-family" property, it will be automatically added.<br/>
-	<a href="http://cssfontstack.com/" target="_blank">cssfontstack.com</a> is a great resource for default web-safe font stacks.',
+		<em>"Helvetica Neue", Helvetica, Arial, sans-serif</em><br/>
+		Do not include the "font-family" property, it will be automatically added.<br/>
+		<a href="http://cssfontstack.com/" target="_blank">cssfontstack.com</a> is a great resource for default web-safe font stacks.',
 				'conditional_logic' => array (
 					'status' => 1,
 					'rules' => array (
@@ -255,9 +255,9 @@ if(function_exists("register_field_group"))
 				'name' => 'custom_body_font_family',
 				'type' => 'text',
 				'instructions' => 'Use the following format:<br/>
-	<em>"Helvetica Neue", Helvetica, Arial, sans-serif</em><br/>
-	Do not include the "font-family" property, it will be automatically added.<br/>
-	<a href="http://cssfontstack.com/" target="_blank">cssfontstack.com</a> is a great resource for default web-safe font stacks.',
+		<em>"Helvetica Neue", Helvetica, Arial, sans-serif</em><br/>
+		Do not include the "font-family" property, it will be automatically added.<br/>
+		<a href="http://cssfontstack.com/" target="_blank">cssfontstack.com</a> is a great resource for default web-safe font stacks.',
 				'conditional_logic' => array (
 					'status' => 1,
 					'rules' => array (
@@ -409,10 +409,18 @@ if(function_exists("register_field_group"))
 				'layout' => 'horizontal',
 			),
 			array (
-				'key' => 'field_5332feced5633',
-				'label' => 'Mailing List Title',
-				'name' => 'mailing_list_title',
-				'type' => 'text',
+				'key' => 'field_533c71d361a2b',
+				'label' => 'Mailchimp Form Snippet',
+				'name' => 'mailchimp_form_snippet',
+				'type' => 'textarea',
+				'instructions' => '<strong>**Important**</strong> - You must grab the "Super Slim" form code from your Mailchimp account.<br/><br/>
+	
+	To access the form code follow these steps:<br/>
+	1) Go to you Mailchimp Account then click on "Lists".<br/>
+	2) Click on the list you would like to use (or create one if none exist).<br/>
+	3) Click "Signup Forms" then "Embedded Forms"<br/>
+	4) Choose the "Super Slim" form style<br/>
+	5) Copy the generated form snippet and paste it into this box',
 				'conditional_logic' => array (
 					'status' => 1,
 					'rules' => array (
@@ -424,58 +432,11 @@ if(function_exists("register_field_group"))
 					),
 					'allorany' => 'all',
 				),
-				'default_value' => 'Mailing List',
+				'default_value' => '',
 				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
+				'maxlength' => '',
+				'rows' => '',
 				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_5332fefbd5635',
-				'label' => 'Mailing List Placeholder Text',
-				'name' => 'mailing_list_placeholder_text',
-				'type' => 'text',
-				'conditional_logic' => array (
-					'status' => 1,
-					'rules' => array (
-						array (
-							'field' => 'field_5332feb5d5632',
-							'operator' => '==',
-							'value' => 'On',
-						),
-					),
-					'allorany' => 'all',
-				),
-				'default_value' => 'Enter your email address',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'none',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_5332feecd5634',
-				'label' => 'Mailing List Button Text',
-				'name' => 'mailing_list_button_text',
-				'type' => 'text',
-				'conditional_logic' => array (
-					'status' => 1,
-					'rules' => array (
-						array (
-							'field' => 'field_5332feb5d5632',
-							'operator' => '==',
-							'value' => 'On',
-						),
-					),
-					'allorany' => 'all',
-				),
-				'default_value' => 'Submit',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'none',
-				'maxlength' => '',
 			),
 			array (
 				'key' => 'field_533717b57b2ee',
@@ -518,7 +479,7 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	register_field_group(array (
-		'id' => 'acf_home-page-layout-2',
+		'id' => 'acf_home-page-layout',
 		'title' => 'Home Page Layout',
 		'fields' => array (
 			array (
@@ -547,7 +508,6 @@ if(function_exists("register_field_group"))
 								'append' => '',
 								'formatting' => 'html',
 								'maxlength' => '',
-								'required' => 'yes'
 							),
 							array (
 								'key' => 'field_5332f25a33b85',
@@ -564,7 +524,6 @@ if(function_exists("register_field_group"))
 								'save_other_choice' => 1,
 								'default_value' => 'Album',
 								'layout' => 'vertical',
-								'required' => 'yes'
 							),
 							array (
 								'key' => 'field_5332f28733b86',
@@ -578,7 +537,6 @@ if(function_exists("register_field_group"))
 								'append' => '',
 								'formatting' => 'none',
 								'maxlength' => '',
-								'required' => 'yes'
 							),
 							array (
 								'key' => 'field_5332f2ab33b87',
@@ -641,7 +599,6 @@ if(function_exists("register_field_group"))
 								'append' => '',
 								'formatting' => 'html',
 								'maxlength' => '',
-								'required' => 'yes'
 							),
 						),
 					),
@@ -661,7 +618,6 @@ if(function_exists("register_field_group"))
 								'default_value' => '',
 								'toolbar' => 'full',
 								'media_upload' => 'no',
-								'required' => 'yes'
 							),
 						),
 					),
@@ -680,7 +636,6 @@ if(function_exists("register_field_group"))
 								'column_width' => '',
 								'preview_size' => 'thumbnail',
 								'library' => 'all',
-								'required' => 'yes'
 							),
 						),
 					),

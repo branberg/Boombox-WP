@@ -349,7 +349,7 @@ FOOTER
 	}
 
 	.mailing_list_title{
-		font-size: 2em;
+		font-size: 32px;
 	}
 
 	form{
@@ -359,7 +359,7 @@ FOOTER
 		input{
 			
 		}
-		input[type="text"]{
+		input[type="email"]{
 			width: 340px;
 		}
 		input[type="submit"]{
@@ -376,6 +376,34 @@ FOOTER
 		:-moz-placeholder {}
 		::-moz-placeholder {}
 		:-ms-input-placeholder {}
+
+	}
+
+	#mc_embed_signup{
+
+		font-size: 22px;
+
+		form{
+			
+		}
+
+		label[for="mce-EMAIL"]{
+			font-size: 32px;
+		}
+
+		input[type="email"]{
+			width: 340px;
+			font-size: 22px;
+		}
+
+		input[type="submit"]{
+			width: 182px;
+			font-size: 22px;
+		}
+
+		.clear{
+			
+		}
 
 	}
 		

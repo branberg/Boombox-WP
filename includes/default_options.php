@@ -37,10 +37,7 @@ function updateoptionkeys() {
 		),
 
 		//mailing list
-		"field_5332feb5d5632"	=> 'On', //mailing list visibility
-		"field_5332feced5633"	=> 'Mailing List', //mailing list title
-		"field_5332fefbd5635"	=> 'Enter your email address', //mailing list placeholder text
-		"field_5332feecd5634"	=> 'Submit', //mailing list button text
+		"field_5332feb5d5632"	=> 'Off', //mailing list visibility
 
 	); 
 

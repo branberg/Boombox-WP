@@ -207,7 +207,8 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 	}
 
 	.site_footer{ <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
-	.mailing_list .mailing_list_title, .mailing_list form, .mailing_list form input[type="text"]{ <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list .mailing_list_title, .mailing_list form, .mailing_list form input[type="email"]{ <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
+	.mailing_list input[type="email"], .mailing_list input[type="submit"]{ <?php echo( $footer_text_color ? "border-color: $footer_text_color;" : "" ); ?> }
 	.mailing_list form input{ <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
 	.mailing_list form ::-webkit-input-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
 	.mailing_list form :-moz-placeholder { <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }

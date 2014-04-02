@@ -519,7 +519,7 @@ FOOTER
 	}
 
 	.mailing_list_title{
-		font-size: 1.5em;
+		font-size: 24px;
 		margin: 0 40px 0 0;
 	}
 
@@ -531,7 +531,7 @@ FOOTER
 			float: left;
 			padding: 20px;
 		}
-		input[type="text"]{
+		input[type="email"]{
 			width: 280px;
 			border-right: none;
 			margin-bottom: 0;
@@ -548,6 +548,37 @@ FOOTER
 		:-moz-placeholder {}
 		::-moz-placeholder {}
 		:-ms-input-placeholder {}
+
+	}
+
+	#mc_embed_signup{
+
+		
+
+		form{
+			
+		}
+
+		label[for="mce-EMAIL"]{
+			float: left;
+			font-size: 24px;
+			margin: 16px 40px 0 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		input[type="email"]{
+			float: left;
+		}
+
+		input[type="submit"]{
+			
+		}
+
+		.clear{
+			clear: none;
+			float: left;
+		}
 
 	}
 		

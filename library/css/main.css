@@ -669,7 +669,7 @@ FOOTER
     color: #382A3B; }
   .mailing_list .mailing_list_title {
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: 22px;
     margin: 0 0 20px 0; }
   .mailing_list form {
     font-size: 18px;
@@ -679,7 +679,7 @@ FOOTER
       display: block;
       padding: 15px;
       outline: none; }
-    .mailing_list form input[type="text"] {
+    .mailing_list form input[type="email"] {
       width: 100%;
       background: none;
       margin-bottom: 10px;
@@ -701,6 +701,46 @@ FOOTER
       color: #382A3B; }
     .mailing_list form label.placeholder {
       color: #382A3B; }
+  .mailing_list #mc_embed_signup {
+    background: none;
+    clear: none;
+    font: 18px "Montserrat",sans-serif; }
+    .mailing_list #mc_embed_signup form {
+      text-align: center;
+      padding: 0;
+      font-size: 18px;
+      overflow: hidden; }
+    .mailing_list #mc_embed_signup label[for="mce-EMAIL"] {
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: 0 0 20px 0;
+      display: block; }
+    .mailing_list #mc_embed_signup input[type="email"] {
+      /*border: solid 2px #382A3B;
+      display: block;
+      padding: 15px;
+      outline: none;
+      width: 100%;
+      background: none;
+      margin-bottom: 10px;
+      color: #382A3B;
+      margin: 0 0 10px 0;
+      text-indent: 0;
+      min-width: 0;*/ }
+    .mailing_list #mc_embed_signup input[type="submit"] {
+      /*font-size: 18px;
+      font-weight: normal;
+      text-transform: uppercase;
+      background-color: #382A3B;
+      color: #ffffff;
+      width: 100%;
+      border: solid 2px #382A3B;
+      display: block;
+      padding: 15px;
+      outline: none;
+      height: auto;
+      line-height: 18px;
+      @include rounded(0);*/ }
 
 .social_links ul {
   margin: 0;
@@ -992,19 +1032,30 @@ PAGE STYLES
     display: inline-block;
     vertical-align: middle; }
   .mailing_list .mailing_list_title {
-    font-size: 1.5em;
+    font-size: 24px;
     margin: 0 40px 0 0; }
   .mailing_list form {
     font-size: 18px; }
     .mailing_list form input {
       float: left;
       padding: 20px; }
-    .mailing_list form input[type="text"] {
+    .mailing_list form input[type="email"] {
       width: 280px;
       border-right: none;
       margin-bottom: 0; }
     .mailing_list form input[type="submit"] {
-      width: 150px; } }
+      width: 150px; }
+  .mailing_list #mc_embed_signup label[for="mce-EMAIL"] {
+    float: left;
+    font-size: 24px;
+    margin: 16px 40px 0 0;
+    display: inline-block;
+    vertical-align: middle; }
+  .mailing_list #mc_embed_signup input[type="email"] {
+    float: left; }
+  .mailing_list #mc_embed_signup .clear {
+    clear: none;
+    float: left; } }
 @media only screen and (min-width: 1024px) {
   /********************************************************************
   *** GLOBALS
@@ -1045,10 +1096,20 @@ PAGE STYLES
   FOOTER
   *************************************/
   .mailing_list .mailing_list_title {
-    font-size: 2em; }
+    font-size: 32px; }
   .mailing_list form {
     font-size: 22px; }
-    .mailing_list form input[type="text"] {
+    .mailing_list form input[type="email"] {
       width: 340px; }
     .mailing_list form input[type="submit"] {
-      width: 182px; } }
+      width: 182px; }
+  .mailing_list #mc_embed_signup {
+    font-size: 22px; }
+    .mailing_list #mc_embed_signup label[for="mce-EMAIL"] {
+      font-size: 32px; }
+    .mailing_list #mc_embed_signup input[type="email"] {
+      width: 340px;
+      font-size: 22px; }
+    .mailing_list #mc_embed_signup input[type="submit"] {
+      width: 182px;
+      font-size: 22px; } }

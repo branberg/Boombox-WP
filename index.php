@@ -219,15 +219,23 @@
 
 		<footer class="site_footer">
 			<div class="wrap">
-				
+
 				<?php if( get_field( 'mailing_list_visibility', 'option' ) == "On" ): ?>
+
 					<div class="mailing_list">
-						<span class="mailing_list_title"><?php the_field( 'mailing_list_title', 'option' ); ?></span>
-						<form>
-							<input type="text" placeholder="<?php the_field( 'mailing_list_placeholder_text', 'option' ); ?>" />
-							<input type="submit" value="<?php the_field( 'mailing_list_button_text', 'option' ); ?>" />
-						</form>
+
+						<?php
+						if(get_field('mailchimp_form_snippet','option')){
+							$MCEmbedCode = get_field('mailchimp_form_snippet','option');
+							$MCEmbedCode = preg_replace("/<link[^>]+\>/i", "", $MCEmbedCode); //remove slim css code line
+							echo $MCEmbedCode;
+						} else {
+							echo "<p>No forms have been set up yet.<br/>Please disable this section or add the correct form code in the options page.</p>";
+						}
+						?>
+
 					</div>
+
 				<?php endif; ?>
 
 				<div class="credits">

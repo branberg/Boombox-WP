@@ -591,7 +591,7 @@ FOOTER
 
 	.mailing_list_title{
 		text-transform: uppercase;
-		font-size: 1.4em;
+		font-size: 22px;
 		margin: 0 0 20px 0;
 	}
 
@@ -606,7 +606,7 @@ FOOTER
 			padding: 15px;
 			outline: none;
 		}
-		input[type="text"]{
+		input[type="email"]{
 			width: 100%;
 			background: none;
 			margin-bottom: 10px;
@@ -630,6 +630,59 @@ FOOTER
 		::-moz-placeholder { color: #382A3B; }
 		:-ms-input-placeholder { color: #382A3B; }
 		label.placeholder{ color: #382A3B; }
+
+	}
+
+	#mc_embed_signup{
+
+		background: none;
+		clear: none;
+		font: 18px "Montserrat",sans-serif;
+
+		form{
+			text-align: center;
+			padding: 0;
+			font-size: 18px;
+			overflow: hidden;
+		}
+
+		label[for="mce-EMAIL"]{
+			text-transform: uppercase;
+			font-size: 22px;
+			margin: 0 0 20px 0;
+			display: block;
+
+		}
+
+		input[type="email"]{
+			/*border: solid 2px #382A3B;
+			display: block;
+			padding: 15px;
+			outline: none;
+			width: 100%;
+			background: none;
+			margin-bottom: 10px;
+			color: #382A3B;
+			margin: 0 0 10px 0;
+			text-indent: 0;
+			min-width: 0;*/
+		}
+
+		input[type="submit"]{
+			/*font-size: 18px;
+			font-weight: normal;
+			text-transform: uppercase;
+			background-color: #382A3B;
+			color: #ffffff;
+			width: 100%;
+			border: solid 2px #382A3B;
+			display: block;
+			padding: 15px;
+			outline: none;
+			height: auto;
+			line-height: 18px;
+			@include rounded(0);*/
+		}
 
 	}
 		
