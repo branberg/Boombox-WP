@@ -1,19 +1,11 @@
 /********************************************************************
 *** GLOBALS
 *********************************************************************/
-html, body{
+html, body{}
 
-	
+a{}
 
-}
-
-a{
-	
-}
-
-h1, h2, h3, h4, h5, h6{
-	
-}
+h1, h2, h3, h4, h5, h6{}
 
 #user_controls{
 
@@ -66,6 +58,7 @@ h1, h2, h3, h4, h5, h6{
 			}
 
 		}
+
 		li:last-child{
 			margin-bottom: 0;
 		}
@@ -87,13 +80,9 @@ h1, h2, h3, h4, h5, h6{
 
 	padding-bottom: 30px;
 
-	#header_overlay_color{
-		
-	}
+	#header_overlay_color{}
 
-	.wrap{
-		
-	}
+	.wrap{}
 
 	
 	#logo_wrap{
@@ -104,9 +93,7 @@ h1, h2, h3, h4, h5, h6{
 
 			font-size: 60px;
 
-			img{
-				
-			}
+			img{}
 
 		}
 
@@ -149,29 +136,21 @@ h1, h2, h3, h4, h5, h6{
 
 		ul#menu_links{
 
-			
-
 			li{
 
-				a{
-
-				}
+				a{}
 
 			}
 
 		}
 
-		ul#social_links{
-
-			
+		ul#social_links{			
 
 			li{
 
 				a{
 
-					i{
-
-					}
+					i{}
 
 				}
 
@@ -205,18 +184,14 @@ MUSIC/ALBUMS
 
 		margin-bottom: 40px;
 
-		&:last-child{
-			
-		}
+		&:last-child{}
 
 		.soundcloud_embed{
 
 			float: left;
 			width: 50%;
 
-			iframe{
-				
-			}
+			iframe{}
 
 		}
 
@@ -242,9 +217,8 @@ MUSIC/ALBUMS
 
 					& > :first-child{  }
 					& > :last-child{  }
-					p{
 
-					}
+					p{}
 
 				}
 				.album_button{
@@ -273,9 +247,7 @@ NEWS SECTION
 
 		margin-bottom: 60px;
 
-		&:before{
-			
-		}
+		&:before{}
 
 		.news_article{
 
@@ -283,15 +255,11 @@ NEWS SECTION
 
 			header.article_header{
 
-				
-
 				h3{
 
 					font-size: 2.3em;
 
-					a{
-						
-					}
+					a{}
 
 				}
 
@@ -309,9 +277,7 @@ NEWS SECTION
 
 				font-size: 1.5rem;
 
-				p{
-					
-				}
+				p{}
 
 			}
 
@@ -356,9 +322,8 @@ table.tour_dates{
 				padding-right: 30px;
 				width: 120px;
 
-				.month, .day{
-					
-				}
+				.month, .day{}
+
 				.month{
 					font-size: 22px;
 				}
@@ -386,10 +351,13 @@ table.tour_dates{
 			}
 
 			a{
+
 				text-decoration: none;
+
 				&:hover{
 					text-decoration: underline;
 				}
+
 			}
 
 			.venue, .city{
@@ -404,11 +372,7 @@ table.tour_dates{
 			}
 
 		}
-		td.tickets{
-
-			
-
-		}
+		td.tickets{}
 		td.rsvp{
 
 			.cell_wrap{
@@ -425,13 +389,9 @@ VIDEOS
 *************************************/
 .videos_section{
 
-	
-
 	.wrap{}
 
-	.video_embed{
-		
-	}
+	.video_embed{}
 
 }
 
@@ -447,24 +407,16 @@ PHOTOS SECTION
 
 	ul{
 
-		
-
 		li{
 
 			width: 25%;
 
 			a{
 
-				
-
-				&:hover{
-					
-				}
+				&:hover{}
 
 			}
-			img{
-				
-			}
+			img{}
 
 		}
 
@@ -486,9 +438,7 @@ PHOTOS SECTION
 		& > :first-child{}
 		& > :last-child{}
 
-		p{
-
-		}
+		p{}
 
 	}
 
@@ -500,18 +450,12 @@ FOOTER
 *************************************/
 .site_footer{
 
-	
-
 	.wrap{}
 
-	.credits{
-
-	}
+	.credits{}
 
 }
 .mailing_list{
-
-	
 
 	.mailing_list_title, form{
 		display: inline-block;
@@ -553,8 +497,6 @@ FOOTER
 
 	#mc_embed_signup{
 
-		
-
 		form{
 			
 		}
@@ -589,11 +531,7 @@ FOOTER
 
 		li{
 
-			a{
-
-				
-
-			}
+			a{}
 
 		}
 

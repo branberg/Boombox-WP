@@ -1,23 +1,13 @@
 /********************************************************************
 *** GLOBALS
 *********************************************************************/
-html, body{
+html, body{}
 
-	
+a{}
 
-}
+h1, h2, h3, h4, h5, h6{}
 
-a{
-	
-}
-
-h1, h2, h3, h4, h5, h6{
-	
-}
-
-#site_wrap{
-	
-}
+#site_wrap{}
 
 #mobile_menu{}
 
@@ -25,14 +15,9 @@ h1, h2, h3, h4, h5, h6{
 
 .site_header{
 
-	#header_overlay_color{
-		
-	}
+	#header_overlay_color{}
 
-	.wrap{
-		
-	}
-
+	.wrap{}
 	
 	#logo_wrap{
 
@@ -42,9 +27,7 @@ h1, h2, h3, h4, h5, h6{
 
 			font-size: 80px;
 
-			img{
-				
-			}
+			img{}
 
 		}
 
@@ -52,17 +35,11 @@ h1, h2, h3, h4, h5, h6{
 
 	nav#header_nav{
 
-		
-
 		ul{
 
 			li{
 
-				
-
-				a{
-					
-				}
+				a{}
 
 			}
 
@@ -70,13 +47,9 @@ h1, h2, h3, h4, h5, h6{
 
 		ul#menu_links{
 
-			
-
 			li{
 
-				a{
-
-				}
+				a{}
 
 			}
 
@@ -84,15 +57,11 @@ h1, h2, h3, h4, h5, h6{
 
 		ul#social_links{
 
-			
-
 			li{
 
 				a{
 
-					i{
-
-					}
+					i{}
 
 				}
 
@@ -138,8 +107,6 @@ h1, h2, h3, h4, h5, h6{
 
 .page_section{
 
-	
-
 	.wrap{}
 
 }
@@ -153,17 +120,11 @@ MUSIC/ALBUMS
 
 	.album{
 
-		
-
-		&:last-child{
-			
-		}
+		&:last-child{}
 
 		.soundcloud_embed{
 
-			iframe{
-				
-			}
+			iframe{}
 
 		}
 
@@ -171,24 +132,16 @@ MUSIC/ALBUMS
 
 			.album_info{
 
-				.album_type{
-					
-				}
-				.album_title{
-					
-				}
+				.album_type{}
+				.album_title{}
 				.album_description{
 
 					& > :first-child{  }
 					& > :last-child{  }
-					p{
-
-					}
+					p{}
 
 				}
-				.album_button{
-					
-				}
+				.album_button{}
 
 			}
 
@@ -207,43 +160,25 @@ NEWS SECTION
 
 	.news_article_wrap{
 
-		
-
-		&:before{
-			
-		}
+		&:before{}
 
 		.news_article{
 
-			
-
 			header.article_header{
-
-				
 
 				h3{
 
-					
-
-					a{
-						
-					}
+					a{}
 
 				}
 
-				span.article_date{
-					
-				}
+				span.article_date{}
 
 			}
 
 			.article_excerpt{
 
-				
-
-				p{
-					
-				}
+				p{}
 
 			}
 
@@ -258,13 +193,9 @@ VIDEOS
 *************************************/
 .videos_section{
 
-	
-
 	.wrap{}
 
-	.video_embed{
-		
-	}
+	.video_embed{}
 
 }
 
@@ -278,26 +209,16 @@ PHOTOS SECTION
 }
 .photo_gallery{
 
-	ul{
-
-		
+	ul{		
 
 		li{
 
-			
+			a{	
 
-			a{
-
-				
-
-				&:hover{
-					
-				}
+				&:hover{}
 
 			}
-			img{
-				
-			}
+			img{}
 
 		}
 
@@ -317,9 +238,7 @@ TEXT SECTION
 		& > :first-child{}
 		& > :last-child{}
 
-		p{
-
-		}
+		p{}
 
 	}
 
@@ -331,22 +250,14 @@ FOOTER
 *************************************/
 .site_footer{
 
-	
-
 	.wrap{}
 
-	.credits{
-
-	}
+	.credits{}
 
 }
 .mailing_list{
 
-	
-
-	.mailing_list_title, form{
-		
-	}
+	.mailing_list_title, form{}
 
 	.mailing_list_title{
 		font-size: 32px;
@@ -356,9 +267,8 @@ FOOTER
 
 		font-size: 22px;
 
-		input{
-			
-		}
+		input{}
+
 		input[type="email"]{
 			width: 340px;
 		}
@@ -366,9 +276,7 @@ FOOTER
 
 			width: 182px;
 
-			&:hover{
-				
-			}
+			&:hover{}
 
 		}
 
@@ -383,9 +291,7 @@ FOOTER
 
 		font-size: 22px;
 
-		form{
-			
-		}
+		form{}
 
 		label[for="mce-EMAIL"]{
 			font-size: 32px;
@@ -401,9 +307,7 @@ FOOTER
 			font-size: 22px;
 		}
 
-		.clear{
-			
-		}
+		.clear{}
 
 	}
 		
@@ -412,17 +316,9 @@ FOOTER
 
 	ul{
 
-		
-
 		li{
 
-			
-
-			a{
-
-				
-
-			}
+			a{}
 
 		}
 

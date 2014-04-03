@@ -265,52 +265,9 @@ TOOLS
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden; }
-
-/*********************
-TYPOGRAPHY
-*********************/
-/*
-use the best ampersand
-http://simplebits.com/notebook/2008/08/14/ampersands-2/
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic; }
-
-.text-left {
-  text-align: left; }
-
-.text-center {
-  text-align: center; }
-
-.text-right {
-  text-align: right; }
-
 /*********************
 TRANSITION
 *********************/
-/*
-I totally rewrote this to be cleaner and easier to use.
-You'll need to be using Sass 3.2+ for these to work.
-Thanks to @anthonyshort for the inspiration on these.
-USAGE: @include transition(all 0.2s ease-in-out);
-*/
-/*********************
-CSS3 GRADIENTS
-Be careful with these since they can
-really slow down your CSS. Don't overdue it.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
-/*********************
-BOX SIZING
-*********************/
-/* @include box-sizing(border-box); */
-/* NOTE: value of "padding-box" is only supported in Gecko. So
-probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BOX SHADOW
 *********************/
@@ -319,9 +276,6 @@ BORDER RADIUS
 *********************/
 /*********************
 BORDER RADIUS - Even
-*********************/
-/*********************
-TRIANGLES
 *********************/
 /********************************************************************
 *** GLOBALS
@@ -715,32 +669,6 @@ FOOTER
       font-size: 22px;
       margin: 0 0 20px 0;
       display: block; }
-    .mailing_list #mc_embed_signup input[type="email"] {
-      /*border: solid 2px #382A3B;
-      display: block;
-      padding: 15px;
-      outline: none;
-      width: 100%;
-      background: none;
-      margin-bottom: 10px;
-      color: #382A3B;
-      margin: 0 0 10px 0;
-      text-indent: 0;
-      min-width: 0;*/ }
-    .mailing_list #mc_embed_signup input[type="submit"] {
-      /*font-size: 18px;
-      font-weight: normal;
-      text-transform: uppercase;
-      background-color: #382A3B;
-      color: #ffffff;
-      width: 100%;
-      border: solid 2px #382A3B;
-      display: block;
-      padding: 15px;
-      outline: none;
-      height: auto;
-      line-height: 18px;
-      @include rounded(0);*/ }
 
 .social_links ul {
   margin: 0;
@@ -782,16 +710,6 @@ PAGE STYLES
   /*************************************
   SHOWS
   *************************************/
-  table.tour_dates tr td.date {
-    /*&:after{
-    	content: "";
-    	border-right: solid 1px #382A3B;
-    	width: 1px;
-    	position: absolute;
-    	right: 0;
-    	top: 10px;
-    	bottom: 10px;
-    }*/ }
   table.tour_dates tr td.rsvp {
     display: table-cell;
     text-align: right; }

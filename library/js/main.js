@@ -2,28 +2,32 @@
 
 FUNCTIONS
 
-2 - keepSquare
-3 - mobileMenu
+1 - keepSquare
+2- mobileMenu
+3 - autoMenuLayout
 
 ***********************************************************/
 
 (function ($) {
 
-	// 2 - keepSquare
+	// 1 - keepSquare
+	// helps keep the album sections square and responsive
 	$.fn.keepSquare = function(){
 		var elementWidth = this.width();
 		this.height(elementWidth);
 		return this;
 	};
 
-	// 3 - mobileMenu
+	// 2 - mobileMenu
+	// creates some mobile menu markup from the main menu links
 	$.fn.mobileMenu = function(){
 		var menu = this.html();
 		$('body').prepend('<div id="mobile_menu">'+menu+'</div>');
 		return this;
 	};
 
-	// 4 - autoMenuLayout
+	// 3 - autoMenuLayout
+	// Aligns the menu based on the display of the menu links and social icons
 	$.fn.autoMenuLayout = function(){
 		var headerNav = this;
 		var textMenu = headerNav.find('#menu_links');

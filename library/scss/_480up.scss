@@ -1,43 +1,23 @@
 /********************************************************************
 *** GLOBALS
 *********************************************************************/
-html, body{
+html, body{}
 
-	
+a{}
 
-}
+h1, h2, h3, h4, h5, h6{}
 
-a{
-	
-}
-
-h1, h2, h3, h4, h5, h6{
-	
-}
-
-#site_wrap{
-	
-}
+#site_wrap{}
 
 #mobile_menu{
 
-	
-
 	ul{
-
-		
 
 		li{
 
-			
+			a{}
 
-			a{
-				
-			}
-
-			ul{
-				
-			}
+			ul{}
 
 		}
 
@@ -47,60 +27,31 @@ h1, h2, h3, h4, h5, h6{
 
 #mobile_header{
 
-	
+	#mobile_menu_toggle{}
 
-	#mobile_menu_toggle{
-
-		
-
-		svg{
-			
-		}
-
-	}
-
-	#mobile_site_title{
-		
-	}
+	#mobile_site_title{}
 
 }
 
 .site_header{
 
-	
+	#header_overlay_color{}
 
-	#header_overlay_color{
-		
-	}
-
-	.wrap{
-		
-	}
-
+	.wrap{}
 	
 	#logo_wrap{
 
 		#logo{
 
-			
-
-			img{
-				
-			}
+			img{}
 
 		}
 
 	}
 
-	#header_nav{  }
+	#header_nav{}
 
-	#page_title{
-
-		
-
-	}
-
-	
+	#page_title{}
 
 }
 
@@ -125,15 +76,11 @@ MUSIC/ALBUMS
 
 		margin-bottom: 40px;
 
-		&:last-child{
-			
-		}
+		&:last-child{}
 
 		.soundcloud_embed{
 
-			iframe{
-				
-			}
+			iframe{}
 
 		}
 
@@ -141,24 +88,20 @@ MUSIC/ALBUMS
 
 			.album_info{
 
-				.album_type{
-					
-				}
-				.album_title{
-					
-				}
+				.album_type{}
+
+				.album_title{}
+
 				.album_description{
 
-					& > :first-child{  }
-					& > :last-child{  }
-					p{
-
-					}
-
-				}
-				.album_button{
+					& > :first-child{}
+					& > :last-child{}
 					
+					p{}
+
 				}
+
+				.album_button{}
 
 			}
 
@@ -172,71 +115,41 @@ MUSIC/ALBUMS
 /*************************************
 SHOWS
 *************************************/
-.shows_section{
+.shows_section{}
 
-	
-
-}
 table.tour_dates{
 
 	tr{
 
-		td{
-			
-		}
+		td{}
 
 		td.date{
 
-			
+			.month, .day{}
 
-			.month, .day{
-				
-			}
-			.month{
-				
-			}
-			.day{
-				
-			}
+			.month{}
 
-			/*&:after{
-				content: "";
-				border-right: solid 1px #382A3B;
-				width: 1px;
-				position: absolute;
-				right: 0;
-				top: 10px;
-				bottom: 10px;
-			}*/
+			.day{}
 
 		}
 		td.location{
 
-			
+			a{}
 
-			a{
-				
-			}
+			.venue, .city{}
 
-			.venue, .city{
-				
-			}
-			.venue{
+			.venue{}
 
-			}
-			.city{
-
-			}
+			.city{}
 
 		}
-		td.tickets{
+		td.tickets{}
 
-			
-
-		}
 		td.rsvp{
+
 			display: table-cell;
 			text-align: right;
+
 		}
 
 	}
@@ -248,17 +161,11 @@ VIDEOS
 *************************************/
 .videos_section{
 
-	
-
 	.wrap{}
 
-	.section_header{
-		
-	}
+	.section_header{}
 
-	.video_embed{
-		
-	}
+	.video_embed{}
 
 }
 
@@ -276,24 +183,15 @@ PHOTOS SECTION
 
 	ul{
 
-		
-
 		li{
-
-			
 
 			a{
 
-				
-
-				&:hover{
-					
-				}
+				&:hover{}
 
 			}
-			img{
-				
-			}
+
+			img{}
 
 		}
 
@@ -307,9 +205,8 @@ TEXT SECTION
 .text_section{
 
 	.wrap{}
-	.section_header{
 
-	}
+	.section_header{}
 
 	.text_content{
 
@@ -318,9 +215,7 @@ TEXT SECTION
 		& > :first-child{}
 		& > :last-child{}
 
-		p{
-
-		}
+		p{}
 
 	}
 
@@ -336,40 +231,26 @@ FOOTER
 
 	.wrap{}
 
-	.credits{
-
-	}
+	.credits{}
 
 }
 .mailing_list{
 
 	padding: 0 0 60px 0;
 
-	.mailing_list_title, form{
-		
-	}
+	.mailing_list_title, form{}
 
-	.mailing_list_title{
-		
-	}
+	.mailing_list_title{}
 
 	form{
 
-		
+		input{}
 
-		input{
-			
-		}
-		input[type="email"]{
-			
-		}
+		input[type="email"]{}
+
 		input[type="submit"]{
 
-			
-
-			&:hover{
-				
-			}
+			&:hover{}
 
 		}
 
@@ -385,30 +266,9 @@ FOOTER
 
 	ul{
 
-		
-
 		li{
 
-			
-
-			a{
-
-				
-
-				svg{
-
-					
-
-					path{
-
-						
-
-					}
-
-				}
-
-			}
-			a:hover path{}
+			a{}
 
 		}
 

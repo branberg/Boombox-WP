@@ -11,9 +11,6 @@ html, body{
 	overflow-x: hidden;
 
 }
-body{
-	
-}
 
 a{
 	color: #382A3B;
@@ -41,6 +38,7 @@ h1, h2, h3, h4, h5, h6{
 		right: 0;
 		bottom: 0;
 	}
+
 }
 
 #mobile_menu{
@@ -241,7 +239,7 @@ h1, h2, h3, h4, h5, h6{
 
 .placeholder_section{
 
-	.wrap{ }
+	.wrap{}
 
 	.placeholder_copy{
 
@@ -331,9 +329,8 @@ MUSIC/ALBUMS
 
 					& > :first-child{ margin-top: 0; }
 					& > :last-child{ margin-bottom: 0; }
-					p{
 
-					}
+					p{}
 
 				}
 				.album_button{
@@ -367,11 +364,8 @@ MUSIC/ALBUMS
 /*************************************
 SHOWS
 *************************************/
-.shows_section{
+.shows_section{}
 
-	
-
-}
 table.tour_dates{
 
 	width:100%;
@@ -390,7 +384,6 @@ table.tour_dates{
 
 		td{
 
-			
 			font-size: 12px;
 
 			.cell_wrap{
@@ -435,12 +428,8 @@ table.tour_dates{
 			.venue, .city{
 				display: block;
 			}
-			.venue{
-
-			}
-			.city{
-
-			}
+			.venue{}
+			.city{}
 
 		}
 		td.tickets{
@@ -529,20 +518,14 @@ TEXT SECTION
 .text_section{
 
 	.wrap{}
-	.section_header{
-
-	}
+	.section_header{}
 
 	.text_content{
-
-		
 
 		& > :first-child{ margin-top: 0; }
 		& > :last-child{ margin-bottom: 0; }
 
-		p{
-
-		}
+		p{}
 
 	}
 
@@ -569,10 +552,12 @@ FOOTER
 			margin: 10px 0;
 		}
 		a{
+
 			text-decoration: none;
 			&:hover{
 				
 			}
+
 		}
 
 	}
@@ -654,35 +639,9 @@ FOOTER
 
 		}
 
-		input[type="email"]{
-			/*border: solid 2px #382A3B;
-			display: block;
-			padding: 15px;
-			outline: none;
-			width: 100%;
-			background: none;
-			margin-bottom: 10px;
-			color: #382A3B;
-			margin: 0 0 10px 0;
-			text-indent: 0;
-			min-width: 0;*/
-		}
+		input[type="email"]{}
 
-		input[type="submit"]{
-			/*font-size: 18px;
-			font-weight: normal;
-			text-transform: uppercase;
-			background-color: #382A3B;
-			color: #ffffff;
-			width: 100%;
-			border: solid 2px #382A3B;
-			display: block;
-			padding: 15px;
-			outline: none;
-			height: auto;
-			line-height: 18px;
-			@include rounded(0);*/
-		}
+		input[type="submit"]{}
 
 	}
 		
@@ -710,9 +669,7 @@ FOOTER
 				text-decoration: none;
 				color: #382A3B;
 
-				i{
-
-				}
+				i{}
 
 			}
 			a:hover, a:hover{ color: lighten(#382A3B, 20%); }
@@ -731,8 +688,6 @@ PAGE STYLES
 
 	padding: 30px 0;
 
-	&.top_offset{
-
-	}
+	&.top_offset{}
 
 }
