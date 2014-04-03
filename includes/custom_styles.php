@@ -45,6 +45,7 @@ $fonts = array(
 );
 
 //site colors
+$logo_color = get_field( 'text_logo_color', 'option' );
 $main_color = get_field('main_color', 'option');
 $menu_color = get_field('menu_color', 'option');
 $footer_text_color = get_field('footer_text_color', 'option');
@@ -197,7 +198,12 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 
 	}
 
-	#logo,
+	#logo{
+
+		<?php echo( $logo_color ? "color: $logo_color;" : "" ); ?>
+
+	}
+
 	.site_header nav#header_nav ul li a{
 		
 		<?php echo( $menu_color ? "color: $menu_color;" : "" ); ?>

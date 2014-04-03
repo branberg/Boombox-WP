@@ -23,6 +23,14 @@ if(function_exists("register_field_group"))
 				'library' => 'all',
 			),
 			array (
+				'key' => 'field_5332fgh583d86',
+				'label' => 'Text Logo Color',
+				'name' => 'text_logo_color',
+				'type' => 'color_picker',
+				'default_value' => '#333333',
+				'instructions' => 'This will change the color of your logo if you do not have a logo image uploaded below',
+			),
+			array (
 				'key' => 'field_5332fcf892d86',
 				'label' => 'Logo',
 				'name' => 'logo',
