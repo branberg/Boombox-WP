@@ -946,6 +946,11 @@ PAGE STYLES
   /*************************************
   FOOTER
   *************************************/
+  .site_footer .credits {
+    padding-top: 0; }
+    .site_footer .credits p {
+      margin: 0; }
+
   .mailing_list .mailing_list_title, .mailing_list form {
     display: inline-block;
     vertical-align: middle; }
