@@ -249,6 +249,9 @@ if( ! isset($content_width) ){
 	$content_width = 920;
 }
 
+//turn off admin bar
+add_filter('show_admin_bar', '__return_false');
+
 
 /*********************************************************************************************************
 Custom style for the wordpress editor
