@@ -184,10 +184,8 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 			echo ( $background_overlay_color ? "background-color: $background_overlay_color;" : '' );
 
 			// Background Overlay
-			if($background_overlay_opacity){
-				$opacityConversion = $background_overlay_opacity/100;
-				echo "opacity: $opacityConversion;";
-			}
+			$opacityConversion = $background_overlay_opacity/100;
+			echo "opacity: $opacityConversion;";
 
 		?>
 
@@ -217,7 +215,13 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 	.mailing_list form label.placeholder{ color: <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
 	.mailing_list form input[type="submit"]{
 		<?php echo( $footer_text_color ? "background-color: $footer_text_color;" : "" ); ?>
-		<?php echo ( $background_overlay_color ? "color: $background_overlay_color;" : '' ); ?>
+		<?php
+			if($background_overlay_opacity){
+				echo "color: $background_overlay_color;";
+			} else {
+				echo "color: #ffffff;";
+			}
+		?>
 	}
 
 	.music_section{ <?php echo( $music_background_color ? "background-color: $music_background_color;" : "" ); ?> }
