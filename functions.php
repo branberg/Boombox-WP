@@ -230,6 +230,13 @@ THEME SUPPORT
 // add rss feed links to <head>
 add_theme_support('automatic-feed-links');
 
+// wp thumbnails (sizes handled in functions.php)
+add_theme_support('post-thumbnails');
+
+// default thumb size
+set_post_thumbnail_size( 256, 160, true );
+add_image_size( 'gallery-photo', 320, 320, true );
+
 // registering wp3+ menus
 register_nav_menus(
 	array(
