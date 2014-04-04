@@ -40,6 +40,13 @@
 </head>
 <body>
 
+	<!--[if lt IE 9]>
+		<div id="ie_upgrade_message">
+			<p>This website is not supported on your browser. It uses up-to-date technology that this version of Internet Exploer does not support.</p>
+			<p>Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> for the best viewing experience possible.</p>
+		</div>
+	<![endif]-->
+
 	<div id="site_wrap">
 
 		<div id="overlay_color"></div>
