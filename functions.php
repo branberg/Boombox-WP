@@ -236,6 +236,7 @@ add_theme_support('post-thumbnails');
 // default thumb size
 set_post_thumbnail_size( 256, 160, true );
 add_image_size( 'gallery-photo', 320, 320, true );
+add_image_size( 'background_photo', 1920, 1920, false );
 
 // registering wp3+ menus
 register_nav_menus(
