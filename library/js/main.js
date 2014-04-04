@@ -60,36 +60,29 @@ jQuery(document).ready(function($) {
 	/****************************************************************
 	Animate the menu stuff
 	****************************************************************/
-	var rightOffset = windowWidth - 60;
-
 	$('#mobile_menu_toggle').click(function(){
 
+		var windowWidth = $(window).width();
+		var rightOffset = windowWidth - 60;
+
 		if( $('#mobile_menu_toggle').hasClass('expanded') ) {
-			
 			$('#site_wrap, #mobile_header').animate({
 				right: 0
 			}, {
 				duration: 120,
 				specialEasing: "swing"
 			});
-
 			$('#mobile_menu_toggle').removeClass('expanded');
-			
 		} else {
-			
 			$('#site_wrap, #mobile_header').animate({
 				right: -rightOffset
 			}, {
 				duration: 120,
 				specialEasing: "swing"
 			});
-
 			$('#mobile_menu_toggle').addClass('expanded');
-			
 		}
-		
 		return false;
-
 	});
 
 	/*************************************************************************
