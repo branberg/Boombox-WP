@@ -66,15 +66,23 @@
 				</div>
 				<nav id="header_nav" class="clearfix">
 
-					<?php wp_nav_menu( array(
+					<?php
 
-						'menu_id' => 'menu_links',
-						'theme_location' => 'main-nav',
-						'container' => '',
-						'menu_class' => '',
-						'fallback_cb' => 'boombox_main_menu'
+						if( has_nav_menu('main-nav') ){ //only show menu links if user has created a custom menu
 
-					)); ?>
+							wp_nav_menu( array(
+
+								'menu_id' => 'menu_links',
+								'theme_location' => 'main-nav',
+								'container' => '',
+								'menu_class' => '',
+								'fallback_cb' => 'boombox_main_menu'
+
+							));
+
+						}
+
+					?>
 
 					<?php if( have_rows('social_icons', 'option') ): ?>
 						<ul id="social_links">

@@ -248,7 +248,7 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 
 		<?php
 			if( $mobile_menu_background_color ){
-				echo "background-color:" . hex2rgba($mobile_menu_background_color, 0.95) . "; border-bottom: " . $mobile_menu_background_color . ";";
+				echo "background-color:" . hex2rgba($mobile_menu_background_color, 0.90) . "; border-bottom: " . $mobile_menu_background_color . ";";
 			}
 		?>
 	}
