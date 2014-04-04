@@ -173,7 +173,7 @@
 											<ul class="clearfix">
 												<?php foreach( $photos as $photo ): ?>
 													<li>
-														<a href="<?php echo $photo['url']; ?>" title="<?php echo $photo['title']; ?>" class="lightbox" data-lightbox-gallery="homepagephotos">
+														<a href="<?php echo $photo['url']; ?>" class="lightbox" data-lightbox-gallery="homepagephotos">
 															<img src="<?php echo $photo['sizes']['gallery-photo']; ?>" alt="<?php echo $photo['alt']; ?>" />
 														</a>
 													</li>
