@@ -52,7 +52,7 @@ if(function_exists("register_field_group"))
 				'label' => 'Background Image',
 				'name' => 'background_image',
 				'type' => 'image',
-				'save_format' => 'url',
+				'save_format' => 'object',
 				'preview_size' => 'medium',
 				'library' => 'all',
 			),
