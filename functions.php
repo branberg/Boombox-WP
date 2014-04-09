@@ -24,6 +24,18 @@ define( 'ACF_LITE' , true );
 
 
 /*********************************************************************************************************
+ADD SUB-OPTIONS PAGES
+*********************************************************************************************************/
+if( function_exists('acf_add_options_sub_page') ) {
+
+   acf_add_options_sub_page( 'Design' );
+   acf_add_options_sub_page( 'Social Icons' );
+   acf_add_options_sub_page( 'Mailing List' );
+   acf_add_options_sub_page( 'License Key' );
+
+}
+
+/*********************************************************************************************************
 BOOMBOX MAIN MENU - Used as fallback when no menu is initially created
 *********************************************************************************************************/
 function boombox_main_menu(){
@@ -266,5 +278,6 @@ add_action( 'init', 'boombox_add_editor_styles' );
 /*********************************************************************************************************
 Sellwire + Wp-Updates integration (keep this for automatic updates!)
 *********************************************************************************************************/
+$license_key = get_field( 'license_key', 'option' );
 require_once('wp-updates-theme.php');
 new WPUpdatesThemeUpdater_692( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ), $license_key  );

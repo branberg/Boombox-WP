@@ -4,40 +4,40 @@ function updateoptionkeys() {
 	$fields = array (
 
 		//background options
-		"field_53348c776bf17"	=> 'Fullscreen', //bg position
-		"field_53348c316bf16"	=> 'No Repeat', //bg repeat
-		"field_53348cbb6bf18"	=> 'Fixed Background', //bg attachment
-		"field_53348ce66bf19"	=> '#ffffff', //bg overlay color
-		"field_53348d016bf1a"	=> '90', //bg overlay opacity
+		"field_534575addbe8c"	=> 'Fullscreen', //bg position
+		"field_534575d9dbe8d"	=> 'No Repeat', //bg repeat
+		"field_53457600dbe8e"	=> 'Fixed Background', //bg attachment
+		"field_5345762adbe8f"	=> '#ffffff', //bg overlay color
+		"field_53457641dbe90"	=> '90', //bg overlay opacity
 
 		//fonts
-		"field_533c3d7c2c07c"	=> 'Google Font', //set default heading font type
-		"field_533c186767fab"	=> 'Montserrat', //heading font
-		"field_533c3e142c07e"	=> 'Google Font', //body font type
-		"field_533c18e42716a"	=> 'Open Sans', //body font
+		"field_53457694dbe92"	=> 'Google Font', //set default heading font type
+		"field_534576c1dbe93"	=> 'Montserrat', //heading font
+		"field_53457777f2cf2"	=> 'Google Font', //body font type
+		"field_5345779af2cf3"	=> 'Open Sans', //body font
 
 		//site colors
-		"field_53348a129e5f7"	=> '#382A3B', //main color
-		"field_53371f6f6f463"	=> '#382A3B', //menu color
-		"field_53371f916f464"	=> '#382A3B', //footer text color
+		"field_5345784994490"	=> '#382A3B', //main color
+		"field_5345787494491"	=> '#382A3B', //menu color
+		"field_5345788294492"	=> '#382A3B', //footer text color
 
 		//music colors
-		"field_5337146fe4728"	=> '#382A3B', //music background color
-		"field_5337148fe4729"	=> '#ffffff', //music text color
+		"field_534578a294494"	=> '#382A3B', //music background color
+		"field_534578b594495"	=> '#ffffff', //music text color
 
 		//mobile
-		"field_533717bc7b2ef"	=> '#382A3B', //mobile menu background color
-		"field_533717d67b2f0"	=> '#ffffff', //mobile menu text color
+		"field_53457923df004"	=> '#382A3B', //mobile menu background color
+		"field_5345793bdf005"	=> '#ffffff', //mobile menu text color
 
 		//social icons
-		"field_533351fd6cbf6"	=> array(
+		"field_534579d0ada8d"	=> array(
 			array( 'social_network' => 'facebook', 'link_url' => 'http://facebook.com' ),
 			array( 'social_network' => 'twitter', 'link_url' => 'http://twitter.com' ),
 			array( 'social_network' => 'soundcloud', 'link_url' => 'http://soundcloud.com' )
 		),
 
 		//mailing list
-		"field_5332feb5d5632"	=> 'Off', //mailing list visibility
+		"field_534574934f4c8"	=> 'Off', //mailing list visibility
 
 	); 
 
