@@ -269,3 +269,9 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 		<?php echo ( $background_overlay_color ? "color: $background_overlay_color;" : '' ); ?>
 
 	}
+
+	#user_controls ul li a:hover{
+
+		<?php echo( $main_color ? "background-color: $main_color;" : "" ); ?>
+
+	}
