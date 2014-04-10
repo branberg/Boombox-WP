@@ -633,43 +633,6 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	register_field_group(array (
-		'id' => 'acf_site-license-key',
-		'title' => 'Site License Key',
-		'fields' => array (
-			array (
-				'key' => 'field_53457441f3475',
-				'label' => 'License Key',
-				'name' => 'license_key',
-				'type' => 'text',
-				'instructions' => 'Insert the license key you received after purchasing the Boombox theme. If you did not receive a license key, please email <a href="mailto:support@branberg.com">support@branberg.com</a> and we will get it fixed for you.',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'none',
-				'maxlength' => '',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'options_page',
-					'operator' => '==',
-					'value' => 'acf-options-license-key',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'default',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
-	register_field_group(array (
 		'id' => 'acf_social-icon-options',
 		'title' => 'Social Icon Options',
 		'fields' => array (
