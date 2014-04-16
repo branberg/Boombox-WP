@@ -201,14 +201,16 @@ if(function_exists("register_field_group"))
 				'label' => 'Mailing List Visibility',
 				'name' => 'mailing_list_visibility',
 				'type' => 'radio',
+				'instructions' => 'Select the type of form integration you would like to use.',
 				'choices' => array (
-					'On' => 'On',
 					'Off' => 'Off',
+					'Mailchimp' => 'Mailchimp',
+					'Fanbridge' => 'Fanbridge'
 				),
 				'other_choice' => 0,
 				'save_other_choice' => 0,
 				'default_value' => 'Off',
-				'layout' => 'horizontal',
+				'layout' => 'vertical',
 			),
 			array (
 				'key' => 'field_534574b64f4c9',
@@ -229,7 +231,7 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_534574934f4c8',
 							'operator' => '==',
-							'value' => 'On',
+							'value' => 'Mailchimp',
 						),
 					),
 					'allorany' => 'all',
@@ -239,6 +241,29 @@ if(function_exists("register_field_group"))
 				'maxlength' => '',
 				'rows' => '',
 				'formatting' => 'html',
+			),
+			array (
+				'key' => 'field_5345784df940g',
+				'label' => 'Fanbridge Message',
+				'name' => 'fanbridge_message',
+				'type' => 'message',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_534574934f4c8',
+							'operator' => '==',
+							'value' => 'Fanbridge',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'message' => 	'<strong>Heads up!</strong>
+								This feature requires that the Fanbridge Signup Plugin is installed and activated.
+								You can download that plugin <a href="http://wordpress.org/plugins/fanbridge-signup/" target="_blank">here</a>.
+
+								There are no options for this form on this page, it simply turns it on/off.<br/>
+								If you would like to change the settings, go to "Settings" > "Fanbridge Signup".'
 			),
 		),
 		'location' => array (

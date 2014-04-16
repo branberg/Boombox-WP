@@ -673,6 +673,12 @@ FOOTER
       margin: 0 0 20px 0;
       display: block; }
 
+#FbridgeSGWidget #attribution {
+  display: none; }
+
+.fanbridge_mailing_list_widget fieldset label {
+  text-align: left; }
+
 .social_links ul {
   margin: 0;
   padding: 0;

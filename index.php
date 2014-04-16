@@ -237,7 +237,7 @@
 		<footer class="site_footer">
 			<div class="wrap">
 
-				<?php if( get_field( 'mailing_list_visibility', 'option' ) == "On" ): ?>
+				<?php if( get_field( 'mailing_list_visibility', 'option' ) == "Mailchimp" ): ?>
 
 					<div class="mailing_list">
 
@@ -251,9 +251,18 @@
 						}
 						?>
 
+						
+
+					</div>
+
+				<?php elseif( get_field( 'mailing_list_visibility', 'option' ) == "Fanbridge" ): ?>
+
+					<div class="mailing_list fanbridge_mailing_list_widget">
+						<?php the_widget( 'FanBridge_SignUp_Widget' ); ?>
 					</div>
 
 				<?php endif; ?>
+
 
 				<div class="credits">
 					<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> - All Rights Reserved</p>

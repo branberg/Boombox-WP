@@ -264,6 +264,21 @@ if( ! isset($content_width) ){
 //turn off admin bar
 add_filter('show_admin_bar', '__return_false');
 
+//Register our sidebars and widgetized areas.
+// This is off by defalt, but if you know what you're doing then have at it.
+/*function boombox_widgets_init() {
+
+	register_sidebar( array(
+		'name' => 'Home Bottom Widget Area',
+		'id' => 'home_bottom_bar',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'boombox_widgets_init' );*/
+
 
 /*********************************************************************************************************
 Custom style for the wordpress editor
