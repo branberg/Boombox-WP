@@ -293,4 +293,4 @@ add_action( 'init', 'boombox_add_editor_styles' );
 Sellwire + Wp-Updates integration (keep this for automatic updates!)
 *********************************************************************************************************/
 require_once('wp-updates-theme.php');
-new WPUpdatesThemeUpdater_692( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ) );
+new WPUpdatesThemeUpdater_701( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ) );
