@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
 
 	<!--
@@ -38,7 +38,7 @@
 	<style type="text/css"><?php include_once('includes/custom_styles.php'); ?></style>
 
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 	<!--[if lt IE 9]>
 		<div id="ie_upgrade_message">
@@ -60,7 +60,7 @@
 		<header id="main_header" class="site_header">
 			<div class="wrap">
 				<div id="logo_wrap">
-					<a href="<?php bloginfo('wpurl'); ?>" id="logo">
+					<a href="<?php site_url(); ?>" id="logo">
 
 						<?php $logo = get_field('logo', 'option'); ?>
 						<?php if( $logo ): ?>
@@ -277,9 +277,9 @@
 
 		<div id="user_controls" <?php echo( is_admin_bar_showing() ? 'style="top:47px;"' : 'style="top:15px;"' ); ?>>
 			<ul>
-				<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/index.php" title="Go To Dashboard"><i class="icon-home"></i></a></li>
+				<li><a href="<?php site_url(); ?>/wp-admin/index.php" title="Go To Dashboard"><i class="icon-home"></i></a></li>
 				<li><a href="<?php echo get_edit_post_link(); ?>" title="Edit Page Content"><i class="icon-cog"></i></a></li>
-				<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/admin.php?page=acf-options" title="Edit Site Styles"><i class="icon-tint"></i></a></li>
+				<li><a href="<?php site_url(); ?>/wp-admin/admin.php?page=acf-options" title="Edit Site Styles"><i class="icon-tint"></i></a></li>
 			</ul>
 		</div>
 
