@@ -29,7 +29,7 @@
 	<meta name="description" content="Boombox is a simple, one-page theme that was created specifically for musicians." />
 	<meta property="og:title" content="<?php the_title(); ?> | <?php bloginfo('name'); ?>" />
 	<meta property="og:type" content="profile" />
-	<meta property="og:url" content="<?php bloginfo('wpurl'); ?>" />
+	<meta property="og:url" content="<?php site_url(); ?>" />
 	<meta property="og:image" content="http://example.com/image.jpg" />
 	<meta property="og:description" content="Boombox is a simple, one-page theme that was created specifically for musicians." />
 
