@@ -26,12 +26,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Social meta tags -->
-	<meta name="description" content="Boombox is a simple, one-page theme that was created specifically for musicians." />
+	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	<meta property="og:title" content="<?php the_title(); ?> | <?php bloginfo('name'); ?>" />
 	<meta property="og:type" content="profile" />
-	<meta property="og:url" content="<?php site_url(); ?>" />
-	<meta property="og:image" content="http://example.com/image.jpg" />
-	<meta property="og:description" content="Boombox is a simple, one-page theme that was created specifically for musicians." />
+	<meta property="og:url" content="<?php echo site_url(); ?>" />
+	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 
 	<?php wp_head(); ?>
 
@@ -60,7 +59,7 @@
 		<header id="main_header" class="site_header">
 			<div class="wrap">
 				<div id="logo_wrap">
-					<a href="<?php site_url(); ?>" id="logo">
+					<a href="<?php echo site_url(); ?>" id="logo">
 
 						<?php $logo = get_field('logo', 'option'); ?>
 						<?php if( $logo ): ?>
@@ -230,6 +229,17 @@
 					</div>
 				</div>
 
+			<?php elseif( is_404() ): //output 404 error pages ?>
+
+				<div class="page_section text_section">
+					<div class="wrap">
+						<header class="section_header"><h2>Error 404</h2></header>
+						<div class="text_content">
+							<p>This page does not exist</p>
+						</div>
+					</div>
+				</div>
+
 			<?php endif; ?>
 
 		</div>
@@ -277,9 +287,9 @@
 
 		<div id="user_controls" <?php echo( is_admin_bar_showing() ? 'style="top:47px;"' : 'style="top:15px;"' ); ?>>
 			<ul>
-				<li><a href="<?php site_url(); ?>/wp-admin/index.php" title="Go To Dashboard"><i class="icon-home"></i></a></li>
+				<li><a href="<?php echo site_url(); ?>/wp-admin/index.php" title="Go To Dashboard"><i class="icon-home"></i></a></li>
 				<li><a href="<?php echo get_edit_post_link(); ?>" title="Edit Page Content"><i class="icon-cog"></i></a></li>
-				<li><a href="<?php site_url(); ?>/wp-admin/admin.php?page=acf-options" title="Edit Site Styles"><i class="icon-tint"></i></a></li>
+				<li><a href="<?php echo site_url(); ?>/wp-admin/admin.php?page=acf-options" title="Edit Site Styles"><i class="icon-tint"></i></a></li>
 			</ul>
 		</div>
 
