@@ -52,10 +52,12 @@ jQuery(document).ready(function($) {
 	****************************************************************/
 	$('#header_nav').autoMenuLayout();
 
+
 	/****************************************************************
 	Build mobile menu
 	****************************************************************/
 	$('#header_nav').mobileMenu();
+
 
 	/****************************************************************
 	Animate the menu stuff
@@ -85,13 +87,19 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
+
 	/*************************************************************************
 	Keep Album dimensions equal no matter what
 	*************************************************************************/
 	$('.soundcloud_embed').keepSquare();
+
 	if( windowWidth > 768 ){
+
+		//set main album info to square dimensions
 		$('.album_info_wrapper').keepSquare();
+
 	}
+
 	$(window).resize(function(){
 		var windowWidth = $(window).width();
 		$('.soundcloud_embed').keepSquare();
@@ -101,6 +109,86 @@ jQuery(document).ready(function($) {
 			$('.album_info_wrapper').height('auto');
 		}
 	});
+
+	
+	/*************************************************************************
+	Allow album descriptions to be longer and scroll rather than get cut off
+	*************************************************************************/
+	//do things initial on window load
+	$(window).load(function(){
+
+		$('.album').each(function(){
+
+			//set variables
+			var album = $(this);
+			var albumPadding = 40;
+			var extraSpacing = 40;
+			var albumHeight = album.find('.album_info_wrapper').outerHeight();
+			var typeHeight = album.find('.album_type').outerHeight();
+			var titleHeight = album.find('.album_title').outerHeight();
+			var buttonHeight = album.find('.album_button').outerHeight();
+
+			//do math to find height value needed
+			var descriptionHeight = albumHeight - ( typeHeight + titleHeight + buttonHeight + ( albumPadding * 2 ) + extraSpacing );
+
+			if( windowWidth > 768 ){
+
+				//set initial load height of description
+				album.find('.album_description').height(descriptionHeight);
+
+				//if the content is being scrolled, add some padding to it so the text doesn't touch the scroll bars
+				if( descriptionHeight < album.find('.album_description p').height() ){
+					album.find('.album_description p').css('padding-right', 20);
+				}
+
+			}
+
+		});
+		
+
+	});
+
+	$(window).resize(function(){
+
+		//set window width to be a dynamic variable as screen is resized
+		var windowWidth = $(window).width();
+
+		$('.album').each(function(){
+
+			//set variables
+			var album = $(this);
+			var albumPadding = 40;
+			var extraSpacing = 40;
+			var albumHeight = album.find('.album_info_wrapper').outerHeight();
+			var typeHeight = album.find('.album_type').outerHeight();
+			var titleHeight = album.find('.album_title').outerHeight();
+			var buttonHeight = album.find('.album_button').outerHeight();
+
+			//do math to find height value needed
+			var descriptionHeight = albumHeight - ( typeHeight + titleHeight + buttonHeight + ( albumPadding * 2 ) + extraSpacing );
+
+			if( windowWidth > 768 ){
+
+				//set initial load height of description
+				album.find('.album_description').height(descriptionHeight);
+
+				//if the content is being scrolled, add some padding to it so the text doesn't touch the scroll bars
+				if( descriptionHeight < album.find('.album_description p').height() ){
+					album.find('.album_description p').css('padding-right', 20);
+				}
+
+			} else {
+
+				// if smaller than 768, reset the vales back to normal to no scrollign happens
+				album.find('.album_description').height('auto');
+				album.find('.album_description p').css('padding-right', 0);
+
+			}
+
+		});
+
+	});
+
 
 	/*************************************************************************
 	Make video embeds responsive - Youtube, vimeo

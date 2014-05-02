@@ -214,6 +214,8 @@ MUSIC/ALBUMS
 				.album_description{
 
 					font-size: 1.15em;
+					height: 100px;
+					overflow-y: auto;
 
 					& > :first-child{  }
 					& > :last-child{  }

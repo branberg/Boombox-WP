@@ -503,7 +503,8 @@ MUSIC/ALBUMS
         .music_section .album .album_info_wrapper .album_info .album_title {
           font-size: 1.625rem;
           font-weight: 500;
-          margin: 10px 0;
+          margin: 0;
+          padding: 10px 0;
           color: #ffffff; }
         .music_section .album .album_info_wrapper .album_info .album_description {
           color: #ffffff; }
@@ -879,7 +880,9 @@ PAGE STYLES
           .music_section .album .album_info_wrapper .album_info .album_title {
             font-size: 2.375rem; }
           .music_section .album .album_info_wrapper .album_info .album_description {
-            font-size: 1.15em; }
+            font-size: 1.15em;
+            height: 100px;
+            overflow-y: auto; }
           .music_section .album .album_info_wrapper .album_info .album_button {
             position: absolute;
             bottom: 40px;
@@ -1021,6 +1024,9 @@ PAGE STYLES
   /*************************************
   MUSIC/ALBUMS
   *************************************/
+  .music_section .album .album_info_wrapper .album_info .album_description {
+    height: 187px; }
+
   /*************************************
   NEWS SECTION
   *************************************/
