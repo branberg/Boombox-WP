@@ -218,7 +218,7 @@ if(function_exists("register_field_group"))
 				'name' => 'mailchimp_form_snippet',
 				'type' => 'textarea',
 				'instructions' => '<strong>**Important**</strong> - You must grab the "Super Slim" form code from your Mailchimp account.<br/><br/>
-		
+
 		To access the form code follow these steps:<br/>
 		1) Go to you Mailchimp Account then click on "Lists".<br/>
 		2) Click on the list you would like to use (or create one if none exist).<br/>
@@ -674,17 +674,26 @@ if(function_exists("register_field_group"))
 						'type' => 'select',
 						'column_width' => '',
 						'choices' => array (
+							'apple' => 'Apple',
 							'bandcamp' => 'Bandcamp',
 							'behance' => 'Behance',
 							'dribbble' => 'Dribbble',
 							'facebook' => 'Facebook',
 							'flickr' => 'Flickr',
+							'forrst' => 'Forrst',
+							'foursquare' => 'Foursquare',
+							'github-alt' => 'Github',
+							'google' => 'Google',
 							'googleplus' => 'Google Plus',
+							'grooveshark' => 'Grooveshark',
 							'instagram' => 'Instagram',
+							'itunes' => 'iTunes',
 							'lastfm' => 'Last.fm',
 							'linkedin' => 'LinkedIn',
+							'myspace' => 'MySpace',
 							'pinterest' => 'Pinterest',
 							'rdio' => 'Rdio',
+							'rss' => 'RSS',
 							'skype' => 'Skype',
 							'soundcloud' => 'Soundcloud',
 							'spotify' => 'Spotify',
@@ -692,6 +701,8 @@ if(function_exists("register_field_group"))
 							'tumblr' => 'Tumblr',
 							'twitter' => 'Twitter',
 							'vimeo' => 'Vimeo',
+							'windows' => 'Windows',
+							'wordpress-alt' => 'Wordpress',
 							'youtube' => 'Youtube',
 						),
 						'default_value' => '',

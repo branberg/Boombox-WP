@@ -34,6 +34,7 @@ if( function_exists('acf_add_options_sub_page') ) {
 
 }
 
+
 /*********************************************************************************************************
 BOOMBOX MAIN MENU - Used as fallback when no menu is initially created
 *********************************************************************************************************/
@@ -53,9 +54,9 @@ function hex2rgba($color, $opacity = false) {
 
 	//Return default if no color provided
 	if(empty($color))
-          return $default; 
+          return $default;
 
-	//Sanitize $color if "#" is provided 
+	//Sanitize $color if "#" is provided
         if ($color[0] == '#' ) {
         	$color = substr( $color, 1 );
         }
@@ -175,7 +176,7 @@ function boombox_custom_webfonts(){
 			$fontFamily = "http://fonts.googleapis.com/css?family=$body_font";
 
 		}
-		
+
 		//only add script if at least one is a Google Font
 		if( $heading_font_type == "Google Font" || $body_font_type == "Google Font" ){
 			wp_register_style( 'custom-fonts', $fontFamily, array(), '', 'all' );
@@ -195,13 +196,13 @@ function boombox_styles_and_scripts(){
 
 	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 	if (!is_admin()) {
-	
+
 		// register scripts
 		wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/library/js/jquery.fitvids.js', array('jquery'), '1.1', true );
 		wp_register_script( 'swipebox', get_stylesheet_directory_uri() . '/library/js/jquery.swipebox.min.js', array('jquery'), '1.2.4', true );
 		wp_register_script( 'nivo', get_stylesheet_directory_uri() . '/library/js/jquery.nivo-lightbox.min.js', array('jquery'), '1.0', true );
 		wp_register_script( 'main-js', get_stylesheet_directory_uri() . '/library/js/main-ck.js', array( 'jquery' ), '', true );
-		
+
 		// register stylesheets
 		wp_register_style( 'default', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
 		wp_register_style( 'swipebox', get_stylesheet_directory_uri() . '/library/css/swipebox/swipebox.css', array(), '', 'all' );
@@ -210,7 +211,7 @@ function boombox_styles_and_scripts(){
 		wp_register_style( 'stylesheet', get_stylesheet_directory_uri() . '/library/css/main.css', array(), '', 'all' );
 		wp_register_style( 'normalize', get_stylesheet_directory_uri() . '/library/css/normalize.css', array(), '', 'all' );
 		wp_register_style( 'ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
-		
+
 		// enqueue styles
 		wp_enqueue_style( 'swipebox' );
 		wp_enqueue_style( 'nivo' );
@@ -220,14 +221,14 @@ function boombox_styles_and_scripts(){
 		wp_enqueue_style( 'stylesheet' );
 		wp_enqueue_style('ie-only');
 		$wp_styles->add_data( 'ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
-		
+
 		//enqueue scripts
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'fitvids' );
 		wp_enqueue_script( 'swipebox' );
 		wp_enqueue_script( 'nivo' );
 		wp_enqueue_script( 'main-js' );
-	
+
 	}
 
 }
