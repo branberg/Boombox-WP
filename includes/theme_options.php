@@ -143,7 +143,7 @@ if(function_exists("register_field_group"))
 								'column_width' => '',
 								'default_value' => '',
 								'toolbar' => 'full',
-								'media_upload' => 'no',
+								'media_upload' => 'yes',
 							),
 						),
 					),
