@@ -678,6 +678,7 @@ if(function_exists("register_field_group"))
 							'bandcamp' => 'Bandcamp',
 							'behance' => 'Behance',
 							'dribbble' => 'Dribbble',
+							'email' => 'Email',
 							'facebook' => 'Facebook',
 							'flickr' => 'Flickr',
 							'forrst' => 'Forrst',

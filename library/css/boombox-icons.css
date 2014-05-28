@@ -122,9 +122,6 @@
 .icon-menu:before {
   content: "\e01e"; }
 
-.icon-bandcamp:before {
-  content: "\e01f"; }
-
 .icon-stumbleupon:before {
   content: "\e020"; }
 
@@ -151,3 +148,9 @@
 
 .icon-tint:before {
   content: "\e028"; }
+
+.icon-email:before {
+  content: "\e029"; }
+
+.icon-bandcamp:before {
+  content: "\e02a"; }
