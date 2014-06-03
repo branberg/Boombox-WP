@@ -130,9 +130,25 @@
 														<p><?php the_sub_field('feature_description'); ?></p>
 													</div>
 												<?php endif; ?>
-												<?php if( get_sub_field('button_url') && get_sub_field('button_text') ): ?>
-													<a href="<?php the_sub_field('button_url'); ?>" class="album_button" target="_blank"><?php the_sub_field('button_text'); ?></a>
+
+												<?php if( get_sub_field('second_button') ): ?>
+
+													<?php if( get_sub_field('button_url') && get_sub_field('button_text') ): ?>
+														<a href="<?php the_sub_field('button_url'); ?>" class="album_button half left" target="_blank"><?php the_sub_field('button_text'); ?></a>
+													<?php endif; ?>
+
+													<?php if( get_sub_field('second_button_url') && get_sub_field('second_button_text') ): ?>
+														<a href="<?php the_sub_field('second_button_url'); ?>" class="album_button half right" target="_blank"><?php the_sub_field('second_button_text'); ?></a>
+													<?php endif; ?>
+
+												<?php else: ?>
+
+													<?php if( get_sub_field('button_url') && get_sub_field('button_text') ): ?>
+														<a href="<?php the_sub_field('button_url'); ?>" class="album_button full" target="_blank"><?php the_sub_field('button_text'); ?></a>
+													<?php endif; ?>
+
 												<?php endif; ?>
+
 											</div>
 										</div>
 									</div>
@@ -172,7 +188,7 @@
 											<ul class="clearfix">
 												<?php foreach( $photos as $photo ): ?>
 													<li>
-														<a href="<?php echo $photo['url']; ?>" class="lightbox" data-lightbox-gallery="homepagephotos">
+														<a href="<?php echo $photo['sizes']['full-gallery-photo']; ?>" class="lightbox" data-lightbox-gallery="homepagephotos">
 															<img src="<?php echo $photo['sizes']['gallery-photo']; ?>" alt="<?php echo $photo['alt']; ?>" />
 														</a>
 													</li>

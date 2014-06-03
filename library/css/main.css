@@ -886,8 +886,21 @@ PAGE STYLES
           .music_section .album .album_info_wrapper .album_info .album_button {
             position: absolute;
             bottom: 40px;
-            left: 40px;
-            right: 40px; }
+            font-size: 1em;
+            padding: 20px 2.5%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+            .music_section .album .album_info_wrapper .album_info .album_button.half {
+              width: 41%; }
+              .music_section .album .album_info_wrapper .album_info .album_button.half.left {
+                left: 8.6999%; }
+              .music_section .album .album_info_wrapper .album_info .album_button.half.right {
+                right: 8.6999%; }
+            .music_section .album .album_info_wrapper .album_info .album_button.full {
+              left: 40px;
+              right: 40px;
+              font-size: 1.25em; }
 
   /*************************************
   NEWS SECTION
@@ -985,21 +998,26 @@ PAGE STYLES
       padding: 20px; }
     .mailing_list form input[type="email"] {
       width: 280px;
-      border-right: none;
       margin-bottom: 0; }
     .mailing_list form input[type="submit"] {
       width: 150px; }
+  .mailing_list #mc_embed_signup form {
+    display: block; }
   .mailing_list #mc_embed_signup label[for="mce-EMAIL"] {
-    float: left;
+    clear: both;
+    width: 100%;
     font-size: 24px;
-    margin: 16px 40px 0 0;
-    display: inline-block;
-    vertical-align: middle; }
+    margin: 20px 0; }
   .mailing_list #mc_embed_signup input[type="email"] {
-    float: left; }
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -6px; }
   .mailing_list #mc_embed_signup .clear {
     clear: none;
-    float: left; } }
+    float: none;
+    display: inline-block;
+    vertical-align: middle; } }
 @media only screen and (min-width: 1024px) {
   /********************************************************************
   *** GLOBALS
