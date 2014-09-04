@@ -110,7 +110,7 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	
+
 	/*************************************************************************
 	Allow album descriptions to be longer and scroll rather than get cut off
 	*************************************************************************/
@@ -144,7 +144,7 @@ jQuery(document).ready(function($) {
 			}
 
 		});
-		
+
 
 	});
 
@@ -204,5 +204,21 @@ jQuery(document).ready(function($) {
 	} else {
 		$('a.lightbox').nivoLightbox();
 	}
+
+
+	/****************************************************************
+	Keep homepage full height
+	****************************************************************/
+	$(window).load(function(){
+
+		var windowHeight = $(window).height();
+		var pageHeight = $('#site_wrap').outerHeight();
+
+		//set site_wrap height to window height if site_wrap is smaller
+		if( pageHeight < windowHeight ){
+			$('#site_wrap').height(windowHeight);
+		}
+
+	});
 
 });

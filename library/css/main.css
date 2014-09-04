@@ -803,7 +803,7 @@ PAGE STYLES
           transition: background-color 0.15s linear; }
           #user_controls ul li a i {
             position: relative;
-            top: 6px; }
+            top: 7px; }
         #user_controls ul li a:hover {
           background-color: #382A3B; }
       #user_controls ul li:last-child {
