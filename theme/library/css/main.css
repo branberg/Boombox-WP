@@ -1,9 +1,7 @@
-@import url("boombox-icons.css");
 /*******
-
 This theme supports 3 major responsive breakpoints for mobile, tablet and desktop resolutions
-
 *******/
+@import url("boombox-icons.css");
 .wrap {
   max-width: 87.5%;
   margin: 0 auto;
@@ -734,12 +732,6 @@ PAGE STYLES
     text-align: right; }
 
   /*************************************
-  VIDEOS
-  *************************************/
-  /*************************************
-  PHOTOS SECTION
-  *************************************/
-  /*************************************
   TEXT SECTION
   *************************************/
   .text_section .text_content {
@@ -811,10 +803,10 @@ PAGE STYLES
 
   #site_wrap {
     padding-top: 0;
-    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    -o-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    -moz-box-shadow: 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -o-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent; }
 
   #mobile_menu {
     display: none; }
@@ -963,9 +955,6 @@ PAGE STYLES
     padding-right: 40px; }
 
   /*************************************
-  VIDEOS
-  *************************************/
-  /*************************************
   PHOTOS SECTION
   *************************************/
   .photo_gallery ul li {
@@ -1045,18 +1034,6 @@ PAGE STYLES
   .music_section .album .album_info_wrapper .album_info .album_description {
     height: 187px; }
 
-  /*************************************
-  NEWS SECTION
-  *************************************/
-  /*************************************
-  VIDEOS
-  *************************************/
-  /*************************************
-  PHOTOS SECTION
-  *************************************/
-  /*************************************
-  TEXT SECTION
-  *************************************/
   /*************************************
   FOOTER
   *************************************/
