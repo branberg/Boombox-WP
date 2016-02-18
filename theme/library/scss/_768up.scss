@@ -9,67 +9,67 @@ h1, h2, h3, h4, h5, h6{}
 
 #user_controls{
 
-	display: block;
-	position: fixed;
-	z-index: 5000;
-	top: 15px;
-	left: 15px;
+  display: block;
+  position: fixed;
+  z-index: 5000;
+  top: 15px;
+  left: 15px;
 
-	ul{
+  ul{
 
-		padding: 0;
-		margin: 0;
-		background: rgba(0,0,0,0.1);
-		padding: 6px;
-		@include rounded(26px);
-		@include transition(background-color 0.15s linear);
+    padding: 0;
+    margin: 0;
+    background: rgba(0,0,0,0.1);
+    padding: 6px;
+    @include rounded(26px);
+    @include transition(background-color 0.15s linear);
 
-		&:hover{
-			background: rgba(0,0,0,0.16);
-		}
+    &:hover{
+      background: rgba(0,0,0,0.16);
+    }
 
-		li{
+    li{
 
-			list-style-type: none;
-			margin: 0 0 10px 0;
+      list-style-type: none;
+      margin: 0 0 10px 0;
 
-			a{
+      a{
 
-				display: block;
-				color: #ffffff;
-				text-decoration: none;
-				text-align: center;
-				width: 40px;
-				height: 40px;
-				border: solid 2px #ffffff;
-				background-color: none;
-				font-size: 20px;
-				@include rounded(20px);
-				@include transition(background-color 0.15s linear);
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        border: solid 2px #ffffff;
+        background-color: none;
+        font-size: 20px;
+        @include rounded(20px);
+        @include transition(background-color 0.15s linear);
 
-				i{
-					position: relative;
-					top:7px;
-				}
+        i{
+          position: relative;
+          top:7px;
+        }
 
-			}
-			a:hover{
-				background-color: #382A3B;
-			}
+      }
+      a:hover{
+        background-color: #382A3B;
+      }
 
-		}
+    }
 
-		li:last-child{
-			margin-bottom: 0;
-		}
+    li:last-child{
+      margin-bottom: 0;
+    }
 
-	}
+  }
 
 }
 
 #site_wrap{
-	padding-top: 0;
-	@include box-shadow( 0, 0, 0, 0 );
+  padding-top: 0;
+  @include box-shadow( 0, 0, 0, 0 );
 }
 
 #mobile_menu{ display: none; }
@@ -78,95 +78,95 @@ h1, h2, h3, h4, h5, h6{}
 
 .site_header{
 
-	padding-bottom: 30px;
+  padding-bottom: 30px;
 
-	#header_overlay_color{}
+  #header_overlay_color{}
 
-	.wrap{}
+  .wrap{}
 
 
-	#logo_wrap{
+  #logo_wrap{
 
-		padding: 75px 0;
+    padding: 75px 0;
 
-		#logo{
+    #logo{
 
-			font-size: 60px;
+      font-size: 60px;
 
-			img{}
+      img{}
 
-		}
+    }
 
-	}
+  }
 
-	nav#header_nav{
+  nav#header_nav{
 
-		display: block;
-		font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
 
-		ul{
+    ul{
 
-			margin: 0;
-			padding: 0;
-			text-align: center;
+      margin: 0;
+      padding: 0;
+      text-align: center;
 
-			li{
+      li{
 
-				list-style-type: none;
-				display: inline-block;
-				text-transform: uppercase;
-				font-size: 22px;
+        list-style-type: none;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 22px;
 
-				a{
-					text-decoration: none;
-					display: block;
-					padding:10px;
-					-webkit-backface-visibility: hidden; //to fix the Chrome moving bug on transition hover
-					@include transition(opacity 0.15s linear);
-					opacity: 1;
-				}
+        a{
+          text-decoration: none;
+          display: block;
+          padding:10px;
+          -webkit-backface-visibility: hidden; //to fix the Chrome moving bug on transition hover
+          @include transition(opacity 0.15s linear);
+          opacity: 1;
+        }
 
-			}
-			li.current-menu-item > a,
-			li a:hover{
-				opacity: 0.5;
-			}
+      }
+      li.current-menu-item > a,
+      li a:hover{
+        opacity: 0.5;
+      }
 
-		}
+    }
 
-		ul#menu_links{
+    ul#menu_links{
 
-			li{
+      li{
 
-				a{}
+        a{}
 
-			}
+      }
 
-		}
+    }
 
-		ul#social_links{
+    ul#social_links{
 
-			li{
+      li{
 
-				a{
+        a{
 
-					i{}
+          i{}
 
-				}
+        }
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
 .page_section{
 
-	padding: 30px 0;
+  padding: 30px 0;
 
-	.wrap{}
+  .wrap{}
 
 }
 
@@ -175,89 +175,89 @@ MUSIC/ALBUMS
 *************************************/
 .music_section{
 
-	background: none;
-	margin: 0;
+  background: none;
+  margin: 0;
 
-	.wrap{}
+  .wrap{}
 
-	.album{
+  .album{
 
-		margin-bottom: 40px;
+    margin-bottom: 40px;
 
-		&:last-child{}
+    &:last-child{}
 
-		.soundcloud_embed{
+    .soundcloud_embed{
 
-			float: left;
-			width: 50%;
+      float: left;
+      width: 50%;
 
-			iframe{}
+      iframe{}
 
-		}
+    }
 
-		.album_info_wrapper{
+    .album_info_wrapper{
 
-			float: left;
-			width: 50%;
-			position: relative;
+      float: left;
+      width: 50%;
+      position: relative;
 
-			.album_info{
+      .album_info{
 
-				padding: 40px;
+        padding: 40px;
 
-				.album_type{
-					font-size: 1.125rem;
-				}
-				.album_title{
-					font-size: 2.375rem;
-				}
-				.album_description{
+        .album_type{
+          font-size: 1.125rem;
+        }
+        .album_title{
+          font-size: 2.375rem;
+        }
+        .album_description{
 
-					font-size: 1.15em;
-					height: 100px;
-					overflow-y: auto;
+          font-size: 1.15em;
+          height: 100px;
+          overflow-y: auto;
 
-					& > :first-child{  }
-					& > :last-child{  }
+          & > :first-child{  }
+          & > :last-child{  }
 
-					p{}
+          p{}
 
-				}
-				.album_button{
+        }
+        .album_button{
 
-					position: absolute;
-					bottom: 40px;
-					font-size: 1em;
-					padding: 20px 2.5%;
-					white-space: nowrap;
-				  overflow: hidden;
-				  text-overflow: ellipsis;
+          position: absolute;
+          bottom: 40px;
+          font-size: 1em;
+          padding: 20px 2.5%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
 
-					&.half{
+          &.half{
 
-						width: 41%;
+            width: 41%;
 
-						&.left{
-							left: 8.6999%;
-						}
-						&.right{
-							right: 8.6999%;
-						}
+            &.left{
+              left: 8.6999%;
+            }
+            &.right{
+              right: 8.6999%;
+            }
 
-					}
-					&.full{
-						left: 40px;
-						right: 40px;
-						font-size: 1.25em;
-					}
+          }
+          &.full{
+            left: 40px;
+            right: 40px;
+            font-size: 1.25em;
+          }
 
-				}
+        }
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -266,49 +266,49 @@ NEWS SECTION
 *************************************/
 .news_section{
 
-	.wrap{}
+  .wrap{}
 
-	.news_article_wrap{
+  .news_article_wrap{
 
-		margin-bottom: 60px;
+    margin-bottom: 60px;
 
-		&:before{}
+    &:before{}
 
-		.news_article{
+    .news_article{
 
-			padding: 40px;
+      padding: 40px;
 
-			header.article_header{
+      header.article_header{
 
-				h3{
+        h3{
 
-					font-size: 2.3em;
+          font-size: 2.3em;
 
-					a{}
+          a{}
 
-				}
+        }
 
-				span.article_date{
-					display: block;
-					float: right;
-					text-transform: uppercase;
-					color: #382A3B;
-					margin-top: 10px;
-				}
+        span.article_date{
+          display: block;
+          float: right;
+          text-transform: uppercase;
+          color: #382A3B;
+          margin-top: 10px;
+        }
 
-			}
+      }
 
-			.article_excerpt{
+      .article_excerpt{
 
-				font-size: 1.5rem;
+        font-size: 1.5rem;
 
-				p{}
+        p{}
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -318,95 +318,95 @@ SHOWS
 *************************************/
 .shows_section{
 
-	padding-bottom: 80px;
+  padding-bottom: 80px;
 
 }
 table.tour_dates{
 
-	tr{
+  tr{
 
-		td{
+    td{
 
-			font-size: 20px;
+      font-size: 20px;
 
-			.cell_wrap{
-				position: relative;
-				height: 100%;
-				padding: 30px 20px;
-			}
+      .cell_wrap{
+        position: relative;
+        height: 100%;
+        padding: 30px 20px;
+      }
 
-		}
+    }
 
-		td.date{
+    td.date{
 
-			width: 126px;
+      width: 126px;
 
-			.cell_wrap{
+      .cell_wrap{
 
-				padding-left: 40px;
-				padding-right: 30px;
-				width: 120px;
+        padding-left: 40px;
+        padding-right: 30px;
+        width: 120px;
 
-				.month, .day{}
+        .month, .day{}
 
-				.month{
-					font-size: 22px;
-				}
-				.day{
-					font-size: 28px;
-				}
+        .month{
+          font-size: 22px;
+        }
+        .day{
+          font-size: 28px;
+        }
 
-				&:after{
-					content: "";
-					border-right: solid 2px transparentize(#382A3B, 0.7);
-					width: 1px;
-					position: absolute;
-					right: 0;
-					top: 40px;
-					bottom: 40px;
-				}
+        &:after{
+          content: "";
+          border-right: solid 2px transparentize(#382A3B, 0.7);
+          width: 1px;
+          position: absolute;
+          right: 0;
+          top: 40px;
+          bottom: 40px;
+        }
 
-			}
+      }
 
-		}
-		td.location{
+    }
+    td.location{
 
-			.cell_wrap{
-				padding-left: 30px;
-			}
+      .cell_wrap{
+        padding-left: 30px;
+      }
 
-			a{
+      a{
 
-				text-decoration: none;
+        text-decoration: none;
 
-				&:hover{
-					text-decoration: underline;
-				}
+        &:hover{
+          text-decoration: underline;
+        }
 
-			}
+      }
 
-			.venue, .city{
+      .venue, .city{
 
-			}
-			.venue{
-				text-transform: uppercase;
-				font-weight:700;
-			}
-			.city{
+      }
+      .venue{
+        text-transform: uppercase;
+        font-weight:700;
+      }
+      .city{
 
-			}
+      }
 
-		}
-		td.tickets{}
-		td.rsvp{
+    }
+    td.tickets{}
+    td.rsvp{
 
-			.cell_wrap{
-				padding-right: 40px;
-			}
+      .cell_wrap{
+        padding-right: 40px;
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 /*************************************
@@ -414,9 +414,9 @@ VIDEOS
 *************************************/
 .videos_section{
 
-	.wrap{}
+  .wrap{}
 
-	.video_embed{}
+  .video_embed{}
 
 }
 
@@ -425,27 +425,27 @@ PHOTOS SECTION
 *************************************/
 .photos_section{
 
-	.wrap{}
+  .wrap{}
 
 }
 .photo_gallery{
 
-	ul{
+  ul{
 
-		li{
+    li{
 
-			width: 25%;
+      width: 25%;
 
-			a{
+      a{
 
-				&:hover{}
+        &:hover{}
 
-			}
-			img{}
+      }
+      img{}
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -454,18 +454,18 @@ PHOTOS SECTION
 *************************************/
 .text_section{
 
-	.wrap{}
+  .wrap{}
 
-	.text_content{
+  .text_content{
 
-		font-size: 1.6em;
+    font-size: 1.6em;
 
-		& > :first-child{}
-		& > :last-child{}
+    & > :first-child{}
+    & > :last-child{}
 
-		p{}
+    p{}
 
-	}
+  }
 
 }
 
@@ -475,92 +475,92 @@ FOOTER
 *************************************/
 .site_footer{
 
-	.wrap{}
+  .wrap{}
 
-	.credits{
+  .credits{
 
-		padding-top: 0;
+    padding-top: 0;
 
-		p{
-			margin: 0;
-		}
+    p{
+      margin: 0;
+    }
 
-	}
+  }
 
 }
 .mailing_list{
 
-	.mailing_list_title, form{
-		display: inline-block;
-		vertical-align: middle;
-	}
+  .mailing_list_title, form{
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-	.mailing_list_title{
-		font-size: 24px;
-		margin: 0 40px 0 0;
-	}
+  .mailing_list_title{
+    font-size: 24px;
+    margin: 0 40px 0 0;
+  }
 
-	form{
+  form{
 
-		font-size: 18px;
+    font-size: 18px;
 
-		input{
-			float: left;
-			padding: 20px;
-		}
-		input[type="email"]{
-			width: 280px;
-			margin-bottom: 0;
-		}
-		input[type="submit"]{
+    input{
+      float: left;
+      padding: 20px;
+    }
+    input[type="email"]{
+      width: 280px;
+      margin-bottom: 0;
+    }
+    input[type="submit"]{
 
-			width: 150px;
+      width: 150px;
 
-			&:hover{}
+      &:hover{}
 
-		}
+    }
 
-		::-webkit-input-placeholder {}
-		:-moz-placeholder {}
-		::-moz-placeholder {}
-		:-ms-input-placeholder {}
+    ::-webkit-input-placeholder {}
+    :-moz-placeholder {}
+    ::-moz-placeholder {}
+    :-ms-input-placeholder {}
 
-	}
+  }
 
-	#mc_embed_signup{
+  #mc_embed_signup{
 
-		form{
-			display: block;
-		}
+    form{
+      display: block;
+    }
 
-		label[for="mce-EMAIL"]{
+    label[for="mce-EMAIL"]{
 
-			clear: both;
-			width: 100%;
-			font-size: 24px;
-			margin: 20px 0;
+      clear: both;
+      width: 100%;
+      font-size: 24px;
+      margin: 20px 0;
 
-		}
+    }
 
-		input[type="email"]{
-			float: none;
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: -6px;
-		}
+    input[type="email"]{
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: -6px;
+    }
 
-		input[type="submit"]{
+    input[type="submit"]{
 
-		}
+    }
 
-		.clear{
-			clear: none;
-			float: none;
-			display: inline-block;
-			vertical-align: middle;
-		}
+    .clear{
+      clear: none;
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+    }
 
-	}
+  }
 
 }
 
@@ -569,39 +569,39 @@ FOOTER
 }
 .fanbridge_mailing_list_widget{
 
-	> h2{
+  > h2{
 
-	}
+  }
 
-	fieldset{
+  fieldset{
 
-		label, input, textarea{
+    label, input, textarea{
 
-		}
-		label{
+    }
+    label{
 
-		}
-		input{
+    }
+    input{
 
-		}
-		input[type="text"]{
+    }
+    input[type="text"]{
 
-		}
+    }
 
-	}
+  }
 
 }
 
 .social_links{
 
-	ul{
+  ul{
 
-		li{
+    li{
 
-			a{}
+      a{}
 
-		}
+    }
 
-	}
+  }
 
 }

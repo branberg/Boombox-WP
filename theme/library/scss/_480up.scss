@@ -11,55 +11,55 @@ h1, h2, h3, h4, h5, h6{}
 
 #mobile_menu{
 
-	ul{
+  ul{
 
-		li{
+    li{
 
-			a{}
+      a{}
 
-			ul{}
+      ul{}
 
-		}
+    }
 
-	}
+  }
 
 }
 
 #mobile_header{
 
-	#mobile_menu_toggle{}
+  #mobile_menu_toggle{}
 
-	#mobile_site_title{}
+  #mobile_site_title{}
 
 }
 
 .site_header{
 
-	#header_overlay_color{}
+  #header_overlay_color{}
 
-	.wrap{}
-	
-	#logo_wrap{
+  .wrap{}
+  
+  #logo_wrap{
 
-		#logo{
+    #logo{
 
-			img{}
+      img{}
 
-		}
+    }
 
-	}
+  }
 
-	#header_nav{}
+  #header_nav{}
 
-	#page_title{}
+  #page_title{}
 
 }
 
 .page_section{
 
-	padding: 40px 0;
+  padding: 40px 0;
 
-	.wrap{}
+  .wrap{}
 
 }
 
@@ -68,46 +68,46 @@ MUSIC/ALBUMS
 *************************************/
 .music_section{
 
-	.wrap{}
+  .wrap{}
 
-	header.section_header{}
+  header.section_header{}
 
-	.album{
+  .album{
 
-		margin-bottom: 40px;
+    margin-bottom: 40px;
 
-		&:last-child{}
+    &:last-child{}
 
-		.soundcloud_embed{
+    .soundcloud_embed{
 
-			iframe{}
+      iframe{}
 
-		}
+    }
 
-		.album_info_wrapper{
+    .album_info_wrapper{
 
-			.album_info{
+      .album_info{
 
-				.album_type{}
+        .album_type{}
 
-				.album_title{}
+        .album_title{}
 
-				.album_description{
+        .album_description{
 
-					& > :first-child{}
-					& > :last-child{}
-					
-					p{}
+          & > :first-child{}
+          & > :last-child{}
+          
+          p{}
 
-				}
+        }
 
-				.album_button{}
+        .album_button{}
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -119,40 +119,40 @@ SHOWS
 
 table.tour_dates{
 
-	tr{
+  tr{
 
-		td{}
+    td{}
 
-		td.date{
+    td.date{
 
-			.month, .day{}
+      .month, .day{}
 
-			.month{}
+      .month{}
 
-			.day{}
+      .day{}
 
-		}
-		td.location{
+    }
+    td.location{
 
-			a{}
+      a{}
 
-			.venue, .city{}
+      .venue, .city{}
 
-			.venue{}
+      .venue{}
 
-			.city{}
+      .city{}
 
-		}
-		td.tickets{}
+    }
+    td.tickets{}
 
-		td.rsvp{
+    td.rsvp{
 
-			display: table-cell;
-			text-align: right;
+      display: table-cell;
+      text-align: right;
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -161,11 +161,11 @@ VIDEOS
 *************************************/
 .videos_section{
 
-	.wrap{}
+  .wrap{}
 
-	.section_header{}
+  .section_header{}
 
-	.video_embed{}
+  .video_embed{}
 
 }
 
@@ -174,28 +174,28 @@ PHOTOS SECTION
 *************************************/
 .photos_section{
 
-	.wrap{}
+  .wrap{}
 
-	.section_header{}
+  .section_header{}
 
 }
 .photo_gallery{
 
-	ul{
+  ul{
 
-		li{
+    li{
 
-			a{
+      a{
 
-				&:hover{}
+        &:hover{}
 
-			}
+      }
 
-			img{}
+      img{}
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -204,20 +204,20 @@ TEXT SECTION
 *************************************/
 .text_section{
 
-	.wrap{}
+  .wrap{}
 
-	.section_header{}
+  .section_header{}
 
-	.text_content{
+  .text_content{
 
-		font-size: 1.25em;
+    font-size: 1.25em;
 
-		& > :first-child{}
-		& > :last-child{}
+    & > :first-child{}
+    & > :last-child{}
 
-		p{}
+    p{}
 
-	}
+  }
 
 }
 
@@ -227,51 +227,51 @@ FOOTER
 *************************************/
 .site_footer{
 
-	padding: 60px 0;
+  padding: 60px 0;
 
-	.wrap{}
+  .wrap{}
 
-	.credits{}
+  .credits{}
 
 }
 .mailing_list{
 
-	padding: 0 0 60px 0;
+  padding: 0 0 60px 0;
 
-	.mailing_list_title, form{}
+  .mailing_list_title, form{}
 
-	.mailing_list_title{}
+  .mailing_list_title{}
 
-	form{
+  form{
 
-		input{}
+    input{}
 
-		input[type="email"]{}
+    input[type="email"]{}
 
-		input[type="submit"]{
+    input[type="submit"]{
 
-			&:hover{}
+      &:hover{}
 
-		}
+    }
 
-		::-webkit-input-placeholder {}
-		:-moz-placeholder {}
-		::-moz-placeholder {}
-		:-ms-input-placeholder {}
+    ::-webkit-input-placeholder {}
+    :-moz-placeholder {}
+    ::-moz-placeholder {}
+    :-ms-input-placeholder {}
 
-	}
-		
+  }
+    
 }
 .social_links{
 
-	ul{
+  ul{
 
-		li{
+    li{
 
-			a{}
+      a{}
 
-		}
+    }
 
-	}
+  }
 
 }

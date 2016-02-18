@@ -15,99 +15,99 @@ h1, h2, h3, h4, h5, h6{}
 
 .site_header{
 
-	#header_overlay_color{}
+  #header_overlay_color{}
 
-	.wrap{}
-	
-	#logo_wrap{
+  .wrap{}
+  
+  #logo_wrap{
 
-		padding: 100px 0;
+    padding: 100px 0;
 
-		#logo{
+    #logo{
 
-			font-size: 80px;
+      font-size: 80px;
 
-			img{}
+      img{}
 
-		}
+    }
 
-	}
+  }
 
-	nav#header_nav{
+  nav#header_nav{
 
-		ul{
+    ul{
 
-			li{
+      li{
 
-				a{}
+        a{}
 
-			}
+      }
 
-		}
+    }
 
-		ul#menu_links{
+    ul#menu_links{
 
-			li{
+      li{
 
-				a{}
+        a{}
 
-			}
+      }
 
-		}
+    }
 
-		ul#social_links{
+    ul#social_links{
 
-			li{
+      li{
 
-				a{
+        a{
 
-					i{}
+          i{}
 
-				}
+        }
 
-			}
+      }
 
-		}
+    }
 
-	}
-	nav#header_nav.justified_menus{
-		
-		ul#menu_links{
+  }
+  nav#header_nav.justified_menus{
+    
+    ul#menu_links{
 
-			text-align: left;
-			float: left;
+      text-align: left;
+      float: left;
 
-		}
-		ul#social_links{
+    }
+    ul#social_links{
 
-			text-align: right;
-			float: right;
+      text-align: right;
+      float: right;
 
-		}
+    }
 
-	}
-	nav#header_nav.centered_menus{
-		
-		ul#menu_links{
+  }
+  nav#header_nav.centered_menus{
+    
+    ul#menu_links{
 
-			text-align: center;
-			float: none;
+      text-align: center;
+      float: none;
 
-		}
-		ul#social_links{
+    }
+    ul#social_links{
 
-			text-align: center;
-			float: none;
+      text-align: center;
+      float: none;
 
-		}
+    }
 
-	}
+  }
 
 }
 
 .page_section{
 
-	.wrap{}
+  .wrap{}
 
 }
 
@@ -116,40 +116,40 @@ MUSIC/ALBUMS
 *************************************/
 .music_section{
 
-	.wrap{}
+  .wrap{}
 
-	.album{
+  .album{
 
-		&:last-child{}
+    &:last-child{}
 
-		.soundcloud_embed{
+    .soundcloud_embed{
 
-			iframe{}
+      iframe{}
 
-		}
+    }
 
-		.album_info_wrapper{
+    .album_info_wrapper{
 
-			.album_info{
+      .album_info{
 
-				.album_type{}
-				.album_title{}
-				.album_description{
+        .album_type{}
+        .album_title{}
+        .album_description{
 
-					height: 187px;
+          height: 187px;
 
-					& > :first-child{  }
-					& > :last-child{  }
-					p{}
+          & > :first-child{  }
+          & > :last-child{  }
+          p{}
 
-				}
-				.album_button{}
+        }
+        .album_button{}
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -158,35 +158,35 @@ NEWS SECTION
 *************************************/
 .news_section{
 
-	.wrap{}
+  .wrap{}
 
-	.news_article_wrap{
+  .news_article_wrap{
 
-		&:before{}
+    &:before{}
 
-		.news_article{
+    .news_article{
 
-			header.article_header{
+      header.article_header{
 
-				h3{
+        h3{
 
-					a{}
+          a{}
 
-				}
+        }
 
-				span.article_date{}
+        span.article_date{}
 
-			}
+      }
 
-			.article_excerpt{
+      .article_excerpt{
 
-				p{}
+        p{}
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -195,9 +195,9 @@ VIDEOS
 *************************************/
 .videos_section{
 
-	.wrap{}
+  .wrap{}
 
-	.video_embed{}
+  .video_embed{}
 
 }
 
@@ -206,25 +206,25 @@ PHOTOS SECTION
 *************************************/
 .photos_section{
 
-	.wrap{}
+  .wrap{}
 
 }
 .photo_gallery{
 
-	ul{		
+  ul{   
 
-		li{
+    li{
 
-			a{	
+      a{  
 
-				&:hover{}
+        &:hover{}
 
-			}
-			img{}
+      }
+      img{}
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -233,16 +233,16 @@ TEXT SECTION
 *************************************/
 .text_section{
 
-	.wrap{}
+  .wrap{}
 
-	.text_content{
+  .text_content{
 
-		& > :first-child{}
-		& > :last-child{}
+    & > :first-child{}
+    & > :last-child{}
 
-		p{}
+    p{}
 
-	}
+  }
 
 }
 
@@ -252,78 +252,78 @@ FOOTER
 *************************************/
 .site_footer{
 
-	.wrap{}
+  .wrap{}
 
-	.credits{}
+  .credits{}
 
 }
 .mailing_list{
 
-	.mailing_list_title, form{}
+  .mailing_list_title, form{}
 
-	.mailing_list_title{
-		font-size: 32px;
-	}
+  .mailing_list_title{
+    font-size: 32px;
+  }
 
-	form{
+  form{
 
-		font-size: 22px;
+    font-size: 22px;
 
-		input{}
+    input{}
 
-		input[type="email"]{
-			width: 340px;
-		}
-		input[type="submit"]{
+    input[type="email"]{
+      width: 340px;
+    }
+    input[type="submit"]{
 
-			width: 182px;
+      width: 182px;
 
-			&:hover{}
+      &:hover{}
 
-		}
+    }
 
-		::-webkit-input-placeholder {}
-		:-moz-placeholder {}
-		::-moz-placeholder {}
-		:-ms-input-placeholder {}
+    ::-webkit-input-placeholder {}
+    :-moz-placeholder {}
+    ::-moz-placeholder {}
+    :-ms-input-placeholder {}
 
-	}
+  }
 
-	#mc_embed_signup{
+  #mc_embed_signup{
 
-		font-size: 22px;
+    font-size: 22px;
 
-		form{}
+    form{}
 
-		label[for="mce-EMAIL"]{
-			font-size: 32px;
-		}
+    label[for="mce-EMAIL"]{
+      font-size: 32px;
+    }
 
-		input[type="email"]{
-			width: 340px;
-			font-size: 22px;
-		}
+    input[type="email"]{
+      width: 340px;
+      font-size: 22px;
+    }
 
-		input[type="submit"]{
-			width: 182px;
-			font-size: 22px;
-		}
+    input[type="submit"]{
+      width: 182px;
+      font-size: 22px;
+    }
 
-		.clear{}
+    .clear{}
 
-	}
-		
+  }
+    
 }
 .social_links{
 
-	ul{
+  ul{
 
-		li{
+    li{
 
-			a{}
+      a{}
 
-		}
+    }
 
-	}
+  }
 
 }
