@@ -289,10 +289,3 @@ function boombox_add_editor_styles() {
     add_editor_style( get_template_directory_uri() . '/library/css/custom-editor-style.css' );
 }
 add_action( 'init', 'boombox_add_editor_styles' );
-
-
-/*********************************************************************************************************
-Sellwire + Wp-Updates integration (keep this for automatic updates!)
-*********************************************************************************************************/
-require_once('wp-updates-theme.php');
-new WPUpdatesThemeUpdater_701( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ) );
