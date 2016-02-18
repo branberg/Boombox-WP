@@ -1,12 +1,6 @@
 /********************************************************************
 *** GLOBALS
 *********************************************************************/
-html, body{}
-
-a{}
-
-h1, h2, h3, h4, h5, h6{}
-
 #user_controls{
 
   display: block;
@@ -80,11 +74,6 @@ h1, h2, h3, h4, h5, h6{}
 
   padding-bottom: 30px;
 
-  #header_overlay_color{}
-
-  .wrap{}
-
-
   #logo_wrap{
 
     padding: 75px 0;
@@ -92,8 +81,6 @@ h1, h2, h3, h4, h5, h6{}
     #logo{
 
       font-size: 60px;
-
-      img{}
 
     }
 
@@ -134,40 +121,12 @@ h1, h2, h3, h4, h5, h6{}
 
     }
 
-    ul#menu_links{
-
-      li{
-
-        a{}
-
-      }
-
-    }
-
-    ul#social_links{
-
-      li{
-
-        a{
-
-          i{}
-
-        }
-
-      }
-
-    }
-
   }
 
 }
 
 .page_section{
-
   padding: 30px 0;
-
-  .wrap{}
-
 }
 
 /*************************************
@@ -178,20 +137,14 @@ MUSIC/ALBUMS
   background: none;
   margin: 0;
 
-  .wrap{}
-
   .album{
 
     margin-bottom: 40px;
-
-    &:last-child{}
 
     .soundcloud_embed{
 
       float: left;
       width: 50%;
-
-      iframe{}
 
     }
 
@@ -216,11 +169,6 @@ MUSIC/ALBUMS
           font-size: 1.15em;
           height: 100px;
           overflow-y: auto;
-
-          & > :first-child{  }
-          & > :last-child{  }
-
-          p{}
 
         }
         .album_button{
@@ -266,13 +214,9 @@ NEWS SECTION
 *************************************/
 .news_section{
 
-  .wrap{}
-
   .news_article_wrap{
 
     margin-bottom: 60px;
-
-    &:before{}
 
     .news_article{
 
@@ -281,11 +225,7 @@ NEWS SECTION
       header.article_header{
 
         h3{
-
           font-size: 2.3em;
-
-          a{}
-
         }
 
         span.article_date{
@@ -299,11 +239,7 @@ NEWS SECTION
       }
 
       .article_excerpt{
-
         font-size: 1.5rem;
-
-        p{}
-
       }
 
     }
@@ -317,9 +253,7 @@ NEWS SECTION
 SHOWS
 *************************************/
 .shows_section{
-
   padding-bottom: 80px;
-
 }
 table.tour_dates{
 
@@ -346,8 +280,6 @@ table.tour_dates{
         padding-left: 40px;
         padding-right: 30px;
         width: 120px;
-
-        .month, .day{}
 
         .month{
           font-size: 22px;
@@ -384,20 +316,12 @@ table.tour_dates{
         }
 
       }
-
-      .venue, .city{
-
-      }
       .venue{
         text-transform: uppercase;
         font-weight:700;
       }
-      .city{
-
-      }
 
     }
-    td.tickets{}
     td.rsvp{
 
       .cell_wrap{
@@ -409,40 +333,16 @@ table.tour_dates{
   }
 
 }
-/*************************************
-VIDEOS
-*************************************/
-.videos_section{
-
-  .wrap{}
-
-  .video_embed{}
-
-}
 
 /*************************************
 PHOTOS SECTION
 *************************************/
-.photos_section{
-
-  .wrap{}
-
-}
 .photo_gallery{
 
   ul{
 
     li{
-
       width: 25%;
-
-      a{
-
-        &:hover{}
-
-      }
-      img{}
-
     }
 
   }
@@ -454,17 +354,8 @@ PHOTOS SECTION
 *************************************/
 .text_section{
 
-  .wrap{}
-
   .text_content{
-
     font-size: 1.6em;
-
-    & > :first-child{}
-    & > :last-child{}
-
-    p{}
-
   }
 
 }
@@ -474,8 +365,6 @@ PHOTOS SECTION
 FOOTER
 *************************************/
 .site_footer{
-
-  .wrap{}
 
   .credits{
 
@@ -516,8 +405,6 @@ FOOTER
 
       width: 150px;
 
-      &:hover{}
-
     }
 
     ::-webkit-input-placeholder {}
@@ -549,57 +436,11 @@ FOOTER
       margin-right: -6px;
     }
 
-    input[type="submit"]{
-
-    }
-
     .clear{
       clear: none;
       float: none;
       display: inline-block;
       vertical-align: middle;
-    }
-
-  }
-
-}
-
-#FbridgeSGWidget #attribution{
-
-}
-.fanbridge_mailing_list_widget{
-
-  > h2{
-
-  }
-
-  fieldset{
-
-    label, input, textarea{
-
-    }
-    label{
-
-    }
-    input{
-
-    }
-    input[type="text"]{
-
-    }
-
-  }
-
-}
-
-.social_links{
-
-  ul{
-
-    li{
-
-      a{}
-
     }
 
   }

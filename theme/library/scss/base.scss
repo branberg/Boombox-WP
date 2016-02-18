@@ -3,13 +3,11 @@
 *** GLOBALS
 *********************************************************************/
 html, body{
-
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 1em;
   color: #382A3B;
   overflow-x: hidden;
-
 }
 
 a{
@@ -27,8 +25,6 @@ h1, h2, h3, h4, h5, h6{
 
 #site_wrap{
 
-  //min-height: 100%;
-  //width: 100%;
   position: relative;
   background-image: url('../img/default_background.jpg');
   @include box-shadow( 0, 0, 40px, 0.5 );
@@ -181,8 +177,6 @@ h1, h2, h3, h4, h5, h6{
 
   position: relative;
 
-  .wrap{}
-
   #logo_wrap{
 
     padding: 140px 0 84px 0;
@@ -237,13 +231,9 @@ h1, h2, h3, h4, h5, h6{
   padding: 15px 0;
   position: relative;
 
-  .wrap{}
-
 }
 
 .placeholder_section{
-
-  .wrap{}
 
   .placeholder_copy{
 
@@ -280,8 +270,6 @@ MUSIC/ALBUMS
   background-color: #382A3B;
   margin: 15px 0;
   padding: 30px 0;
-
-  .wrap{}
 
   header.section_header{}
 
@@ -334,8 +322,6 @@ MUSIC/ALBUMS
 
           & > :first-child{ margin-top: 0; }
           & > :last-child{ margin-bottom: 0; }
-
-          p{}
 
         }
         .album_button{
@@ -433,19 +419,13 @@ table.tour_dates{
       .venue, .city{
         display: block;
       }
-      .venue{}
-      .city{}
 
     }
     td.tickets{
-
       text-align: right;
-
     }
     td.rsvp{
-
       display: none;
-
     }
 
   }
@@ -457,8 +437,6 @@ table.tour_dates{
 VIDEOS
 *************************************/
 .videos_section{
-
-  .wrap{}
 
   .section_header{
     margin: 0 0 40px 0;
@@ -473,13 +451,6 @@ VIDEOS
 /*************************************
 PHOTOS SECTION
 *************************************/
-.photos_section{
-
-  .wrap{}
-
-  .section_header{}
-
-}
 .photo_gallery{
 
   ul{
@@ -522,15 +493,10 @@ TEXT SECTION
 *************************************/
 .text_section{
 
-  .wrap{}
-  .section_header{}
-
   .text_content{
 
     & > :first-child{ margin-top: 0; }
     & > :last-child{ margin-bottom: 0; }
-
-    p{}
 
   }
 
@@ -544,8 +510,6 @@ FOOTER
 
   padding: 40px 0;
   position: relative;
-
-  .wrap{}
 
   .credits{
 
@@ -657,23 +621,10 @@ FOOTER
 }
 .fanbridge_mailing_list_widget{
 
-  > h2{
-
-  }
-
   fieldset{
 
-    label, input, textarea{
-
-    }
     label{
       text-align: left;
-    }
-    input{
-
-    }
-    input[type="text"]{
-
     }
 
   }
@@ -703,8 +654,6 @@ FOOTER
         text-decoration: none;
         color: #382A3B;
 
-        i{}
-
       }
       a:hover, a:hover{ color: lighten(#382A3B, 20%); }
 
@@ -721,7 +670,5 @@ PAGE STYLES
 #page_content{
 
   padding: 30px 0;
-
-  &.top_offset{}
 
 }

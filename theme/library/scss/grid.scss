@@ -1,18 +1,15 @@
 /*******
-
 This theme supports 3 major responsive breakpoints for mobile, tablet and desktop resolutions
-
 *******/
+
 .wrap{
   max-width: 87.5%;
   margin: 0 auto;
   overflow: hidden;
 }
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol{
-  
   float: left;
   margin-right: 0;
-  
 }
 .onecol{ width:100%; }
 .twocol{ width:100%; }
@@ -30,17 +27,7 @@ This theme supports 3 major responsive breakpoints for mobile, tablet and deskto
 .last{ margin-right: 0 !important; }
 .first{}
 
-
 @media only screen and (min-width: 480px) {
-  
-  .wrap{
-    
-  }
-  .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol{
-    
-    
-    
-  }
   .onecol{ width:50%; }
   .twocol{ width:50%; }
   .threecol{ width:50%; }
@@ -53,23 +40,16 @@ This theme supports 3 major responsive breakpoints for mobile, tablet and deskto
   .tencol{ width:100%; }
   .elevencol{ width:100%; }
   .twelvecol{ width:100%; }
-  
-  .last{}
-  .first{}
-  
 }
 
-
 @media only screen and (min-width: 768px) {
-  
+
   .wrap{
     max-width: 94.79%;
     padding: 0 20px;
   }
   .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol{
-    
     margin-right: 2.13%;
-    
   }
   .onecol   { width: 6.38%; }
   .twocol   { width:14.89%; }
@@ -83,23 +63,17 @@ This theme supports 3 major responsive breakpoints for mobile, tablet and deskto
   .tencol   { width:82.97%; }
   .elevencol  { width:91.48%; }
   .twelvecol  { width:99.99%; }
-  
-  .last{}
-  .first{}
-  
+
 }
 
-
 @media only screen and (min-width: 1024px) {
-  
+
   .wrap{
     max-width: 940px;
     padding: 0 10px;
   }
   .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol{
-  
     margin-right: 2.13%;
-    
   }
   .onecol   { width: 6.38%; }
   .twocol   { width:14.89%; }
@@ -113,8 +87,7 @@ This theme supports 3 major responsive breakpoints for mobile, tablet and deskto
   .tencol   { width:82.97%; }
   .elevencol  { width:91.48%; }
   .twelvecol  { width:99.99%; }
-  
+
   .last{ margin-right: 0; }
-  .first{  }
-  
+
 }
