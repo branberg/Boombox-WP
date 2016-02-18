@@ -64,25 +64,15 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
   /** Custom Styles Set by Site Owner **/
 
   html, body{
-
     <?php
-
       if( $body_font_type == "Google Font" ){ //if Google Font
-
         echo "font-family: " . $fonts[$body_font] . ";";
-
       } elseif( $body_font_type == "Custom" ) { //if Custom Font
-
         echo "font-family: $custom_body_font_family;";
-
       } else {
-
         echo 'font-family: "Helvetica Neue", Helvetica, sans-serif;';
-
       }
-
     ?>
-
   }
 
   h1, h2, h3, h4, h5, h6,
@@ -94,34 +84,21 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
   .site_footer .credits,
   .mailing_list,
   .site_header nav#header_nav{
-
     <?php
-      
       if( $heading_font_type == "Google Font" ){ //if Google Font
-
         echo "font-family: " . $fonts[$heading_font] . ";";
-
       } elseif( $heading_font_type == "Custom" ) { //if Custom Font
-
         echo "font-family: $custom_heading_font_family;";
-
       } else {
-
         echo 'font-family: "Helvetica Neue", Helvetica, sans-serif;'; //fall back to helvetica because why not
-      
       }
-
     ?>
-
   }
 
   #site_wrap{
-    
     <?php
-
       // Background Image
       echo ( $background_image ? "background-image: url('$background_image');" : '' );
-
       // Background Position
       if( $background_position ){
         switch($background_position){
@@ -143,7 +120,6 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
             break;
         }
       }
-
       // Background Repeat
       if($background_repeat){
         switch( $background_repeat ){
@@ -161,7 +137,6 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
             break;
         }
       }
-
       // Background Attachment
       if($background_attachment){
         switch( $background_attachment ){
@@ -173,42 +148,29 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
             break;
         }
       }
-
     ?>
-
   }
 
   #site_wrap #overlay_color{
-    
     <?php
-
       // Background Color
       echo ( $background_overlay_color ? "background-color: $background_overlay_color;" : '' );
-
       // Background Overlay
       $opacityConversion = $background_overlay_opacity/100;
       echo "opacity: $opacityConversion;";
-
     ?>
-
   }
 
   html, body, a{
-    
     <?php echo( $main_color ? "color: $main_color;" : "" ); ?>
-
   }
 
   #logo{
-
     <?php echo( $logo_color ? "color: $logo_color;" : "" ); ?>
-
   }
 
   .site_header nav#header_nav ul li a{
-    
     <?php echo( $menu_color ? "color: $menu_color;" : "" ); ?>
-
   }
 
   .site_footer{ <?php echo( $footer_text_color ? "color: $footer_text_color;" : "" ); ?> }
@@ -246,7 +208,6 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
 
   #mobile_menu{ <?php echo( $mobile_menu_background_color ? "background-color: $mobile_menu_background_color;" : "" ); ?> }
   #mobile_header{
-
     <?php
       if( $mobile_menu_background_color ){
         echo "background-color:" . hex2rgba($mobile_menu_background_color, 0.90) . "; border-bottom: " . $mobile_menu_background_color . ";";
@@ -255,23 +216,17 @@ $mobile_menu_text_color = get_field( 'mobile_menu_text_color', 'option');
   }
 
   <?php if( $mobile_menu_text_color ): ?>
-
-  #mobile_menu ul li a{ color: <?php echo $mobile_menu_text_color; ?>; }
-  #mobile_header #mobile_site_title{ color: <?php echo $mobile_menu_text_color; ?>; }
-  #mobile_header #mobile_menu_toggle i{ color: <?php echo $mobile_menu_text_color; ?>; }
-
+    #mobile_menu ul li a{ color: <?php echo $mobile_menu_text_color; ?>; }
+    #mobile_header #mobile_site_title{ color: <?php echo $mobile_menu_text_color; ?>; }
+    #mobile_header #mobile_menu_toggle i{ color: <?php echo $mobile_menu_text_color; ?>; }
   <?php endif; ?>
 
   .placeholder_section .placeholder_copy{ <?php echo ( $background_overlay_color ? "background-color: $background_overlay_color;" : '' ); ?> }
   .placeholder_section .placeholder_copy a{
-
     <?php echo( $main_color ? "background-color: $main_color;" : "" ); ?>
     <?php echo ( $background_overlay_color ? "color: $background_overlay_color;" : '' ); ?>
-
   }
 
   #user_controls ul li a:hover{
-
     <?php echo( $main_color ? "background-color: $main_color;" : "" ); ?>
-
   }
