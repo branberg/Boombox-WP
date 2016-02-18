@@ -8,7 +8,7 @@ All instructions assume you're working with a fresh install of Wordpress.
 It might work on an existing site, though your mileage will likely vary.
 
   1. Install base Wordpress
-  2. Download the latest release from Github
+  2. Download `boombix.zip` from the [latest release](https://github.com/branberg/Boombox-WP/releases/latest)
   3. Install theme manually by dropping extracted download in your wp-content/themes directory or use the "Add Themes" page in your Dashboard
   4. Active theme and preview site
   5. Fill out content! (details coming soon)
