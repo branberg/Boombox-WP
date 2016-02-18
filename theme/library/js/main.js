@@ -3,7 +3,7 @@
 FUNCTIONS
 
 1 - keepSquare
-2- mobileMenu
+2 - mobileMenu
 3 - autoMenuLayout
 
 ***********************************************************/
@@ -52,12 +52,10 @@ jQuery(document).ready(function($) {
   ****************************************************************/
   $('#header_nav').autoMenuLayout();
 
-
   /****************************************************************
   Build mobile menu
   ****************************************************************/
   $('#header_nav').mobileMenu();
-
 
   /****************************************************************
   Animate the menu stuff
@@ -87,17 +85,14 @@ jQuery(document).ready(function($) {
     return false;
   });
 
-
   /*************************************************************************
   Keep Album dimensions equal no matter what
   *************************************************************************/
   $('.soundcloud_embed').keepSquare();
 
   if( windowWidth > 768 ){
-
     //set main album info to square dimensions
     $('.album_info_wrapper').keepSquare();
-
   }
 
   $(window).resize(function(){
@@ -109,7 +104,6 @@ jQuery(document).ready(function($) {
       $('.album_info_wrapper').height('auto');
     }
   });
-
 
   /*************************************************************************
   Allow album descriptions to be longer and scroll rather than get cut off
@@ -144,7 +138,6 @@ jQuery(document).ready(function($) {
       }
 
     });
-
 
   });
 
@@ -189,12 +182,10 @@ jQuery(document).ready(function($) {
 
   });
 
-
   /*************************************************************************
   Make video embeds responsive - Youtube, vimeo
   *************************************************************************/
   $(".video_embed").fitVids();
-
 
   /*************************************************************************
   LIGHTBOX FOR PHOTOS
@@ -204,7 +195,6 @@ jQuery(document).ready(function($) {
   } else {
     $('a.lightbox').nivoLightbox();
   }
-
 
   /****************************************************************
   Keep homepage full height

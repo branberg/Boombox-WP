@@ -9,7 +9,6 @@ include_once( 'plugins/acf-flexible-content/acf-flexible-content.php' ); //ACF F
 include_once( 'plugins/acf-repeater/acf-repeater.php' ); //ACF Repeater Field
 include_once( 'plugins/acf-options-page/acf-options-page.php' ); //ACF Options Page
 
-
 /*********************************************************************************************************
 ADD CUSTOM ACF OPTIONS + TOGGLE ACF CONFIG PANEL IN DASHBOARD
 *********************************************************************************************************/
@@ -22,7 +21,6 @@ include_once( 'includes/default_options.php' );
 // change this value to false to view custom field editor in Wordpress and make modifications.
 define( 'ACF_LITE' , true );
 
-
 /*********************************************************************************************************
 ADD SUB-OPTIONS PAGES
 *********************************************************************************************************/
@@ -34,7 +32,6 @@ if( function_exists('acf_add_options_sub_page') ) {
 
 }
 
-
 /*********************************************************************************************************
 BOOMBOX MAIN MENU - Used as fallback when no menu is initially created
 *********************************************************************************************************/
@@ -43,7 +40,6 @@ function boombox_main_menu(){
   wp_list_pages('title_li=');
   echo '</ul>';
 }
-
 
 /*********************************************************************************************************
 ADD CUSTOM HEX TO RGBA CONVERTER  - thanks http://mekshq.com/how-to-convert-hexadecimal-color-code-to-rgb-or-rgba-using-php/
@@ -86,7 +82,6 @@ function hex2rgba($color, $opacity = false) {
         return $output;
 }
 
-
 /*********************************************************************************************************
 ADD & SET HOME PAGE ON THEME ACTIVATION
 Thanks Kevin: http://wpsnipp.com/index.php/functions-php/create-page-on-theme-activation/
@@ -118,7 +113,6 @@ if (isset($_GET['activated']) && is_admin()){
     }
 
 }
-
 
 /*********************************************************************************************************
 SCRIPTS & ENQUEUEING FOR CUSTOM WEB FONTS
@@ -188,7 +182,6 @@ function boombox_custom_webfonts(){
 }
 add_action( 'wp_enqueue_scripts', 'boombox_custom_webfonts' );
 
-
 /*********************************************************************************************************
 SCRIPTS & ENQUEUEING
 *********************************************************************************************************/
@@ -234,7 +227,6 @@ function boombox_styles_and_scripts(){
 }
 
 add_action( 'wp_enqueue_scripts', 'boombox_styles_and_scripts' );
-
 
 /*********************************************************************************************************
 THEME SUPPORT
