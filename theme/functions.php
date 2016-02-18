@@ -194,7 +194,7 @@ function boombox_styles_and_scripts(){
     wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/library/js/jquery.fitvids.js', array('jquery'), '1.1', true );
     wp_register_script( 'swipebox', get_stylesheet_directory_uri() . '/library/js/jquery.swipebox.min.js', array('jquery'), '1.2.4', true );
     wp_register_script( 'nivo', get_stylesheet_directory_uri() . '/library/js/jquery.nivo-lightbox.min.js', array('jquery'), '1.0', true );
-    wp_register_script( 'main-js', get_stylesheet_directory_uri() . '/library/js/main-ck.js', array( 'jquery' ), '', true );
+    wp_register_script( 'main-js', get_stylesheet_directory_uri() . '/library/js/main-min.js', array( 'jquery' ), '', true );
 
     // register stylesheets
     wp_register_style( 'default', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
