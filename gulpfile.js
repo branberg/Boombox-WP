@@ -28,7 +28,7 @@ gulp.task('post-clean', function(){
 });
 
 gulp.task('release', function(callback){
-  runSequence('wipe', 'copy', 'pre-clean', 'zip');
+  runSequence('wipe', 'copy', 'pre-clean', 'zip', 'post-clean');
 });
 
 /*
