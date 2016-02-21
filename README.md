@@ -21,33 +21,3 @@ Boombox-WP uses [Gulp](https://github.com/gulpjs/gulp) to generate builds. It wo
   3. `$ gulp release' to zip up the theme and place it in the `dist` directory
 
 *_Ideally doing #1 & #2 in one step would be great, but Gulp's streams are weird with caching the `pachage.json` version number._
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
