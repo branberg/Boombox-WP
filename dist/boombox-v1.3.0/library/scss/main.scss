@@ -1,0 +1,15 @@
+@import "grid.scss";
+@import "wp_defaults.scss";
+@import "mixins.scss";
+@import "base.scss";
+
+// Media Queries
+@media only screen and (min-width: 480px) {
+  @import "_480up.scss";
+}
+@media only screen and (min-width: 768px) {
+  @import "_768up.scss";
+}
+@media only screen and (min-width: 1024px) {
+  @import "_1024up.scss";
+}
