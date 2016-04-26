@@ -305,7 +305,7 @@
       <ul>
         <li><a href="<?php echo site_url(); ?>/wp-admin/index.php" title="Go To Dashboard"><i class="icon-home"></i></a></li>
         <li><a href="<?php echo get_edit_post_link(); ?>" title="Edit Page Content"><i class="icon-cog"></i></a></li>
-        <li><a href="<?php echo site_url(); ?>/wp-admin/admin.php?page=acf-options" title="Edit Site Styles"><i class="icon-tint"></i></a></li>
+        <li><a href="<?php echo site_url(); ?>/wp-admin/admin.php?page=acf-options-design" title="Edit Site Styles"><i class="icon-tint"></i></a></li>
       </ul>
     </div>
 
